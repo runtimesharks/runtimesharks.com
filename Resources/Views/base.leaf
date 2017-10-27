@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>#import("title")</title>
-	<link rel="stylesheet" href="/styles/app.css">
+	#embed("Partials/head")
+	#import("head")
 </head>
 <body>
+	#embed("Partials/header")
+	#import("before-content")
+	<div class="content">
+		#import("body")
+	</div>
+	#import("after-content")
+	#embed("Partials/footer")
 
-#import("content")
-
+	#import("end-stylesheets")
+	#embed("Partials/stylesheets")
 </body>
 </html>

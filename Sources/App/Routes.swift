@@ -1,8 +1,9 @@
-import Vapor
 
 final class Routes: RouteCollection {
+	
     let view: ViewRenderer
-    init(_ view: ViewRenderer) {
+	
+    init(in view: ViewRenderer) {
         self.view = view
     }
 
@@ -20,6 +21,6 @@ final class Routes: RouteCollection {
         builder.get("info") { req in
             return req.description
         }
-
     }
+	
 }

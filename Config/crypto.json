@@ -2,12 +2,12 @@
     "hash": {
         "method": "sha256",
         "encoding": "hex",
-        "key": "0000000000000000"
+		 "key": "ZrWFLiHEQOqYClUNIver04OZU/txfVkuDEALNgjNh80vv7fXawC4LTgWmk+K8tMalmLStUc1EgFRTW5i6QhBL/aJiu0KeHjflTqyY3HUAuKas644wXYJp5mSK6OoGVN08FZ0e/x3/PUXrOQztVU2DasJ/PkT3C1ALNDL3wrLlLs="
     },
 
     "cipher": {
         "method": "aes256",
         "encoding": "base64",
-        "key": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+        "key": "38qlcOEkVOAj6xUTBDDrWP0izDcdGPqw3Biu4ChABX4="
     }
 }
