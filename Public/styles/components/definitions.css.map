@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,YAAa,CACZ,WAAW,CAAE,GAAG,CAChB,SAAS,CAAE,KAAK,CAChB,WAAW,CAAE,KAAK",
+"sources": ["definitions.scss"],
+"names": [],
+"file": "definitions.css"
+}

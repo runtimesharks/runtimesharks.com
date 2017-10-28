@@ -5,12 +5,8 @@
 	#import("head")
 </head>
 <body>
-	#embed("Partials/header")
-	#import("before-content")
-	<div class="content">
-		#import("body")
-	</div>
-	#import("after-content")
+	#import("body")
+
 	#embed("Partials/footer")
 
 	#import("end-stylesheets")

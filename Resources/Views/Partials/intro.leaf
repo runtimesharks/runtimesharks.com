@@ -1,0 +1,7 @@
+<div class="intro">
+	<h1>Runtime Sharks</h1>
+
+	<div class="definitions-container">
+		#embed("Partials/definitions")
+	</div>
+</div>

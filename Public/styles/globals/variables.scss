@@ -1,0 +1,42 @@
+// Sizing
+$maxWidth: 700px;
+
+// Colors
+$linkColor: #12A8DA;
+$highlighColor: #fffeca;
+$darkGray: #585858;
+$lightGray: #cacaca;
+$gray: #888;
+$backgroundColor: #fcfcfc;
+$textColor: #3b3b3b;
+$redColor: #f6291d;
+
+$headerFont: 'Luminari', 'Georgia', serif;
+$lightFont: 'Avenir Next', 'Verdana', sans-serif;
+$bodyFont: 'Verdana', 'Arial', sans-serif;
+$phoneMedia: 482px;
+
+@mixin borderRadius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin lightBottomBorder($size) {
+	border-bottom: $size solid $lightGray;
+}
+
+@mixin lightTopBorder($size) {
+	border-top: $size solid $lightGray;
+}
+
+@mixin responsiveWidth($width) {
+	@media screen and (max-width: $width) { @content; }
+}
+
+@mixin transition($prop, $duration) {
+	-webkit-transition: $prop $duration ease-in-out;
+	-moz-transition: $prop $duration ease-in-out;
+	-o-transition: $prop $duration ease-in-out;
+	transition: $prop $duration ease-in-out;
+}

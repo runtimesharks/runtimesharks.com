@@ -1,0 +1,80 @@
+@import '../globals/variables';
+@import '../globals/reset.min.css';
+
+body {
+	color: $textColor;
+	background: $backgroundColor;
+	font-family: $bodyFont;
+
+	margin: 0 auto;
+}
+
+li {
+	list-style: disc inside;
+	padding-left: 1.5em;
+
+	&:nth-child(1) {
+		padding-top: 0.3em;
+	}
+
+	> ul > li {
+		padding-left: 1.5em;
+		list-style-type: circle;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $linkColor;
+	border-bottom: 1px solid transparent;
+	padding-bottom: 2px;
+
+	@include transition(border, 0.4s);
+
+	&:hover {
+		border-bottom-color: $linkColor;
+	}
+
+	.site-header & {
+		color: $textColor;
+		border-bottom: none;
+
+		&:hover {
+			color: $linkColor;
+		}
+
+		@include transition(color, 0.3s);
+	}
+}
+
+p {
+	margin: 0.75em 0;
+
+	&.no-margin {
+		margin: 0;
+	}
+}
+
+em {
+	font-style: italic;
+}
+
+img {
+	border-radius: 2px;
+	-webkit-box-shadow: #777777 0 0 3px 1px;
+	-moz-box-shadow: #444444 0 0 3px 1px; /* color, h-offset, v-offset, blur, spread */
+	box-shadow: #777777 0 0 7px 0; /* inset is optional */
+
+	&:not([class]) {
+		display: table;
+		margin: 10px auto;
+	}
+}
+
+strong {
+	font-weight: 600;
+}
+
+.centered {
+	text-align: center;
+}

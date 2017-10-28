@@ -1,0 +1,23 @@
+@import '../globals/variables';
+
+.site-footer {
+	border-top: solid 1px $gray;
+	max-width: $maxWidth;
+	padding-top: 0.2em;
+	margin: 5em auto 1em;
+	text-align: center;
+	color: $gray;
+	line-height: 1.5em;
+	font-size: 1em;
+
+	.quote {
+		color: $lightGray;
+		line-height: 1.5em;
+		font-style: italic;
+		font-size: 0.65em;
+	}
+
+	.copyright {
+		margin: 0.8em 0;
+	}
+}

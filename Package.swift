@@ -5,12 +5,10 @@ import PackageDescription
 let package = Package(
     name: "RuntimeSharks",
     products: [
-        .library(name: "App", targets: ["App"]),
-        .executable(name: "Run", targets: ["Run"])
+        .executable(name: "App", targets: ["App"])
     ],
     dependencies: [
         .package(url: "https://github.com/vapor/vapor.git", .upToNextMajor(from: "2.2.0")),
-        .package(url: "https://github.com/vapor/postgresql-provider.git", .upToNextMajor(from: "2.0.0")),
         .package(url: "https://github.com/vapor/leaf-provider.git", .upToNextMajor(from: "1.1.0"))
     ],
     targets: [
@@ -21,7 +19,6 @@ let package = Package(
                    "Public",
                    "Resources"
                ]),
-        .target(name: "Run", dependencies: ["App"]),
         .testTarget(name: "AppTests", dependencies: ["App", "Testing"])
     ]
 )

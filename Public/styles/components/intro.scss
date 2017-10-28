@@ -1,0 +1,26 @@
+@import '../globals/variables';
+
+.intro {
+	padding: 2.5em 0 0;
+	line-height: 1.5em;
+}
+
+h1 {
+	font-size: 4em;
+	text-align: center;
+	font-weight: normal;
+	font-family: $headerFont;
+	line-height: 1.2em;
+	color: $textColor;
+}
+
+.definitions-container {
+	border-left: solid 4px $linkColor;
+	// border-right: solid 4px $linkColor;
+	padding: 2.5em 0;
+
+	& .definitions {
+		max-width: $maxWidth;
+		margin: auto;
+	}
+}

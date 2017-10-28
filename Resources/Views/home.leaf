@@ -1,0 +1,10 @@
+#extend("base")
+
+#export("body") {
+	#embed("Partials/intro")
+}
+
+#export("end-stylesheets") {
+	<link rel="stylesheet" href="/styles/components/intro.css">
+	<link rel="stylesheet" href="/styles/components/definitions.css">
+}
