@@ -1,1 +1,1 @@
-web: RuntimeSharks --env=production --workdir="./"
+web: App --env=production --workdir="./"

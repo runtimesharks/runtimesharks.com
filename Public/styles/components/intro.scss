@@ -14,13 +14,20 @@ h1 {
 	color: $textColor;
 }
 
-.definitions-container {
+.definitions-container, .contact-us-container {
 	border-left: solid 4px $linkColor;
+}
+
+.definitions-container {
 	// border-right: solid 4px $linkColor;
-	padding: 2.5em 0;
+	padding: 2.5em 0 1em;
 
 	& .definitions {
 		max-width: $maxWidth;
 		margin: auto;
 	}
+}
+
+.contact-us-container {
+	padding: 0 0 1em;
 }
