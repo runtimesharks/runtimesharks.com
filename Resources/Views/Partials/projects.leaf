@@ -1,0 +1,28 @@
+<div class="projects">
+	#loop(projects, "project") {
+		<div class="project" style="
+					#equal(project.imagePosition, "left") { border-right: solid 4px #(project.themeColor) }
+					##else() { border-left: solid 4px #(project.themeColor) }">
+			<header class="project-name">
+				#(project.name)
+			</header>
+
+			<div class="project-meta">
+				#equal(project.imagePosition, "left") {
+					#embed("Partials/Projects/image")
+					#embed("Partials/Projects/description")
+				} ##else() {
+					#embed("Partials/Projects/description")
+					#embed("Partials/Projects/image")
+					<div class="project-description-fake-right-container">
+						#embed("Partials/Projects/description")
+					</div>
+				}
+			</div>
+		</div>
+	}
+
+	<div class="other-projects">
+		For more projects, please check Roland's <a href="https://rolandleth.com/projects">page</a>.
+	</div>
+</div>

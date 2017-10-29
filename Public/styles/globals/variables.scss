@@ -14,11 +14,16 @@ $redColor: #f6291d;
 // $bodyFont: 'Verdana', 'Arial', sans-serif;
 $bodyFont: 'Titillium Web', sans-serif;
 $phoneMedia: 482px;
+$sidePadding: 20px;
 
 @mixin borderRadius($radius) {
 	-webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
 	border-radius: $radius;
+}
+
+@mixin sidePadding() {
+	padding: 0 $sidePadding;
 }
 
 @mixin lightBottomBorder($size) {

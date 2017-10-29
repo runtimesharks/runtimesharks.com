@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAEA,YAAa,CACZ,WAAW,CAAE,GAAG,CAChB,SAAS,CAAE,KAAK,CAChB,WAAW,CAAE,KAAK",
-"sources": ["definitions.scss"],
+"mappings": "AAEA,YAAa,CACZ,WAAW,CAAE,GAAG,CAChB,SAAS,CAAE,KAAK,CAChB,WAAW,CAAE,KAAK,CCoBlB,OAAO,CAAE,MAAc",
+"sources": ["definitions.scss","../globals/variables.scss"],
 "names": [],
 "file": "definitions.css"
 }

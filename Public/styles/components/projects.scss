@@ -1,0 +1,110 @@
+@import '../globals/variables';
+
+.project {
+	padding: 3em $sidePadding 2em;
+	margin: auto;
+}
+
+.project-name {
+	margin-bottom: 2.5em;
+	font-size: 1.5em;
+	font-weight: 600;
+	text-align: center;
+}
+
+.project-meta {
+	display: table;
+	margin: auto;
+}
+
+.project-description {
+	max-width: 500px;
+}
+
+.project-description, .project-image {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+
+	&.left {
+		padding: 0 20px 0 40px;
+	}
+
+	&.right {
+		padding: 0 40px 0 20px;
+	}
+}
+
+.project-image > img {
+	max-width: 400px;
+}
+
+.project-description-fake-right-container {
+	display: none;
+}
+
+.other-projects {
+	padding-top: 3em;
+	text-align: center;
+}
+
+@include responsiveWidth(1000px) {
+	.project-description, .project-image {
+		&.left {
+			padding: 0 10px 0 20px;
+		}
+
+		&.right {
+			padding: 0 20px 0 10px;
+		}
+	}
+}
+
+@include responsiveWidth(900px) {
+	.project-description, .project-image {
+		&.left {
+			padding: 0 0 0 10px;
+		}
+
+		&.right {
+			padding: 0 10px 0 0;
+		}
+	}
+
+	.project-description {
+		max-width: 80%;
+	}
+}
+
+@include responsiveWidth(800px) {
+	.project-description, .project-image {
+		&.left, &.right {
+			padding: 0;
+		}
+
+		display: block;
+	}
+
+	.project-description {
+		&.left {
+			display: none;
+		}
+
+		margin: 3em auto 0;
+		max-width: 90%;
+	}
+
+	.project-description-fake-right-container {
+		& > .left {
+			display: block;
+		}
+
+		display: block;
+	}
+}
+
+@include responsiveWidth(375px) {
+	.project-image > img {
+		max-width: 90%;
+	}
+}

@@ -1,0 +1,3 @@
+<div class="project-description #equal(project.imagePosition, "left") { right } ##else() { left }">
+	#(project.description)
+</div>

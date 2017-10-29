@@ -5,30 +5,26 @@
 	line-height: 1.5em;
 }
 
-h1 {
-	font-size: 2em;
-	text-align: right;
-	font-weight: normal;
-	font-family: $bodyFont;
-	line-height: 1.2em;
-
-	&.title {
-		display: inline-block;
-
-		&.first-half {
-			color: #00356A;
-		}
-
-		&.second-half {
-			color: #0371B8;
-		}
-	}
-}
-
 .title-container {
 	text-align: right;
 	max-width: $maxWidth;
 	margin: auto;
+	@include sidePadding();
+}
+
+.title {
+	display: inline-block;
+	font-size: 2em;
+	font-weight: 600;
+	line-height: 1.2em;
+
+	&.first-half {
+		color: #00356A;
+	}
+
+	&.second-half {
+		color: #0371B8;
+	}
 }
 
 .definitions-container, .contact-us-container {
