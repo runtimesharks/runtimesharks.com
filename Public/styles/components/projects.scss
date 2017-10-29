@@ -1,7 +1,7 @@
 @import '../globals/variables';
 
 .project {
-	padding: 3em $sidePadding 2em;
+	padding: 3em $sidePadding 0;
 	margin: auto;
 }
 
@@ -41,6 +41,12 @@
 
 .project-description-fake-right-container {
 	display: none;
+}
+
+.project-bottom-line {
+	margin: 2em auto auto;
+	border-bottom: solid 0.5px $lightGray;
+	max-width: $maxWidth;
 }
 
 .other-projects {
@@ -91,6 +97,10 @@
 		}
 
 		margin: 3em auto 0;
+		max-width: 90%;
+	}
+
+	.project-image > img {
 		max-width: 90%;
 	}
 
