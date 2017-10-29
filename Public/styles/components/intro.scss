@@ -6,12 +6,29 @@
 }
 
 h1 {
-	font-size: 4em;
-	text-align: center;
+	font-size: 2em;
+	text-align: right;
 	font-weight: normal;
-	font-family: $headerFont;
+	font-family: $bodyFont;
 	line-height: 1.2em;
-	color: $textColor;
+
+	&.title {
+		display: inline-block;
+
+		&.first-half {
+			color: #00356A;
+		}
+
+		&.second-half {
+			color: #0371B8;
+		}
+	}
+}
+
+.title-container {
+	text-align: right;
+	max-width: $maxWidth;
+	margin: auto;
 }
 
 .definitions-container, .contact-us-container {

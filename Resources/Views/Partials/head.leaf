@@ -2,15 +2,18 @@
 <title>#(title)</title>
 <link rel="canonical" href="#(fullRoot)#(path)">
 <!-- Icons -->
-<link rel="shortcut icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="192x192" href="/images/favicons/192x192.png"><!-- Android -->
-<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/images/favicons/180x180.png">
+#embed("Partials/favicons")
 <!--Metadata-->
 <link rel="author" type="text/plain" href="/humans.txt">
 <meta name="description" content="#(metadata)">
 <meta name="author" content="Roland Leth">
 <!--Stylesheets-->
 <link rel="stylesheet" href="/styles/globals/base.css">
+<link rel="stylesheet" href="/styles/components/footer.css">
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+<!--
+<link rel="preload" href="/styles/font-awesome/css/font-awesome.min.css" as="style" onload="this.rel='stylesheet'">
+-->
 <!--Mobile settings-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="HandheldFriendly" content="true">

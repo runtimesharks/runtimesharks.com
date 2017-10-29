@@ -8,8 +8,5 @@
 	#import("body")
 
 	#embed("Partials/footer")
-
-	#import("end-stylesheets")
-	#embed("Partials/stylesheets")
 </body>
 </html>

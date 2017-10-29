@@ -11,9 +11,8 @@ $backgroundColor: #fcfcfc;
 $textColor: #3b3b3b;
 $redColor: #f6291d;
 
-$headerFont: 'Luminari', 'Georgia', serif;
-$lightFont: 'Avenir Next', 'Verdana', sans-serif;
-$bodyFont: 'Verdana', 'Arial', sans-serif;
+// $bodyFont: 'Verdana', 'Arial', sans-serif;
+$bodyFont: 'Titillium Web', sans-serif;
 $phoneMedia: 482px;
 
 @mixin borderRadius($radius) {
