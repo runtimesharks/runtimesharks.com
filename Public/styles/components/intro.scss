@@ -8,7 +8,6 @@
 	text-align: right;
 	max-width: $maxWidth;
 	margin: auto;
-	@include sidePadding();
 }
 
 .title {

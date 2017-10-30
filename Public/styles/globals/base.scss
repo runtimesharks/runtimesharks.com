@@ -28,23 +28,12 @@ a {
 	text-decoration: none;
 	color: $linkColor;
 	border-bottom: 1px solid transparent;
-	padding-bottom: 2px;
+	padding-bottom: 1.5px;
 
 	@include transition(border, 0.4s);
 
 	&:hover {
 		border-bottom-color: $linkColor;
-	}
-
-	.site-header & {
-		color: $textColor;
-		border-bottom: none;
-
-		&:hover {
-			color: $linkColor;
-		}
-
-		@include transition(color, 0.3s);
 	}
 }
 
@@ -60,22 +49,14 @@ em {
 	font-style: italic;
 }
 
-// img {
-// 	border-radius: 2px;
-// 	-webkit-box-shadow: #777777 0 0 3px 1px;
-// 	-moz-box-shadow: #444444 0 0 3px 1px; /* color, h-offset, v-offset, blur, spread */
-// 	box-shadow: #777777 0 0 7px 0; /* inset is optional */
-
-// 	&:not([class]) {
-// 		display: table;
-// 		margin: 10px auto;
-// 	}
-// }
-
 strong {
 	font-weight: 600;
 }
 
 .centered {
 	text-align: center;
+}
+
+.side-padded {
+	padding: 0 $sidePadding;
 }

@@ -1,5 +1,5 @@
 <div class="intro">
-	<div class="title-container">
+	<div class="title-container side-padded">
 		<h1 class="title first-half">runtime</h1><h1 class="title second-half">sharks;#(test)</h1>
 	</div>
 
@@ -7,7 +7,7 @@
 		#embed("Partials/definitions")
 	</div>
 
-	<div class="contact-us-container">
+	<div class="contact-us-container centered side-padded">
 		#embed("Partials/contact-us")
 	</div>
 </div>

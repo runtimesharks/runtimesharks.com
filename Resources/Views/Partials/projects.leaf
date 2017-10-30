@@ -3,7 +3,7 @@
 		<div class="project" style="
 					#equal(project.imagePosition, "left") { border-right: solid 4px #(project.color) }
 					##else() { border-left: solid 4px #(project.color) }">
-			<header class="project-name">
+			<header class="project-name centered">
 				<a href="#(project.link)" style="color: #(project.color)"
 												  onmouseover='this.style.borderColor="#(project.color)"'
     											  onmouseout='this.style.borderColor="transparent"'>#(project.name)</a>
@@ -27,7 +27,7 @@
 		</div>
 	}
 
-	<div class="other-projects">
+	<div class="other-projects centered">
 		For more projects, please check Roland's <a href="https://rolandleth.com/projects">page</a>.
 	</div>
 </div>

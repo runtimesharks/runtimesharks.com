@@ -1,7 +1,7 @@
 @import '../globals/variables';
 
 .project {
-	padding: 3em $sidePadding 0;
+	padding: 4em $sidePadding 0;
 	margin: auto;
 }
 
@@ -9,7 +9,6 @@
 	margin-bottom: 2.5em;
 	font-size: 1.5em;
 	font-weight: 600;
-	text-align: center;
 }
 
 .project-meta {
@@ -23,7 +22,6 @@
 
 .project-description, .project-image {
 	display: table-cell;
-	text-align: center;
 	vertical-align: middle;
 
 	&.left {
@@ -52,7 +50,6 @@
 
 .other-projects {
 	padding-top: 3em;
-	text-align: center;
 }
 
 @include responsiveWidth(1200px) {

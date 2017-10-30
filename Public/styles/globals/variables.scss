@@ -2,9 +2,7 @@
 $maxWidth: 700px;
 
 // Colors
-// $linkColor: #12A8DA;
 $linkColor: #0371B8;
-$highlighColor: #fffeca;
 $darkGray: #585858;
 $lightGray: #cacaca;
 $gray: #888;
@@ -14,34 +12,15 @@ $redColor: #f6291d;
 
 // $bodyFont: 'Verdana', 'Arial', sans-serif;
 $bodyFont: 'Titillium Web', sans-serif;
-$phoneMedia: 482px;
 $sidePadding: 20px;
-
-@mixin borderRadius($radius) {
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	border-radius: $radius;
-}
-
-@mixin sidePadding() {
-	padding: 0 $sidePadding;
-}
-
-@mixin lightBottomBorder($size) {
-	border-bottom: $size solid $lightGray;
-}
-
-@mixin lightTopBorder($size) {
-	border-top: $size solid $lightGray;
-}
 
 @mixin responsiveWidth($width) {
 	@media screen and (max-width: $width) { @content; }
 }
 
 @mixin transition($prop, $duration) {
-	-webkit-transition: $prop $duration ease-in-out;
-	-moz-transition: $prop $duration ease-in-out;
-	-o-transition: $prop $duration ease-in-out;
-	transition: $prop $duration ease-in-out;
+	-webkit-transition: $prop $duration ease-in;
+	-moz-transition: $prop $duration ease-in;
+	-o-transition: $prop $duration ease-in;
+	transition: $prop $duration ease-in;
 }
