@@ -2,7 +2,6 @@
 
 .intro {
 	padding: 2.5em 0 0;
-	line-height: 1.5em;
 }
 
 .title-container {
@@ -23,7 +22,7 @@
 	}
 
 	&.second-half {
-		color: #0371B8;
+		color: $linkColor;
 	}
 }
 

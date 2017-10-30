@@ -1,10 +1,12 @@
 <div class="projects">
 	#loop(projects, "project") {
 		<div class="project" style="
-					#equal(project.imagePosition, "left") { border-right: solid 4px #(project.themeColor) }
-					##else() { border-left: solid 4px #(project.themeColor) }">
+					#equal(project.imagePosition, "left") { border-right: solid 4px #(project.color) }
+					##else() { border-left: solid 4px #(project.color) }">
 			<header class="project-name">
-				#(project.name)
+				<a href="#(project.link)" style="color: #(project.color)"
+												  onmouseover='this.style.borderColor="#(project.color)"'
+    											  onmouseout='this.style.borderColor="transparent"'>#(project.name)</a>
 			</header>
 
 			<div class="project-meta">
@@ -14,6 +16,7 @@
 				} ##else() {
 					#embed("Partials/Projects/description")
 					#embed("Partials/Projects/image")
+
 					<div class="project-description-fake-right-container">
 						#embed("Partials/Projects/description")
 					</div>
