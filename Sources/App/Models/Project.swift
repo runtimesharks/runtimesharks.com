@@ -29,7 +29,14 @@ struct Project: NodeRepresentable {
 		return try node.makeNode(in: context)
 	}
 	
-	init(name: String, description: String, image: String, color: String, link: String) {
+	/// Creates a new project.
+	///
+	/// - Parameters:
+	///   - description: This should be skipped for projects that require raw HTML, for hrefs, for example. The description is added directly in the leaf file.
+	///   - image: The project's screenshot.
+	///   - color: The theme color, for border and hrefs.
+	///   - link: The project's url.
+	init(name: String, description: String = "", image: String, color: String, link: String) {
 		self.name = name
 		self.description = description
 		self.image = image
@@ -47,19 +54,21 @@ extension Project {
 		var projects = [
 			Project(
 				name: "DeinDeal",
-				description: "Between 2013 and 2017 Roland has worked for DeinDeal, one of the dominating flash-sales companies in Switzerland, and starting with 2014 he took the role of iOS Lead.",
 				image: "\(path)/deindeal.png",
 				color: "#C40E3D",
 				link: "https://itunes.apple.com/us/app/deindeal/id465657999?ls=1&mt=8"),
 			Project(
+				name: "Beraria H",
+				image: "\(path)/beraria-h.png",
+				color: "#FA8F30",
+				link: "https://itunes.apple.com/us/app/beraria-h/id1257720997?mt=8"),
+			Project(
 				name: "Carminder",
-				description: "Helps you keep track of your car's maintenance. See all your car's events at a glance and easily add a reminder, and how often you'd like to be reminded. [Discontinued as of 2014]",
 				image: "\(path)/carminder.png",
 				color: "#00A29B",
 				link: "https://itunes.apple.com/us/app/carminder-super-simple-maintenance/id633617025?ls=1&amp;mt=8"),
 			Project(
 				name: "Expenses Planner",
-				description: "Helps you keep track of your upcoming expenses. Easily set up your upcoming expenses, their recurring intervals, a reminder, and how often you'd like to be reminded. [Discontinued as of 2014]",
 				image: "\(path)/expenses-planner.png",
 				color: "#481FAF",
 				link: "https://itunes.apple.com/us/app/expenses-planner/id669431471?ls=1&mt=8"),

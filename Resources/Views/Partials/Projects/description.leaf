@@ -1,3 +1,17 @@
 <div class="project-description centered #equal(project.imagePosition, "left") { right } ##else() { left }">
-	#(project.description)
+	#equal(project.name, "DeinDeal") {
+		Between 2013 and 2017, Roland has worked for <a href="https://deindeal.ch">DeinDeal</a>, one of the dominating flash-sales companies in Switzerland &amp; part of <a href="http://ringier.com">Ringier AG</a>, and starting with 2014 he took the role of iOS Lead.
+	}
+	##equal(project.name, "Beraria H") {
+		In 2017, Roland worked with <a href="http://www.sniperlab.com">Sniperlab</a> to create an app for the largest beer hall in Europe, <a href="http://berariah.ro">Beraria H</a>. The result is an easy way for its customers to browse for, book and check-in at events.
+	}
+	##equal(project.name, "Carminder") {
+		Helps you keep track of your car's maintenance. See all your car's events at a glance and easily add a reminder, and how often you'd like to be reminded. <em>[Discontinued as of 2014]</em>
+	}
+	##equal(project.name, "Expenses Planner") {
+		Helps you keep track of your upcoming expenses. Easily set up your upcoming expenses, their recurring intervals, a reminder, and how often you'd like to be reminded. <em>[Discontinued as of 2014]</em>
+	}
+	##() {
+		#(project.description)
+	}
 </div>
