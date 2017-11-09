@@ -7,7 +7,7 @@
 		#embed("Partials/definitions")
 	</div>
 
-	<div class="contact-us-container centered side-padded">
+	<div class="contact-us-container">
 		#embed("Partials/contact-us")
 	</div>
 </div>

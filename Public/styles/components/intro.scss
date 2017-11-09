@@ -42,3 +42,14 @@
 .contact-us-container {
 	padding: 0 0 1em;
 }
+
+.contact-us {
+	max-width: $maxWidth;
+	margin: auto;
+}
+
+@include responsiveWidth(590px) {
+	.contact-us-spacer {
+		display: none;
+	}
+}
