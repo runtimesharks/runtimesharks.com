@@ -38,10 +38,6 @@
 	max-width: 400px;
 }
 
-.project-description-fake-right-container {
-	display: none;
-}
-
 .project-bottom-line {
 	margin: 2em auto auto;
 	border-bottom: solid 0.5px $lightGray;
@@ -102,24 +98,25 @@
 	}
 
 	.project-description {
-		&.left {
-			display: none;
-		}
-
 		margin: 3em auto 0;
 		max-width: 90%;
 	}
 
-	.project-image > img {
-		max-width: 90%;
+	.project-image {
+		margin: auto;
 	}
 
-	.project-description-fake-right-container {
-		& > .left {
-			display: block;
-		}
+	.project-meta {
+		@include flex();
+		@include flexVertical();
+	}
 
-		display: block;
+	.project-description.centered.left {
+		@include flexPosition(2);
+	}
+
+	.project-image.centered.right {
+		@include flexPosition(1);
 	}
 }
 

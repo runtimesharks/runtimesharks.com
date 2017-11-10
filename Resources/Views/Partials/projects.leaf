@@ -16,10 +16,6 @@
 				} ##else() {
 					#embed("Partials/Projects/description")
 					#embed("Partials/Projects/image")
-
-					<div class="project-description-fake-right-container">
-						#embed("Partials/Projects/description")
-					</div>
 				}
 			</div>
 

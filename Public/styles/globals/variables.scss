@@ -24,3 +24,27 @@ $sidePadding: 20px;
 	-o-transition: $prop $duration ease-in;
 	transition: $prop $duration ease-in;
 }
+
+@mixin flex() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin flexVertical() {
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	-webkit-flex-direction: column;
+	-ms-flex-direction:column;
+	flex-direction: column;
+}
+
+@mixin flexPosition($position) {
+	-webkit-box-ordinal-group: $position;
+	-moz-box-ordinal-group: $position;
+	-ms-flex-order: $position;
+	-webkit-order: $position;
+	order: $position;
+}
