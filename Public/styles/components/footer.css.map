@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AAEA,YAAa,CACZ,SAAS,CCFC,KAAK,CDGf,UAAU,CAAE,gBAAiB,CAC7B,WAAW,CAAE,KAAK,CAClB,MAAM,CAAE,YAAY,CACpB,WAAW,CAAE,KAAK,CAClB,SAAS,CAAE,GAAG,CACd,WAAW,CAAE,GAAG,CAEhB,mBAAO,CACN,WAAW,CAAE,KAAK,CAClB,UAAU,CAAE,MAAM,CAClB,SAAS,CAAE,KAAK,CAChB,WAAW,CAAE,GAAG,CAGjB,uBAAW,CACV,MAAM,CAAE,OAAO",
-"sources": ["footer.scss","../globals/variables.scss"],
-"names": [],
-"file": "footer.css"
-}
+{"version":3,"sources":["footer.scss"],"names":[],"mappings":"AAEA,aACC,gBACA,4BACA,kBACA,oBACA,kBACA,cACA,eAAgB,CAPjB,oBAUE,kBACA,kBACA,gBACA,eAAgB,CAblB,wBAiBE,cAAe,CACf","file":"footer.css"}

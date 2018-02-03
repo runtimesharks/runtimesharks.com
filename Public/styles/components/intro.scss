@@ -1,4 +1,4 @@
-@import '../globals/variables';
+@import '../globals/variables.scss';
 
 .intro {
 	padding: 2.5em 0 0;
@@ -36,7 +36,6 @@
 }
 
 .definitions-container {
-	// border-right: solid 4px $linkColor;
 	padding: 2.5em 0 1em;
 
 	& .definitions {
