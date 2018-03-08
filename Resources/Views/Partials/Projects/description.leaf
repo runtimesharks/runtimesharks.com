@@ -6,7 +6,7 @@
 		In 2017, Roland worked with <a href="http://www.sniperlab.com">Sniperlab</a> to create an app for the largest beer hall in Europe, <a href="http://berariah.ro">Beraria H</a>. The result is an easy way for its customers to browse for, book and check-in at events.
 	}
 	##equal(project.name, "Carminder") {
-		Helps you keep track of your car's maintenance. See all your car's events at a glance and easily add a reminder, and how often you'd like to be reminded. <em>[Discontinued as of 2014]</em>
+		Helps you keep track of your car's maintenance. See all your car's events at a glance and easily add a reminder, and how often you'd like to be reminded. <em>[Discontinued in 2014, resurected in 2018]</em>
 	}
 	##equal(project.name, "Expenses Planner") {
 		Helps you keep track of your upcoming expenses. Easily set up your upcoming expenses, their recurring intervals, a reminder, and how often you'd like to be reminded. <em>[Discontinued as of 2014]</em>
