@@ -1,5 +1,8 @@
 <div class="project-description centered #equal(project.imagePosition, "left") { right } ##else() { left }">
-	#equal(project.name, "DeinDeal") {
+	#equal(project.name, "ChallengeBeat") {
+		In collaboration with <a href="https://www.linkedin.com/in/tiagodanielmsfernandes">Tiago Fernandes</a> and <a href="http://www.christian-boegner.ch/">Christian Boegner</a>, ChallengeBeat has been one of the first projects we worked on. Challenge yourself and/or your friends and start creating better habits!
+	}
+	##equal(project.name, "DeinDeal") {
 		Between 2013 and 2017, Roland has worked for <a href="https://deindeal.ch">DeinDeal</a>, one of the dominating flash-sales companies in Switzerland &amp; part of <a href="http://ringier.com">Ringier AG</a>, and starting with 2014 he took the role of iOS Lead.
 	}
 	##equal(project.name, "Beraria H") {

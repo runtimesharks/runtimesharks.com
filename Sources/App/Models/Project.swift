@@ -51,7 +51,13 @@ extension Project {
 	
 	static func all() -> [Project] {
 		let path = "/images/project-screenshots"
+		
 		var projects = [
+			Project(
+				name: "ChallengeBeat",
+				image: "\(path)/challengebeat.png",
+				color: "#FF0E37",
+				link: "https://itunes.apple.com/us/app/challengebeat/id1323950655"),
 			Project(
 				name: "DeinDeal",
 				image: "\(path)/deindeal.png",
