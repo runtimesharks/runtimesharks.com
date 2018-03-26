@@ -1,3 +1,9 @@
+<div class="shark-definition centered">
+	How could we forget about the aquatic apex predator, that has been around for over 400 million years?
+	</br>
+	We'll try to do that, as well. <span class="faded">[Maybe not <em>that</em> long]</span>
+</div>
+
 <footer class="site-footer centered" role="contentinfo">
 	<div class="quote side-padded">
 		<p>
@@ -5,7 +11,7 @@
 		</p>
 	</div>
 	<div class="copyright">
-		&copy;&nbsp#(year)&nbspRuntime Sharks
+		&copy;&nbsp2017–#(year)&nbspRuntime Sharks
 	</div>
 	<a href="https://plus.google.com/116830737199229269159?rel=author"></a>
 	<!--Apple's auto affiliate link script-->
