@@ -1,18 +1,12 @@
 @import '../globals/variables.scss';
 
-.shark-definition {
-	font-size: 0.8em;
-	margin: 6em auto 1em;
-	max-width: $maxWidth;
-}
-
 .site-footer {
 	max-width: $maxWidth;
 	border-top: solid 0.5px $gray;
 	padding-top: 0.2em;
-	margin: 3em auto 1em;
+	margin: 7em auto 1em;
 	line-height: 1.5em;
-	font-size: 0.95em;
+	font-size: 0.85em;
 	font-weight: 500;
 
 	.quote {
@@ -23,6 +17,6 @@
 	}
 
 	.copyright {
-		margin: 0.8em 0;
+		margin: 1.25em 0;
 	}
 }
