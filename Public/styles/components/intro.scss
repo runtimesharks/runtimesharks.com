@@ -39,13 +39,14 @@
 	padding: 2.5em 0 1em;
 
 	& .definitions {
+		line-height: 1.5em;
 		max-width: $maxWidth;
 		margin: auto;
 	}
 }
 
 .contact-us-container {
-	padding: 0 0 1em;
+	padding: 1em 0 1em;
 }
 
 .contact-us {
