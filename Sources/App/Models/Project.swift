@@ -80,7 +80,7 @@ extension Project {
 				link: "https://itunes.apple.com/us/app/expenses-planner/id669431471?ls=1&mt=8"),
 			Project(
 				name: "Puppet Anthems",
-				description: "The fun way to learn about national anthems, for adults and kids alike. All the lyrics, all the music, all the history, and all the info related to the 32 countries from the 2014 World Cup in one great app.",
+				description: "The fun way to learn about national anthems, for adults and kids alike. All the lyrics, the music, the history, and all the info related to the 32 countries from the 2014 World Cup in one great app.",
 				image: "\(path)/puppet-anthems.png",
 				color: "#A91F13",
 				link: "http://puppetanthems.com")
