@@ -26,7 +26,8 @@
 <script>
 	window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) }
 	ga.l =+ new Date
-	ga("create", "#(trackingId)", "auto")
+	ga('create', '#(trackingId)', { 'storage': 'none', 'storeGac': false })
+	ga('set', 'anonymizeIp', true);
 	ga('send', 'pageview')
 </script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
