@@ -1,0 +1,33 @@
+@import '../globals/variables.scss';
+
+.title-container {
+	padding: 2.5em 0 0;
+	text-align: right;
+	max-width: $maxWidth;
+	margin: auto;
+
+	& a:hover {
+		border-bottom-color: transparent;
+	}
+}
+
+.title {
+	display: inline-block;
+	font-size: 2em;
+	font-weight: 600;
+	line-height: 1.2em;
+
+	&.first-half {
+		color: #00356A;
+	}
+
+	&.second-half {
+		color: $linkColor;
+	}
+}
+
+.subtitle {
+	font-style: italic;
+	font-size: 0.8em;
+	font-weight: 200;
+}

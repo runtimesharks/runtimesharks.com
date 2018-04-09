@@ -34,6 +34,7 @@ extension Droplet {
 	
 	func addRoutes() -> Droplet {
 		get("/", handler: HomeController.show)
+		get("/privacy-policy", handler: PrivacyController.display)
 		
 		return self
 	}

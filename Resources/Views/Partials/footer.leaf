@@ -5,9 +5,8 @@
 		</p>
 	</div>
 	<div class="copyright">
-		&copy;&nbsp2017–#(year)&nbspRuntime Sharks
+		&copy;&nbsp2017–#(year)&nbspRuntime Sharks&nbsp&mdash;&nbsp<a href="/privacy-policy">Privacy Policy</a></p>
 	</div>
-	<a href="https://plus.google.com/116830737199229269159?rel=author"></a>
 	<!--Apple's auto affiliate link script-->
 	<script async>
 		var _merchantSettings = _merchantSettings || []
@@ -25,3 +24,7 @@
 		})()
 	</script>
 </footer>
+
+#export("end-stylesheets") {
+	<link rel="stylesheet" href="/styles/pages/privacy-policy.css">
+}

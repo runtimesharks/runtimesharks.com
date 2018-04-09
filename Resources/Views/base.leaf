@@ -5,8 +5,10 @@
 	#import("head")
 </head>
 <body>
+	#embed("Partials/header")
 	#import("body")
 
 	#embed("Partials/footer")
+	#import("end-stylesheets")
 </body>
 </html>

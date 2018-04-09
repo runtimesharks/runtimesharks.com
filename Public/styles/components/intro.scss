@@ -1,36 +1,5 @@
 @import '../globals/variables.scss';
 
-.intro {
-	padding: 2.5em 0 0;
-}
-
-.title-container {
-	text-align: right;
-	max-width: $maxWidth;
-	margin: auto;
-}
-
-.title {
-	display: inline-block;
-	font-size: 2em;
-	font-weight: 600;
-	line-height: 1.2em;
-
-	&.first-half {
-		color: #00356A;
-	}
-
-	&.second-half {
-		color: $linkColor;
-	}
-}
-
-.subtitle {
-	font-style: italic;
-	font-size: 0.8em;
-	font-weight: 200;
-}
-
 .definitions-container, .contact-us-container {
 	border-left: solid 4px $linkColor;
 }
