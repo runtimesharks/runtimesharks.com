@@ -8,7 +8,7 @@ let package = Package(
         .executable(name: "App", targets: ["App"])
     ],
     dependencies: [
-        .package(url: "https://github.com/vapor/vapor.git", .upToNextMajor(from: "2.3.0")),
+        .package(url: "https://github.com/vapor/vapor.git", .upToNextMajor(from: "2.4.0")),
         .package(url: "https://github.com/vapor/leaf-provider.git", .upToNextMajor(from: "1.1.0"))
     ],
     targets: [

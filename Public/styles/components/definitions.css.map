@@ -1,1 +1,10 @@
-{"version":3,"sources":["definitions.scss"],"names":[],"mappings":"AAEA,aACC,gBACA,gBACA,iBAAkB,CAClB,OAGA,aAAc,CACd","file":"definitions.css"}
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,YAAY,AAAC,CACZ,WAAW,CAAE,GAAG,CAChB,SAAS,CAAE,KAAK,CAChB,WAAW,CAAE,KAAK,CAClB,AAED,AAAA,MAAM,AAAC,CACN,KAAK,CAAE,OAAO,CACd",
+    "sources": [
+        "definitions.scss",
+        "../globals/variables.scss"
+    ],
+    "names": [],
+    "file": "definitions.css"
+}
