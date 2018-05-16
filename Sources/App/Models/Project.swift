@@ -62,22 +62,28 @@ extension Project {
 				name: "DeinDeal",
 				image: "\(path)/deindeal.png",
 				color: "#C40E3D",
-				link: "https://itunes.apple.com/us/app/deindeal/id465657999?ls=1&mt=8"),
+				link: "https://itunes.apple.com/us/app/deindeal/id465657999"),
+			Project(
+				name: "Card Virtual",
+				description: "An app that helps users save their fidelity cards (or request new ones), that also displays merchants & their offers, and offers a shopping list. With the built-in friends feature, the users can share and collaborate in real-time on their shopping lists.",
+				image: "\(path)/card-virtual.png",
+				color: "#FC5F25",
+				link: "https://itunes.apple.com/ro/app/card-virtual/id1365350958"),
 			Project(
 				name: "Beraria H",
 				image: "\(path)/beraria-h.png",
 				color: "#FA8F30",
-				link: "https://itunes.apple.com/us/app/beraria-h/id1257720997?mt=8"),
+				link: "https://itunes.apple.com/us/app/beraria-h/id1257720997"),
 			Project(
 				name: "Carminder",
 				image: "\(path)/carminder.png",
 				color: "#00A29B",
-				link: "https://itunes.apple.com/us/app/carminder-super-simple-maintenance/id633617025?ls=1&amp;mt=8"),
+				link: "https://itunes.apple.com/us/app/carminder-super-simple-maintenance/id633617025"),
 			Project(
 				name: "Expenses Planner",
 				image: "\(path)/expenses-planner.png",
 				color: "#481FAF",
-				link: "https://itunes.apple.com/us/app/expenses-planner/id669431471?ls=1&mt=8"),
+				link: "https://itunes.apple.com/us/app/expenses-planner/id669431471"),
 			Project(
 				name: "Puppet Anthems",
 				description: "The fun way to learn about national anthems, for adults and kids alike. All the lyrics, the music, the history, and all the info related to the 32 countries from the 2014 World Cup in one great app.",
