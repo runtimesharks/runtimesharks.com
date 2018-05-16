@@ -36,6 +36,7 @@ extension Droplet {
 		get("/", handler: HomeController.show)
 		get("/privacy-policy", handler: PrivacyController.display)
 		get("privacy/challengebeat", handler: PrivacyController.displayChallengeBeat)
+		get("privacy/travel-stories", handler: PrivacyController.displayTravelStories)
 		
 		return self
 	}

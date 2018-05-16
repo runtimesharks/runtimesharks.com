@@ -25,4 +25,13 @@ struct PrivacyController {
 		return try drop.view.make("privacy-policy-challengebeat", with: params, for: request)
 	}
 	
+	static func displayTravelStories(with request: Request) throws -> ResponseRepresentable {
+		let params = [
+			"title": "Privacy Policy",
+			"metadata": "TravelStories' privacy policy"
+		]
+		
+		return try drop.view.make("privacy-policy-travel-stories", with: params, for: request)
+	}
+	
 }
