@@ -6,6 +6,7 @@
 //
 
 import Vapor
+import Foundation
 import LeafProvider
 
 extension Droplet {
@@ -27,7 +28,16 @@ extension Droplet {
 		config.addConfigurable(middleware: AppFileMiddleware(publicDir: config.publicDir), name: "app-file")
 		//		config.addConfigurable(middleware: GzipMiddleware(), name: "gzip")
 		
-		let drop = try Droplet(config)
+		let logger = Logger(workDir: config.workDir)
+		
+		let drop: Droplet
+		
+		if ProcessInfo.processInfo.environment["customLogger"] == "true" {
+			drop = try Droplet(config: config, log: logger)
+		}
+		else {
+			drop = try Droplet(config)
+		}
 		
 		return drop
 	}
