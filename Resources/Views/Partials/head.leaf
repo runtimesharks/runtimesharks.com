@@ -19,16 +19,3 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="HandheldFriendly" content="true">
 <meta name="MobileOptimized" content="375">
-<!--Scripts-->
-<!--
-<script src="/js/jquery.min.js"></script>
--->
-<!--Tracking-->
-<script>
-	window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) }
-	ga.l =+ new Date
-	ga('create', '#(trackingId)', { 'storage': 'none', 'storeGac': false })
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview')
-</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
