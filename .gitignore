@@ -13,6 +13,7 @@ xcuserdata
 *.xcuserstate
 DerivedData/
 .DS_Store
+*.log
 
 # End of https://www.gitignore.io/api/vapor
 

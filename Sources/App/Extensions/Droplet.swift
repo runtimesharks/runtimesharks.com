@@ -32,7 +32,7 @@ extension Droplet {
 		
 		let drop: Droplet
 		
-		if ProcessInfo.processInfo.environment["customLogger"] == "true" {
+		if config.arguments.contains("--customLogger") {
 			drop = try Droplet(config: config, log: logger)
 		}
 		else {
