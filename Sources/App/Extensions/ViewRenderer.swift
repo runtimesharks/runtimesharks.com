@@ -13,7 +13,7 @@ extension ViewRenderer {
 
 	func make(_ path: String, with params: [String: Any], for request: Request) throws -> View {
 		let footerParams: [String: Any] = [
-			"fullRoot": request.domain,
+			"fullRoot": "https://runtimesharks.com",
 			"production": drop.production,
 			"year": Calendar.current.component(.year, from: Date())
 		]
