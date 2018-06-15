@@ -3,12 +3,110 @@
 .project {
 	padding: 4em $sidePadding 0;
 	margin: auto;
+
+	&.image-left.bordered {
+		border-right: solid 4px;
+	}
+
+	&.image-right.bordered {
+		border-left: solid 4px
+	}
+
+	&.bordered {
+		&.challengebeat {
+			border-color: $challengeBeatColor;
+		}
+
+		&.deindeal {
+			border-color: $deinDealColor;
+		}
+
+		&.beraria-h {
+			border-color: $berariahColor;
+		}
+
+		&.carminder {
+			border-color: $carminderColor;
+		}
+
+		&.expenses-planner {
+			border-color: $expensesPlannerColor;
+		}
+
+		&.card-virtual {
+			border-color: $cardVirtualColor;
+		}
+
+		&.puppet-anthems {
+			border-color: $puppetAnthemsColor;
+		}
+	}
 }
 
 .project-name {
 	margin-bottom: 2.5em;
 	font-size: 1.5em;
 	font-weight: 600;
+
+	& a {
+		.challengebeat & {
+			color: $challengeBeatColor;
+		}
+
+		.deindeal & {
+			color: $deinDealColor;
+		}
+
+		.beraria-h & {
+			color: $berariahColor;
+		}
+
+		.card-virtual & {
+			color: $cardVirtualColor;
+		}
+
+		.carminder & {
+			color: $carminderColor;
+		}
+
+		.expenses-planner & {
+			color: $expensesPlannerColor;
+		}
+
+		.puppet-anthems & {
+			color: $puppetAnthemsColor;
+		}
+
+		&:hover {
+			.challengebeat & {
+				border-color: $challengeBeatColor;
+			}
+
+			.deindeal & {
+				border-color: $deinDealColor;
+			}
+
+			.beraria-h & {
+				border-color: $berariahColor;
+			}
+
+			.card-virtual & {
+				border-color: $cardVirtualColor;
+			}
+
+			.carminder & {
+				border-color: $carminderColor;
+			}
+
+			.expenses-planner & {
+				border-color: $expensesPlannerColor;
+			}
+
+			.puppet-anthems & {
+				border-color: $puppetAnthemsColor;
+			}
+		}
+	}
 }
 
 .project-meta {
