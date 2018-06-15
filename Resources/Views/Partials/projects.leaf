@@ -1,23 +1,43 @@
 <div class="projects">
 	#loop(projects, "project") {
-		<div class="project #(project.slug) bordered image-#(project.imagePosition)">
-			<header class="project-name centered">
-				<a href="#(project.link)">#(project.name)</a>
-			</header>
+		#equal(project.type, "major") {
+			<div class="project #(project.slug) bordered image-#(project.imagePosition)">
+				<header class="project-name centered">
+					<a href="#(project.link)">#(project.name)</a>
+				</header>
 
-			<div class="project-meta">
-				#equal(project.imagePosition, "left") {
-					#embed("Partials/Projects/image")
-					#embed("Partials/Projects/description")
-				} ##else() {
-					#embed("Partials/Projects/description")
-					#embed("Partials/Projects/image")
-				}
+				<div class="project-meta">
+					#equal(project.imagePosition, "left") {
+						#embed("Partials/Projects/image")
+						#embed("Partials/Projects/description")
+					} ##else() {
+						#embed("Partials/Projects/description")
+						#embed("Partials/Projects/image")
+					}
+				</div>
+
+				<div class="project-bottom-line"></div>
 			</div>
-
-			<div class="project-bottom-line"></div>
-		</div>
+		}
 	}
+
+	<div class="gallery">
+		#loop(projects, "project") {
+			#equal(project.type, "minor") {
+				#embed("Partials/minor-project")
+			}
+		}
+	</div>
+
+	<div class="second gallery">
+		<header class="project-name centered">Old & discontinued</header>
+
+		#loop(projects, "project") {
+			#equal(project.type, "old") {
+				#embed("Partials/minor-project")
+			}
+		}
+	</div>
 
 	<div class="other-projects centered">
 		For more projects, please check Roland's <a href="https://rolandleth.com/projects">page</a>.

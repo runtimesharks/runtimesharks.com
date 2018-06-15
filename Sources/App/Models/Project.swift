@@ -15,6 +15,7 @@ struct Project: NodeRepresentable {
 	var imagePosition: String
 	let link: String
 	let slug: String
+	let type: String
 
 	func makeNode(in context: Context?) throws -> Node {
 		let mirror = Mirror(reflecting: self)
@@ -33,9 +34,9 @@ struct Project: NodeRepresentable {
 	///
 	/// - Parameters:
 	///   - description: This should be skipped for projects that require raw HTML, for hrefs, for example. The description is added directly in the leaf file.
-	///   - image: The project's screenshot.
+	///   - image: The project's screenshot. Optional for minor and old projects.
 	///   - link: The project's url.
-	init(name: String, description: String = "", image: String, link: String) {
+	init(name: String, description: String = "", image: String = "", link: String, type: String) {
 		self.name = name
 		self.description = description
 		self.image = image
@@ -43,7 +44,10 @@ struct Project: NodeRepresentable {
 		self.link = link
 		self.slug = name
 			.lowercased()
+			.replacingOccurrences(of: "&", with: "")
 			.replacingOccurrences(of: " ", with: "-")
+			.replacingOccurrences(of: "--", with: "-")
+		self.type = type
 	}
 
 }
@@ -52,38 +56,65 @@ extension Project {
 
 	static func all() -> [Project] {
 		let path = "/images/project-screenshots"
+		let projectsPath = "https://rolandleth.com/projects"
 
 		var projects = [
 			Project(
 				name: "ChallengeBeat",
 				image: "\(path)/challengebeat.png",
-				link: "https://itunes.apple.com/us/app/challengebeat/id1323950655"),
+				link: "https://itunes.apple.com/us/app/challengebeat/id1323950655",
+				type: "major"),
 			Project(
 				name: "DeinDeal",
 				image: "\(path)/deindeal.png",
-				link: "https://itunes.apple.com/us/app/deindeal/id465657999"),
+				link: "https://itunes.apple.com/us/app/deindeal/id465657999",
+				type: "major"),
 			Project(
 				name: "Card Virtual",
 				description: "An app that helps users save their fidelity cards (or request new ones), that also displays merchants & their offers, and offers a shopping list. With the built-in friends feature, the users can share and collaborate in real-time on their shopping lists.",
 				image: "\(path)/card-virtual.png",
-				link: "https://itunes.apple.com/ro/app/card-virtual/id1365350958"),
+				link: "https://itunes.apple.com/ro/app/card-virtual/id1365350958",
+				type: "major"),
 			Project(
 				name: "Beraria H",
 				image: "\(path)/beraria-h.png",
-				link: "https://itunes.apple.com/us/app/beraria-h/id1257720997"),
+				link: "https://itunes.apple.com/us/app/beraria-h/id1257720997",
+				type: "major"),
+
+			Project(
+				name: "Essenza",
+				link: "https://itunes.apple.com/us/app/essenza/id1392962759?ls=1&mt=8",
+				type: "minor"),
 			Project(
 				name: "Carminder",
-				image: "\(path)/carminder.png",
-				link: "https://itunes.apple.com/us/app/carminder-super-simple-maintenance/id633617025"),
-			Project(
-				name: "Expenses Planner",
-				image: "\(path)/expenses-planner.png",
-				link: "https://itunes.apple.com/us/app/expenses-planner/id669431471"),
+				link: "https://itunes.apple.com/us/app/carminder-super-simple-maintenance/id633617025",
+				type: "minor"),
 			Project(
 				name: "Puppet Anthems",
 				description: "The fun way to learn about national anthems, for adults and kids alike. All the lyrics, the music, the history, and all the info related to the 32 countries from the 2014 World Cup in one great app.",
-				image: "\(path)/puppet-anthems.png",
-				link: "http://puppetanthems.com")
+				link: "http://puppetanthems.com",
+				type: "minor"),
+			Project(
+				name: "DeinDeal Partners",
+				link: "https://itunes.apple.com/za/app/deindeal-partners/id892826193?mt=8",
+				type: "minor"),
+
+			Project(
+				name: "Expenses Planner",
+				link: "https://itunes.apple.com/us/app/expenses-planner/id669431471",
+				type: "old"),
+			Project(
+				name: "Bouncy B",
+				link: "\(projectsPath)/bouncy-b",
+				type: "old"),
+			Project(
+				name: "iWordJuggle",
+				link: "\(projectsPath)/iwordjuggle",
+				type: "old"),
+			Project(
+				name: "SOS & Morse",
+				link: "\(projectsPath)/sos-morse",
+				type: "old")
 		]
 
 		for project in projects.enumerated() {
