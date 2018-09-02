@@ -1,8 +1,4 @@
 <div class="intro">
-	<div class="definitions-container">
-		#embed("Partials/definitions")
-	</div>
-
 	<div class="contact-us-container">
 		#embed("Partials/contact-us")
 	</div>

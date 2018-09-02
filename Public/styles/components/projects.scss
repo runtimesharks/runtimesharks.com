@@ -137,9 +137,19 @@
 	}
 }
 
-.project-image > img {
-	max-height: 400px;
-	max-width: 400px;
+.project-image {
+	img {
+		max-height: 600px;
+		max-width: 600px;
+	}
+
+	a {
+		transition: none;
+	}
+
+	a:hover {
+		border-bottom: none;
+	}
 }
 
 .project-bottom-line {
