@@ -42,7 +42,7 @@ a {
 }
 
 p {
-	margin: 0.75em 0;
+	margin: revert;
 
 	&.no-margin {
 		margin: 0;
