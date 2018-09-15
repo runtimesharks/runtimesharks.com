@@ -25,6 +25,7 @@
 
 	&.second-half {
 		color: $linkColor;
+		margin-left: 1px;
 	}
 }
 
@@ -37,6 +38,7 @@
 	font-size: 0.8em;
 	font-weight: 100;
 	line-height: 1.5em;
+	margin-top: -2x;
 }
 
 @include responsiveWidth(460px) {
