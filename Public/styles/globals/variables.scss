@@ -2,7 +2,7 @@
 $maxWidth: 700px;
 
 // Colors
-$linkColor: #0371B8;
+$linkColor: #0371b8;
 $darkGray: #585858;
 $lightGray: #cacaca;
 $gray: #888;
@@ -10,20 +10,24 @@ $backgroundColor: #fcfcfc;
 $textColor: #3b3b3b;
 $redColor: #f6291d;
 
-$challengeBeatColor: #FF0E37;
-$deinDealColor: #C40E3D;
-$cardVirtualColor: #FC5F25;
-$berariahColor: #FA8F30;
-$carminderColor: #00A29B;
-$expensesPlannerColor: #481FAF;
-$puppetAnthemsColor: #A91F13;
+$challengeBeatColor: #ff0e37;
+$deinDealColor: #c40e3d;
+$cardVirtualColor: #fc5f25;
+$berariahColor: #fa8f30;
+$carminderColor: #00a29b;
+$expensesPlannerColor: #481faf;
+$puppetAnthemsColor: #a91f13;
 
 // $bodyFont: 'Verdana', 'Arial', sans-serif;
-$bodyFont: 'Titillium Web', sans-serif;
+$headerFont: copperplate, "Copperplate", "Copperplate Gothic", "Titillium Web",
+	sans-serif;
+$bodyFont: "Titillium Web", sans-serif;
 $sidePadding: 20px;
 
 @mixin responsiveWidth($width) {
-	@media screen and (max-width: $width) { @content; }
+	@media screen and (max-width: $width) {
+		@content;
+	}
 }
 
 @mixin transition($prop, $duration) {
@@ -45,7 +49,7 @@ $sidePadding: 20px;
 	-webkit-box-orient: vertical;
 	-moz-box-orient: vertical;
 	-webkit-flex-direction: column;
-	-ms-flex-direction:column;
+	-ms-flex-direction: column;
 	flex-direction: column;
 }
 

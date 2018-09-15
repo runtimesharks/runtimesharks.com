@@ -1,4 +1,4 @@
-@import '../globals/variables.scss';
+@import "../globals/variables.scss";
 
 .project {
 	padding: 4em $sidePadding 0;
@@ -9,7 +9,7 @@
 	}
 
 	&.image-right.bordered {
-		border-left: solid 4px
+		border-left: solid 4px;
 	}
 
 	&.bordered {
@@ -124,7 +124,8 @@
 	max-width: 500px;
 }
 
-.project-description, .project-image {
+.project-description,
+.project-image {
 	display: table-cell;
 	vertical-align: middle;
 
@@ -209,7 +210,8 @@ a.image:hover {
 }
 
 @include responsiveWidth(1200px) {
-	.project-description, .project-image {
+	.project-description,
+	.project-image {
 		&.left {
 			padding: 0 40px 0 20px;
 		}
@@ -221,7 +223,8 @@ a.image:hover {
 }
 
 @include responsiveWidth(1000px) {
-	.project-description, .project-image {
+	.project-description,
+	.project-image {
 		&.left {
 			padding: 0 20px 0 10px;
 		}
@@ -233,7 +236,8 @@ a.image:hover {
 }
 
 @include responsiveWidth(900px) {
-	.project-description, .project-image {
+	.project-description,
+	.project-image {
 		&.left {
 			padding: 0 10px 0 0;
 		}
@@ -249,8 +253,10 @@ a.image:hover {
 }
 
 @include responsiveWidth(800px) {
-	.project-description, .project-image {
-		&.left, &.right {
+	.project-description,
+	.project-image {
+		&.left,
+		&.right {
 			padding: 0;
 		}
 
@@ -281,7 +287,7 @@ a.image:hover {
 }
 
 @include responsiveWidth(375px) {
-	.project-image > img {
+	.project-image img {
 		max-width: 90%;
 	}
 }

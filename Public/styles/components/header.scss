@@ -1,10 +1,11 @@
-@import '../globals/variables.scss';
+@import "../globals/variables.scss";
 
 .title-container {
 	padding: 2.5em 20px 0;
 	text-align: right;
 	max-width: $maxWidth;
 	margin: auto;
+	// font-family: $headerFont;
 
 	& a:hover {
 		border-bottom-color: transparent;
@@ -16,9 +17,10 @@
 	font-size: 2em;
 	font-weight: 600;
 	line-height: 1.2em;
+	font-family: $headerFont;
 
 	&.first-half {
-		color: #00356A;
+		color: #00356a;
 	}
 
 	&.second-half {
@@ -26,8 +28,31 @@
 	}
 }
 
+.title-space {
+	display: none;
+}
+
 .subtitle {
 	font-style: italic;
 	font-size: 0.8em;
-	font-weight: 200;
+	font-weight: 100;
+	line-height: 1.5em;
+}
+
+@include responsiveWidth(460px) {
+	.title-space {
+		display: inline-block;
+	}
+}
+
+@include responsiveWidth(360px) {
+	.title-space {
+		display: none;
+	}
+}
+
+@include responsiveWidth(330px) {
+	.title {
+		font-size: 1.9em;
+	}
 }
