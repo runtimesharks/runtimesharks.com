@@ -34,4 +34,13 @@ struct PrivacyController {
 		return try drop.view.make("privacy-policy-travelstories", with: params, for: request)
 	}
 
+	static func displayGoalee(with request: Request) throws -> ResponseRepresentable {
+		let params = [
+			"title": "Goalee's Privacy Policy",
+			"metadata": "Goalee's privacy policy"
+		]
+
+		return try drop.view.make("privacy-policy-goalee", with: params, for: request)
+	}
+
 }

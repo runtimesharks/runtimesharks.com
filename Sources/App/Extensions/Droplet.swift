@@ -47,6 +47,7 @@ extension Droplet {
 		get("privacy/runtimesharks", handler: PrivacyController.display)
 		get("privacy/challengebeat", handler: PrivacyController.displayChallengeBeat)
 		get("privacy/travelstories", handler: PrivacyController.displayTravelStories)
+		get("privacy/goalee", handler: PrivacyController.displayGoalee)
 		get("terms-and-conditions/travelstories", handler: TermsAndConditionsController.displayTravelStories)
 
 		return self
