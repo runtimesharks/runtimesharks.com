@@ -60,6 +60,14 @@ extension Project {
 
 		var projects = [
 			Project(
+				name: "Goalee",
+				description: "What drives you each day?\n"
+					+ "What matters to you the most?\n"
+					+ "Remind yourself often, so you don't forget what your true goals in life are!",
+				image: "\(path)/goalee.png",
+				link: "https://itunes.apple.com/us/app/goalee/id1438115216",
+				type: "major"),
+			Project(
 				name: "ChallengeBeat",
 				image: "\(path)/challengebeat.png",
 				link: "https://itunes.apple.com/us/app/challengebeat/id1323950655",
@@ -74,12 +82,12 @@ extension Project {
 				description: "Helps users save their fidelity cards (or request new ones), that also displays merchants & their offers and offers a shopping list. With the built-in friends feature, the users can share and collaborate in real-time on their shopping lists.",
 				image: "\(path)/card-virtual.png",
 				link: "https://itunes.apple.com/ro/app/card-virtual/id1365350958",
-				type: "major"),
+				type: "minor"),
 			Project(
 				name: "Beraria H",
 				image: "\(path)/beraria-h.png",
 				link: "https://itunes.apple.com/us/app/beraria-h/id1257720997",
-				type: "major"),
+				type: "minor"),
 
 			Project(
 				name: "Essenza",

@@ -13,6 +13,10 @@
 	}
 
 	&.bordered {
+		&.goalee {
+			border-color: $goaleeColor;
+		}
+
 		&.challengebeat {
 			border-color: $challengeBeatColor;
 		}
@@ -56,6 +60,10 @@
 	}
 
 	& a {
+		.goalee & {
+			color: $goaleeColor;
+		}
+
 		.challengebeat & {
 			color: $challengeBeatColor;
 		}
@@ -85,6 +93,10 @@
 		}
 
 		&:hover {
+			.goalee & {
+				border-color: $goaleeColor;
+			}
+
 			.challengebeat & {
 				border-color: $challengeBeatColor;
 			}
