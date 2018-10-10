@@ -55,7 +55,7 @@ struct Project: NodeRepresentable {
 extension Project {
 
 	static func all() -> [Project] {
-		let path = "/images/project-screenshots"
+		let path = "/images/projects/screenshots"
 		let projectsPath = "https://rolandleth.com/projects"
 
 		var projects = [

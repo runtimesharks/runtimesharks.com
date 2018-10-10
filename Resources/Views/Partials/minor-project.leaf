@@ -1,6 +1,6 @@
 <span>
 	<a class="image" href="#(project.link)">
-		<img class="icon" src="/images/project-screenshots/icons/#(project.slug).jpg" alt="#(project.name)'s icon">
+		<img class="icon" src="/images/projects/icons/#(project.slug).jpg" alt="#(project.name)'s icon">
 	</a>
 	<span class="icon-title">#(project.name)</span>
 </span>
