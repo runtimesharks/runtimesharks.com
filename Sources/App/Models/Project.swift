@@ -60,42 +60,41 @@ extension Project {
 
 		var projects = [
 			Project(
+				name: "My Travel Stories",
+				description: "Travel, take beautiful photos, write down your feelings and create your travel journal. Share your stories with the world and find inspiration from others for your next trips!",
+				image: "\(path)/my-travel-stories.png",
+				link: "https://itunes.apple.com/us/app/my-travel-stories/id1395335605?ls=1&mt",
+				type: "major"),
+			Project(
 				name: "Goalee",
-				description: "What drives you each day?\n"
-					+ "What matters to you the most?\n"
-					+ "Remind yourself often, so you don't forget what your true goals in life are!",
+				description: "What drives you each day? What matters to you the most? Remind yourself often, so you don't forget what your true goals in life are!",
 				image: "\(path)/goalee.png",
-				link: "https://itunes.apple.com/us/app/goalee/id1438115216",
+				link: "https://itunes.apple.com/us/app/goalee/id1438115216?ls=1&mt",
 				type: "major"),
 			Project(
 				name: "ChallengeBeat",
 				image: "\(path)/challengebeat.png",
-				link: "https://itunes.apple.com/us/app/challengebeat/id1323950655",
+				link: "https://itunes.apple.com/us/app/challengebeat/id1323950655?ls=1&mt",
 				type: "major"),
-			Project(
-				name: "DeinDeal",
-				image: "\(path)/deindeal.png",
-				link: "https://itunes.apple.com/us/app/deindeal/id465657999",
-				type: "major"),
+
 			Project(
 				name: "Card Virtual",
 				description: "Helps users save their fidelity cards (or request new ones), that also displays merchants & their offers and offers a shopping list. With the built-in friends feature, the users can share and collaborate in real-time on their shopping lists.",
 				image: "\(path)/card-virtual.png",
-				link: "https://itunes.apple.com/ro/app/card-virtual/id1365350958",
+				link: "https://itunes.apple.com/ro/app/card-virtual/id1365350958?ls=1&mt",
 				type: "minor"),
 			Project(
 				name: "Beraria H",
 				image: "\(path)/beraria-h.png",
-				link: "https://itunes.apple.com/us/app/beraria-h/id1257720997",
+				link: "https://itunes.apple.com/us/app/beraria-h/id1257720997?ls=1&mt",
 				type: "minor"),
-
 			Project(
 				name: "Essenza",
 				link: "https://itunes.apple.com/us/app/essenza/id1392962759?ls=1&mt=8",
 				type: "minor"),
 			Project(
 				name: "Carminder",
-				link: "https://itunes.apple.com/us/app/carminder-super-simple-maintenance/id633617025",
+				link: "https://itunes.apple.com/us/app/carminder-super-simple-maintenance/id633617025?ls=1&mt",
 				type: "minor"),
 			Project(
 				name: "Puppet Anthems",
@@ -103,13 +102,18 @@ extension Project {
 				link: "http://puppetanthems.com",
 				type: "minor"),
 			Project(
+				name: "DeinDeal",
+				image: "\(path)/deindeal.png",
+				link: "https://itunes.apple.com/us/app/deindeal/id465657999",
+				type: "minor"),
+			Project(
 				name: "DeinDeal Partners",
-				link: "https://itunes.apple.com/za/app/deindeal-partners/id892826193?mt=8",
+				link: "https://itunes.apple.com/za/app/deindeal-partners/id892826193",
 				type: "minor"),
 
 			Project(
 				name: "Expenses Planner",
-				link: "https://itunes.apple.com/us/app/expenses-planner/id669431471",
+				link: "https://itunes.apple.com/us/app/expenses-planner/id669431471?ls=1&mt",
 				type: "old"),
 			Project(
 				name: "Bouncy B",
