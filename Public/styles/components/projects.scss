@@ -181,7 +181,8 @@ a.image:hover {
 	text-align: center;
 	font-weight: 500;
 	font-size: 0.75em;
-	margin-top: 6em;
+	max-width: 600px;
+	margin: 6em auto;
 
 	&.second {
 		margin-top: 3em;
@@ -276,6 +277,10 @@ a.image:hover {
 		display: block;
 	}
 
+	.gallery {
+		max-width: 550px;
+	}
+
 	.project-description {
 		margin: 3em auto 0;
 		max-width: 90%;
@@ -296,6 +301,12 @@ a.image:hover {
 
 	.project-image.centered.right {
 		@include flexPosition(1);
+	}
+}
+
+@include responsiveWidth(500px) {
+	.gallery {
+		max-width: 400px;
 	}
 }
 
