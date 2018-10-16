@@ -3,6 +3,9 @@
 #export("body") {
 	<div class="content side-padded">
 		<h1>Coming soon</h1>
+		<p>
+			We're working hard on creating our first workshop. In the meantime, please <a href="mailto:workshops@runtimesharks.com">get in touch</a> if you'd like to tailor something just for you.
+		</p>
 	</div>
 }
 
