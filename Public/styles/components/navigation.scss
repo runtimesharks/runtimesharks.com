@@ -20,7 +20,7 @@ nav {
 	max-width: $maxWidth;
 	margin: auto;
 
-	& a {
+	& .nav-item {
 		flex: 1;
 
 		&:hover {
@@ -37,6 +37,10 @@ nav {
 			cursor: pointer;
 			white-space: nowrap;
 			border: none;
+
+			&.selected {
+				border-bottom: 0.5px solid $linkColor;
+			}
 
 			@include transition(all, 0.25s);
 

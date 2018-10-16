@@ -1,8 +1,8 @@
 <div class="navigation centered side-padded" role="navigation">
 	<nav>
-		<a href="/projects"><button>Projects</button></a>
-		<a href="/workshops"><button>Workshops</button></a>
-		<a href="/mentoring"><button>Mentoring</button></a>
-		<a href="/consulting"><button>Consulting</button></a>
+		<a class="nav-item" href="/projects"><button>Projects</button></a>
+		<a class="nav-item" href="/workshops"><button>Workshops</button></a>
+		<a class="nav-item" href="/mentoring"><button>Mentoring</button></a>
+		<a class="nav-item" href="/consulting"><button>Consulting</button></a>
 	</nav>
 </div>
