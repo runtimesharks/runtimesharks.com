@@ -1,12 +1,1 @@
 #extend("base")
-
-#export("head") {
-	<link rel="stylesheet" href="/styles/components/intro.css">
-	<link rel="stylesheet" href="/styles/components/definitions.css">
-	<link rel="stylesheet" href="/styles/components/projects.css">
-}
-
-#export("body") {
-	#embed("Partials/intro")
-	#embed("Partials/projects")
-}
