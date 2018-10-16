@@ -1,9 +1,5 @@
 #extend("base")
 
-#export("head") {
-	<link rel="stylesheet" href="/styles/components/mentoring.css">
-}
-
 #export("body") {
 	<div class="content side-padded">
 		<h1>Learning from zero</h1>

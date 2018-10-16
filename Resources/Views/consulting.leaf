@@ -1,11 +1,25 @@
 #extend("base")
 
-#export("head") {
-	<link rel="stylesheet" href="/styles/components/intro.css">
-	<link rel="stylesheet" href="/styles/components/projects.css">
+#export("body") {
+	<div class="content side-padded">
+		<h1>Best practices</h1>
+		<p>
+			Would you like your team to learn best practices? Writing clean code, architecture, git, team collaboration or shipping process, we'd love to work with your team.
+		</p>
+		<h1>Code review</h1>
+		<p>
+			Do you have an existing app/codebase that you'd like reviewed? Do you need tips and advice on how to untangle and clean old code? Do you need old code fixed/improved? Let us work with you on the best solution, from architecture to code style — everything matters.
+		</p>
+		<h1>Software solutions</h1>
+		<p>
+			Do you have a business and would like a website or an app developed, but don't know where to start? Talk with us about your business in detail, about your goals and expectations and we'll find the best solution. At the end, we can also work with you on creating it.
+		</p>
+	</div>
+	<div class="centered side-padded">
+		If you're interested, please <a href="mailto:consulting@runtimesharks.com">get in touch</a>; we'd love to talk.
+	</div>
 }
 
-#export("body") {
-	#embed("Partials/intro")
-	#embed("Partials/projects")
+#export("end-stylesheets") {
+	<link rel="stylesheet" href="/styles/components/content.css">
 }

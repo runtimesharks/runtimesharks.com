@@ -1,11 +1,11 @@
 #extend("base")
 
-#export("head") {
-	<link rel="stylesheet" href="/styles/components/intro.css">
-	<link rel="stylesheet" href="/styles/components/projects.css">
+#export("body") {
+	<div class="content side-padded">
+		<h1>Coming soon</h1>
+	</div>
 }
 
-#export("body") {
-	#embed("Partials/intro")
-	#embed("Partials/projects")
+#export("end-stylesheets") {
+	<link rel="stylesheet" href="/styles/components/content.css">
 }
