@@ -51,6 +51,12 @@
 	margin-top: -5px;
 }
 
+@include responsiveWidth(630px) {
+	.nav-padding {
+		height: 76px;
+	}
+}
+
 @include responsiveWidth(460px) {
 	.title-space {
 		display: inline-block;

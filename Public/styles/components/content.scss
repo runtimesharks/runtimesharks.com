@@ -16,3 +16,9 @@
 		padding: 0.25em 0;
 	}
 }
+
+@include responsiveWidth(630px) {
+	.content {
+		padding-top: 3em;
+	}
+}
