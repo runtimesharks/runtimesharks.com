@@ -1,5 +1,9 @@
 @import "../globals/variables.scss";
 
+.projects {
+	padding: 3em 0;
+}
+
 .project {
 	padding: 4em $sidePadding 0;
 	margin: auto;
@@ -13,6 +17,10 @@
 	}
 
 	&.bordered {
+		&.my-travel-stories {
+			border-color: $travelStoriesColor;
+		}
+
 		&.goalee {
 			border-color: $goaleeColor;
 		}
@@ -60,6 +68,10 @@
 	}
 
 	& a {
+		&.my-travel-stories {
+			border-color: $travelStoriesColor;
+		}
+
 		.goalee & {
 			color: $goaleeColor;
 		}
@@ -93,6 +105,10 @@
 		}
 
 		&:hover {
+			.my-travel-stories & {
+				border-color: $travelStoriesColor;
+			}
+
 			.goalee & {
 				border-color: $goaleeColor;
 			}
@@ -167,7 +183,7 @@
 }
 
 .project-bottom-line {
-	margin: 2em auto auto;
+	margin: 3em auto auto;
 	border-bottom: solid 0.5px $lightGray;
 	max-width: $maxWidth;
 }

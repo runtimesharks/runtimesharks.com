@@ -6,6 +6,6 @@
 }
 
 #export("body") {
-	<!--#embed("Partials/intro")-->
+	#embed("Partials/intro")
 	#embed("Partials/projects")
 }
