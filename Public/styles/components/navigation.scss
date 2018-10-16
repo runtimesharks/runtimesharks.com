@@ -39,7 +39,7 @@ nav {
 			border: none;
 
 			&.selected {
-				border-bottom: 0.5px solid $linkColor;
+				border-top: 0.5px solid $linkColor;
 			}
 
 			@include transition(all, 0.25s);

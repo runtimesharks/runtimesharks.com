@@ -1,7 +1,7 @@
 document.addEventListener(
 	"scroll",
 	() => {
-		const passedFixedTreshold = window.scrollY > 122
+		const passedFixedTreshold = window.scrollY > 121
 		const navPadding = document.getElementsByClassName("nav-padding")[0]
 		const nav = document.getElementsByClassName("navigation")[0]
 
