@@ -10,6 +10,7 @@
 <!--Stylesheets-->
 <link rel="stylesheet" href="/styles/globals/base.css">
 <link rel="stylesheet" href="/styles/components/header.css">
+<link rel="stylesheet" href="/styles/components/navigation.css">
 <link rel="stylesheet" href="/styles/components/footer.css">
 <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600" rel="stylesheet">
 <!--

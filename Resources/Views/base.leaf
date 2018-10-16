@@ -6,6 +6,7 @@
 </head>
 <body>
 	#embed("Partials/header")
+	#embed("Partials/navigation")
 	#import("body")
 
 	#embed("Partials/footer")

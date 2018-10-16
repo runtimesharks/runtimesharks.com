@@ -1,0 +1,7 @@
+<div class="navigation" role="navigation">
+	<nav class="side-padded">
+		<a href="/projects"><button>Projects</button></a>
+		<a href="/workshops"><button>Workshops</button></a>
+		<a href="/mentoring"><button>Mentoring</button></a>
+	</nav>
+</div>

@@ -219,10 +219,6 @@ a.image:hover {
 	}
 }
 
-.other-projects {
-	padding-top: 3em;
-}
-
 @include responsiveWidth(1200px) {
 	.project-description,
 	.project-image {
