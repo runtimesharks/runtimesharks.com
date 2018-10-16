@@ -1,10 +1,24 @@
 @import "../globals/variables.scss";
 
+.navigation {
+	// padding: 2.5em 0;
+	padding: 0.7em 0 0.5em;
+	margin: auto;
+
+	&.fixed {
+		position: fixed;
+		top: 0;
+		background: white;
+		width: 100%;
+		border-bottom: 0.5px solid $linkColor;
+	}
+}
+
 nav {
-	margin: 2em auto;
 	display: flex;
 	text-align: center;
 	max-width: $maxWidth;
+	margin: auto;
 
 	& a {
 		flex: 1;
