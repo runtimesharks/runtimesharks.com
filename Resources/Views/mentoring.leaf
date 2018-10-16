@@ -1,11 +1,25 @@
 #extend("base")
 
 #export("head") {
-	<link rel="stylesheet" href="/styles/components/intro.css">
-	<link rel="stylesheet" href="/styles/components/projects.css">
+	<link rel="stylesheet" href="/styles/components/mentoring.css">
 }
 
 #export("body") {
-	#embed("Partials/intro")
-	#embed("Partials/projects")
+	<div class="content side-padded">
+		<h1>Learning from zero</h1>
+		<p>
+			Would you like to learn programming? No matter the language, let us help you! We will start with an intro session, where we'll understand your goals. We'll then work together a suggested of 2–3 times/week and get you up and running with the basics. At the end, you should be able to apply to any junior position. If you'd like to continue after that, we'd be happy to!
+		</p>
+		<h1>Learning iOS</h1>
+		<p>
+			Are you already a developer, but would like to learn iOS? Or maybe you're already an iOS developer that would like to go to the next level. After a quick chat where we'll understand your needs, we'll tailor a learning plan just for you. The suggested frequency is of 2–3 times/week, but daily is also an option.
+		</p>
+	</div>
+	<div class="centered side-padded">
+		If you're interested, please <a href="mailto:mentoring@runtimesharks.com">get in touch</a>; we'd love to talk.
+	</div>
+}
+
+#export("end-stylesheets") {
+	<link rel="stylesheet" href="/styles/components/content.css">
 }
