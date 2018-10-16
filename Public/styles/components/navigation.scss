@@ -1,0 +1,55 @@
+@import "../globals/variables.scss";
+
+.navigation {
+	// padding: 2.5em 0;
+	padding: 0.7em 0 0.5em;
+	margin: auto;
+
+	&.fixed {
+		position: fixed;
+		top: 0;
+		background: white;
+		width: 100%;
+		border-bottom: 0.5px solid $linkColor;
+	}
+}
+
+nav {
+	display: flex;
+	text-align: center;
+	max-width: $maxWidth;
+	margin: auto;
+
+	& .nav-item {
+		flex: 1;
+
+		&:hover {
+			border-bottom-color: transparent;
+		}
+
+		& button {
+			font-family: $headerFont;
+			font-size: 1em;
+			color: $linkColor;
+			background: none;
+			border-radius: 8px;
+			padding: 8px 20px;
+			cursor: pointer;
+			white-space: nowrap;
+			border: none;
+
+			&.selected {
+				border-top: 0.5px solid $linkColor;
+			}
+
+			@include transition(all, 0.25s);
+
+			&:hover {
+				background: $linkColor none repeat;
+				color: white;
+				box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px;
+				transform: translateY(-3px);
+			}
+		}
+	}
+}

@@ -1,6 +1,7 @@
-@import '../globals/variables.scss';
+@import "../globals/variables.scss";
 
-.definitions-container, .contact-us-container {
+.definitions-container,
+.contact-us-container {
 	border-left: solid 4px $linkColor;
 }
 
@@ -14,9 +15,12 @@
 	}
 }
 
+.intro {
+	padding-top: 3em;
+}
+
 .contact-us-container {
-	// padding: 1em 0 1em;
-	padding: 5em 0 2em;
+	padding: 2em 0;
 }
 
 .contact-us {

@@ -1,7 +1,7 @@
 @import "../globals/variables.scss";
 
 .title-container {
-	padding: 2.5em 20px 0;
+	padding: 2.5em 20px 1em;
 	text-align: right;
 	max-width: $maxWidth;
 	margin: auto;
@@ -9,6 +9,16 @@
 
 	& a:hover {
 		border-bottom-color: transparent;
+	}
+}
+
+.nav-padding {
+	height: 24px;
+	padding: 1em;
+	display: none;
+
+	&.visible {
+		display: block;
 	}
 }
 
@@ -20,7 +30,7 @@
 	font-family: $headerFont;
 
 	&.first-half {
-		color: #00356a;
+		color: $darkBlue;
 	}
 
 	&.second-half {

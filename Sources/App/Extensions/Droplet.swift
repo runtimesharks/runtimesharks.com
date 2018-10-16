@@ -43,12 +43,21 @@ extension Droplet {
 	}
 
 	func addRoutes() -> Droplet {
-		get("/", handler: HomeController.show)
-		get("privacy/runtimesharks", handler: PrivacyController.display)
-		get("privacy/challengebeat", handler: PrivacyController.displayChallengeBeat)
-		get("privacy/travelstories", handler: PrivacyController.displayTravelStories)
-		get("privacy/goalee", handler: PrivacyController.displayGoalee)
-		get("terms-and-conditions/travelstories", handler: TermsAndConditionsController.displayTravelStories)
+		let builders = [self, grouped("ro")]
+
+		builders.forEach {
+			$0.get("/", handler: HomeController.show)
+			$0.get("/projects", handler: ProjectsController.show)
+			$0.get("/workshops", handler: WorkshopsController.show)
+			$0.get("/mentoring", handler: MentoringController.show)
+			$0.get("/consulting", handler: ConsultingController.show)
+
+			$0.get("privacy/runtimesharks", handler: PrivacyController.display)
+			$0.get("privacy/challengebeat", handler: PrivacyController.displayChallengeBeat)
+			$0.get("privacy/travelstories", handler: PrivacyController.displayTravelStories)
+			$0.get("privacy/goalee", handler: PrivacyController.displayGoalee)
+			$0.get("terms-and-conditions/travelstories", handler: TermsAndConditionsController.displayTravelStories)
+		}
 
 		return self
 	}

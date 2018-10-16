@@ -7,13 +7,15 @@ import HTTP
 
 struct PrivacyController {
 
+	private static let path = "Privacy Policy"
+
 	static func display(with request: Request) throws -> ResponseRepresentable {
 		let params = [
 			"title": "Privacy Policy",
 			"metadata": "Runtime Shark's privacy policy"
 		]
 
-		return try drop.view.make("privacy-policy", with: params, for: request)
+		return try drop.view.make("\(path)/runtimesharks", with: params, for: request)
 	}
 
 	static func displayChallengeBeat(with request: Request) throws -> ResponseRepresentable {
@@ -22,7 +24,7 @@ struct PrivacyController {
 			"metadata": "ChallengeBeat's privacy policy"
 		]
 
-		return try drop.view.make("privacy-policy-challengebeat", with: params, for: request)
+		return try drop.view.make("\(path)/challengebeat", with: params, for: request)
 	}
 
 	static func displayTravelStories(with request: Request) throws -> ResponseRepresentable {
@@ -31,7 +33,7 @@ struct PrivacyController {
 			"metadata": "Travel Stories' privacy policy"
 		]
 
-		return try drop.view.make("privacy-policy-travelstories", with: params, for: request)
+		return try drop.view.make("\(path)/travelstories", with: params, for: request)
 	}
 
 	static func displayGoalee(with request: Request) throws -> ResponseRepresentable {
@@ -40,7 +42,7 @@ struct PrivacyController {
 			"metadata": "Goalee's privacy policy"
 		]
 
-		return try drop.view.make("privacy-policy-goalee", with: params, for: request)
+		return try drop.view.make("\(path)/goalee", with: params, for: request)
 	}
 
 }
