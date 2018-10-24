@@ -8,7 +8,7 @@
 	&.fixed {
 		position: fixed;
 		top: 0;
-		background: white;
+		background: $backgroundColor;
 		width: 100%;
 		border-bottom: 0.5px solid $linkColor;
 	}
