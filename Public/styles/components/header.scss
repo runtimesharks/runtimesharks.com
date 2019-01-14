@@ -39,10 +39,6 @@
 	}
 }
 
-.title-space {
-	display: none;
-}
-
 .subtitle {
 	font-style: italic;
 	font-size: 0.8em;
@@ -54,18 +50,6 @@
 @include responsiveWidth(630px) {
 	.nav-padding {
 		height: 76px;
-	}
-}
-
-@include responsiveWidth(460px) {
-	.title-space {
-		display: inline-block;
-	}
-}
-
-@include responsiveWidth(360px) {
-	.title-space {
-		display: none;
 	}
 }
 
