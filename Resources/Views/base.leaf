@@ -4,9 +4,7 @@
 	#embed("Partials/head")
 	#import("head")
 	<script src="https://cdn.paddle.com/paddle/paddle.js"></script>
-	<script type="text/javascript">
-		Paddle.Setup({ vendor: 39394 });
-	</script>
+	<script src="/js/paddle.js"></script>
 </head>
 <body>
 	#embed("Partials/header")
