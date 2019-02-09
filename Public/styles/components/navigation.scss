@@ -8,9 +8,10 @@
 	&.fixed {
 		position: fixed;
 		top: 0;
-		background: $backgroundColor;
+		background: rgba(255, 255, 255, 0.9);
 		width: 100%;
 		border-bottom: 0.5px solid $linkColor;
+		-webkit-backdrop-filter: blur(10px);
 	}
 }
 

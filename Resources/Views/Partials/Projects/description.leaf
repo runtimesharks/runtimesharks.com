@@ -14,7 +14,25 @@
 	##equal(project.name, "Expenses Planner") {
 		Helps you keep track of your upcoming expenses. Easily set up your upcoming expenses, their recurring intervals, a reminder, and how often you'd like to be reminded. <em>[Discontinued as of 2014]</em>
 	}
+	##equal(project.name, "DND Me") {
+		Ever wanted to get more focused work done?
+		<br />
+		Do you turn Do Not Disturb on, but forget to turn it off?
+		<br />
+		<br />
+		Look no further!
+		<br />
+		Activate Do Not Disturb for a few hours and work distraction free!
+	}
 	##() {
 		#(project.description)
+	}
+
+	#if(project.paddleProductId) {
+		<br />
+		<br />
+		<a href="#!"
+			class="paddle_button"
+			data-product="#(project.paddleProductId)">Buy Now!</a>
 	}
 </div>

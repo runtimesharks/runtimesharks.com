@@ -47,11 +47,11 @@ extension Droplet {
 
 		builders.forEach {
 			$0.get("/", handler: HomeController.show)
-			$0.get("/projects", handler: ProjectsController.show)
+			
 			$0.get("/workshops", handler: WorkshopsController.show)
 			$0.get("/mentoring", handler: MentoringController.show)
 			$0.get("/consulting", handler: ConsultingController.show)
-
+			ProjectsController.addRoutes(to: $0)
 			$0.get("privacy/runtimesharks", handler: PrivacyController.display)
 			$0.get("privacy/challengebeat", handler: PrivacyController.displayChallengeBeat)
 			$0.get("privacy/travelstories", handler: PrivacyController.displayTravelStories)

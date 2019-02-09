@@ -7,5 +7,30 @@
 
 #export("body") {
 	<!--#embed("Partials/intro")-->
-	#embed("Partials/projects")
+	<div class="projects">
+		#loop(projects, "project") {
+			#equal(project.type, "major") {
+				#embed("Partials/major-project")
+				<div class="project-bottom-line"></div>
+			}
+		}
+
+		<div class="gallery">
+			#loop(projects, "project") {
+				#equal(project.type, "minor") {
+					#embed("Partials/minor-project")
+				}
+			}
+		</div>
+
+		<div class="second gallery">
+			<header class="project-name centered">Discontinued</header>
+
+			#loop(projects, "project") {
+				#equal(project.type, "discontinued") {
+					#embed("Partials/minor-project")
+				}
+			}
+		</div>
+	</div>
 }

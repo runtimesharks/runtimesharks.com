@@ -1,0 +1,39 @@
+@import "../globals/variables.scss";
+
+.project-image {
+	img {
+		max-height: 400px;
+		max-width: 400px;
+	}
+}
+
+.gallery {
+	display: grid;
+	max-width: 730px;
+	grid-template-columns: auto auto;
+	grid-column-gap: 80px;
+	margin: 100px auto 0;
+
+	@include responsiveWidth(820px) {
+		grid-column-gap: 40px;
+	}
+
+	@include responsiveWidth(760px) {
+		grid-template-columns: auto;
+		grid-template-rows: auto auto;
+		grid-row-gap: 80px;
+	}
+
+	img {
+		display: block;
+		max-height: 400px;
+		max-width: 400px;
+		margin: auto;
+	}
+}
+
+.image-caption {
+	color: #666;
+	font-size: 0.9em;
+	margin-top: 4px;
+}
