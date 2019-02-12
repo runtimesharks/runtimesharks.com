@@ -287,6 +287,10 @@ a.image:hover {
 		}
 
 		display: block;
+
+		img {
+			max-width: 90%;
+		}
 	}
 
 	.gallery {
@@ -319,11 +323,5 @@ a.image:hover {
 @include responsiveWidth(500px) {
 	.gallery {
 		max-width: 400px;
-	}
-}
-
-@include responsiveWidth(375px) {
-	.project-image img {
-		max-width: 90%;
 	}
 }

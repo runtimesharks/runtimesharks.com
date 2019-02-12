@@ -4,6 +4,10 @@
 	img {
 		max-height: 400px;
 		max-width: 400px;
+
+		@include responsiveWidth(450px) {
+			max-width: 90%;
+		}
 	}
 }
 
