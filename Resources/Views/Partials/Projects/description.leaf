@@ -31,6 +31,9 @@
 	#if(project.paddleProductId) {
 		<br />
 		<br />
+		<a href="https://dl.devmate.com/com.runtimesharks.dndme/DNDMe.dmg"
+			class="paddle_button_dark"
+			data-init="false">Download</a>
 		<a href="#!"
 			class="paddle_button"
 			data-product="#(project.paddleProductId)">Buy Now!</a>
