@@ -14,7 +14,7 @@ struct Project: NodeRepresentable {
 		case minor
 		case discontinued
 	}
-	
+
 	let name: String
 	var description: String
 	let paddleProductId: String?
@@ -123,7 +123,7 @@ extension Project {
 				name: "My Travel Stories",
 				description: "Travel, take beautiful photos, write down your feelings and create your travel journal. Share your stories with the world and find inspiration from others for your next trips!",
 				image: "\(path)/my-travel-stories.png",
-				link: "https://itunes.apple.com/us/app/my-travel-stories/id1395335605?ls=1&mt",
+				link: "https://travelstories.world",
 				state: .discontinued),
 			Project(
 				name: "Expenses Planner",

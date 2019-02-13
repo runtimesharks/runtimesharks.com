@@ -9,6 +9,22 @@
 		<p>
 			We are truly dedicated to creating a great user experience. Since every app is unique, we will work with you right from the start and offer guidance, product feedback, create a roadmap and a development plan. If you have wireframes and/or designs, that's great! If you don't, let us tailor something just for you.
 		</p>
+		<h1>We have experience with</h1>
+		<div class="technologies-wrapper">
+			<div class="technologies">
+				<div class="technology">
+					#embed("Partials/Icons/swift")
+					<span class="technology-caption">iOS & Mac</span>
+				</div>
+				<div class="technology">
+					<div class="technology-wrapper">
+						#embed("Partials/Icons/nodejs")
+						#embed("Partials/Icons/react")
+					</div>
+					<span class="technology-caption">Web</span>
+				</div>
+			</div>
+		</div>
 		<h1>Teaching & Consulting</h1>
 		<p>
 			Roland has more than 7 years of iOS experience; he's been writing on <a href="https://rolandleth.com">his blog</a> since 2013 and has been <a href="https://codementor.io/rolandleth">mentoring</a> since 2017. Whether you'd like a 1:1 mentorship, a mobile-focused on-site workshop for your company, or consulting services, our team is here to help.
