@@ -23,6 +23,8 @@
 		Look no further!
 		<br />
 		Activate Do Not Disturb for a few hours and work distraction free!
+		<br />
+		<p class="disclaimer">*Due to system limitations, DND Me does not work if Do Not Disturb is scheduled in System Preferences -> Notifications.</p>
 	}
 	##() {
 		#(project.description)
