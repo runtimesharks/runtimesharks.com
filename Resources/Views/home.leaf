@@ -13,7 +13,10 @@
 		<div class="technologies-wrapper">
 			<div class="technologies">
 				<div class="technology">
-					#embed("Partials/Icons/swift")
+					<div class="technology-wrapper">
+						#embed("Partials/Icons/swift")
+						#embed("Partials/Icons/react-native")
+					</div>
 					<span class="technology-caption">iOS & Mac</span>
 				</div>
 				<div class="technology">
