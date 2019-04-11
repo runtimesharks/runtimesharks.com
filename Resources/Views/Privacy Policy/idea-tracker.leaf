@@ -1,0 +1,16 @@
+#extend("base")
+
+#export("head") {
+	<meta name="robots" content="none">
+}
+
+#export("body") {
+	<div class="content side-padded">
+		<p><strong>Privacy Policy of Idea Trackerr</strong></p>
+		<p>This app doesn't collect, transfer or sync any information. All the information you create stays on your device and is deleted once you delete the app.</p>
+	</div>
+}
+
+#export("end-stylesheets") {
+	<link rel="stylesheet" href="/styles/pages/privacy-policy.css">
+}
