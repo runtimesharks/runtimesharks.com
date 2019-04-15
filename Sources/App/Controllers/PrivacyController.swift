@@ -12,7 +12,7 @@ struct PrivacyController {
 	static func display(with request: Request) throws -> ResponseRepresentable {
 		let params = [
 			"title": "Privacy Policy",
-			"metadata": "Runtime Shark's privacy policy"
+			"metadata": "Runtime Shark's Privacy policy"
 		]
 
 		return try drop.view.make("\(path)/runtimesharks", with: params, for: request)
@@ -21,7 +21,7 @@ struct PrivacyController {
 	static func displayChallengeBeat(with request: Request) throws -> ResponseRepresentable {
 		let params = [
 			"title": "ChalleneBeat's Privacy Policy",
-			"metadata": "ChallengeBeat's privacy policy"
+			"metadata": "ChallengeBeat's Privacy policy"
 		]
 
 		return try drop.view.make("\(path)/challengebeat", with: params, for: request)
@@ -30,7 +30,7 @@ struct PrivacyController {
 	static func displayTravelStories(with request: Request) throws -> ResponseRepresentable {
 		let params = [
 			"title": "Travel Stories' Privacy Policy",
-			"metadata": "Travel Stories' privacy policy"
+			"metadata": "Travel Stories' Privacy policy"
 		]
 
 		return try drop.view.make("\(path)/travelstories", with: params, for: request)
@@ -39,10 +39,19 @@ struct PrivacyController {
 	static func displayGoalee(with request: Request) throws -> ResponseRepresentable {
 		let params = [
 			"title": "Goalee's Privacy Policy",
-			"metadata": "Goalee's privacy policy"
+			"metadata": "Goalee's Privacy policy"
 		]
 
 		return try drop.view.make("\(path)/goalee", with: params, for: request)
+	}
+
+	static func displayIdeaTracker(with request: Request) throws -> ResponseRepresentable {
+		let params = [
+			"title": "Idea Trackerr's Privacy Policy",
+			"metadata": "Idea Trackerr's Privacy policy"
+		]
+
+		return try drop.view.make("\(path)/idea-tracker", with: params, for: request)
 	}
 
 }
