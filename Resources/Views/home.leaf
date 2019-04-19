@@ -17,7 +17,7 @@
 						#embed("Partials/Icons/swift")
 						#embed("Partials/Icons/react-native")
 					</div>
-					<span class="technology-caption">iOS & Mac</span>
+					<span class="technology-caption">iOS, Android & Mac</span>
 				</div>
 				<div class="technology">
 					<div class="technology-wrapper">
@@ -30,7 +30,7 @@
 		</div>
 		<h1>Teaching & Consulting</h1>
 		<p>
-			Roland has more than 7 years of iOS experience; he's been writing on <a href="https://rolandleth.com">his blog</a> since 2013 and has been <a href="https://codementor.io/rolandleth">mentoring</a> since 2017. Whether you'd like a 1:1 mentorship, a mobile-focused on-site workshop for your company, or consulting services, our team is here to help.
+			Roland has more than 8 years of iOS experience; he's been writing on <a href="https://rolandleth.com">his blog</a> since 2013 and has been <a href="https://codementor.io/rolandleth">mentoring</a> since 2017. Whether you'd like a 1:1 mentorship, a mobile-focused on-site workshop for your company, or consulting services, our team is here to help.
 		</p>
 	</div>
 	<div class="centered side-padded">
