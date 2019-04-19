@@ -6,20 +6,31 @@ struct ProjectsController {
 
 	static func addRoutes(to builder: RouteBuilder) {
 		let builder = builder.grouped("projects")
-		
+
 		builder.get("/", handler: show)
 		builder.get("/dnd-me", handler: showDNDMe)
+
+		Project.all().forEach {
+			builder.get($0.link.replacingOccurrences(of: "/projects", with: ""), handler: showProject)
+		}
 	}
+
+	static func showProject(with request: Request) throws -> ResponseRepresentable {
+		let project = Project.all().first { $0.link == request.uri.path }
+
+		return try drop.view.make("project", with: ["project": project], for: request)
+	}
+
 
 	// MARK: - Routes
 
 	static func showDNDMe(with request: Request) throws -> ResponseRepresentable {
 		let path = "/images/projects/dnd-me/"
-		
+
 		var project = Project.all().first { $0.name == "DND Me" }!
 		project.image = "\(path)off-menu.png"
 		project.link = ""
-		
+
 		let parameters: [String : Any] = [
 			"project": project,
 			"gallery": [
@@ -33,10 +44,10 @@ struct ProjectsController {
 				]
 			]
 		]
-		
+
 		return try drop.view.make("project", with: parameters, for: request)
 	}
-	
+
 	static func show(with request: Request) throws -> ResponseRepresentable {
 		let parameters = [
 			"projects": Project.all()

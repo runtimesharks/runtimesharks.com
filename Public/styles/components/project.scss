@@ -11,6 +11,10 @@
 	}
 }
 
+.paddle_button_dark {
+	background: linear-gradient($linkColor 0%, $darkBlue 100%);
+}
+
 .disclaimer {
 	font-size: 0.8em;
 	color: #bbb;

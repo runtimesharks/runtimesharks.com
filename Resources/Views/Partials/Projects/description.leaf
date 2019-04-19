@@ -5,6 +5,12 @@
 	##equal(project.name, "DeinDeal") {
 		Between 2013 and 2017, Roland has worked for <a href="https://deindeal.ch">DeinDeal</a>, one of the dominating flash-sales companies in Switzerland &amp; part of <a href="http://ringier.com">Ringier AG</a>, and starting with 2014 he took the role of iOS Lead.
 	}
+	##equal(project.name, "DeinDeal Partners") {
+			Between 2013 and 2017, Roland has worked for <a href="https://deindeal.ch">DeinDeal</a>, one of the dominating flash-sales companies in Switzerland &amp; part of <a href="http://ringier.com">Ringier AG</a>, and starting with 2014 he took the role of iOS Lead.
+	}
+	##equal(project.name, "Essenza") {
+			In 2018, <a href="http://www.christian-boegner.ch/">Christian Boegner</a> has reached out to us for what appears to be a simple app, but it has a lot of value. Always have a handy list of self improvement essentials and takeaways.
+	}
 	##equal(project.name, "Beraria H") {
 		In 2017, Roland worked with <a href="http://www.sniperlab.com">Sniperlab</a> to create an app for the largest beer hall in Europe, <a href="http://berariah.ro">Beraria H</a>. The result is an easy way for its customers to browse for, book and check-in at events.
 	}
@@ -30,12 +36,15 @@
 		#(project.description)
 	}
 
-	#if(project.paddleProductId) {
+	#if(project.externalLink) {
 		<br />
 		<br />
-		<a href="https://dl.devmate.com/com.runtimesharks.dndme/DNDMe.dmg"
+		<a href="#(project.externalLink)"
 			class="paddle_button_dark"
 			data-init="false">Download</a>
+	}
+
+	#if(project.paddleProductId) {
 		<a href="#!"
 			class="paddle_button"
 			data-product="#(project.paddleProductId)">Buy Now!</a>
