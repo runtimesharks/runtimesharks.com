@@ -12,14 +12,17 @@
 			#embed("Partials/Projects/image")
 		}
 	</div>
-	<div class="gallery">
-		#loop(gallery, "item") {
-			<div class="gallery-item">
-				<img src="#(item.image)"/>
-				<div class="image-caption centered">
-					#(item.description)
+
+	#if(gallery) {
+		<div class="gallery">
+			#loop(gallery, "item") {
+				<div class="gallery-item">
+					<img src="#(item.image)"/>
+					<div class="image-caption centered">
+						#(item.description)
+					</div>
 				</div>
-			</div>
-		}
-	</div>
+			}
+		</div>
+	}
 </div>

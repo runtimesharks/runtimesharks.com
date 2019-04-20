@@ -8,15 +8,17 @@ struct ProjectsController {
 		let builder = builder.grouped("projects")
 
 		builder.get("/", handler: show)
-		builder.get("/dnd-me", handler: showDNDMe)
 
 		Project.all().forEach {
 			builder.get($0.link.replacingOccurrences(of: "/projects", with: ""), handler: showProject)
 		}
+
+		// Special template.
+		builder.get("/dnd-me", handler: showDNDMe)
 	}
 
 	static func showProject(with request: Request) throws -> ResponseRepresentable {
-		let project = Project.all().first { $0.link == request.uri.path }
+		let project = Project.all().first { $0.link == request.uri.path }!
 
 		return try drop.view.make("project", with: ["project": project], for: request)
 	}

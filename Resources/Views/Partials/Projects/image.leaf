@@ -1,5 +1,5 @@
 <div class="project-image centered #(project.imagePosition)">
-	<a href="#(project.link)">
+	<!-- <a href="#(project.link)"> -->
 		<img src="#(project.image)"/>
-	</a>
+	<!-- </a> -->
 </div>

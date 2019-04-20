@@ -32,16 +32,29 @@
 		<br />
 		<p class="disclaimer">*Due to system limitations, DND Me does not work if Do Not Disturb is scheduled in System Preferences -> Notifications.</p>
 	}
+	##equal(project.name, "Idea Trackerr") {
+		Ever wanted to <em>quickly</em> jot down ideas, but also keep track of their progress? Does a notes app or a journal become too <em>cluttered</em>?
+		<br />
+		<br />
+		Are you forgetting in what state each idea is? If it's worth it, what research have you done, or if and why you cancelled it?
+		<br />
+		<br />
+		Say hello to Idea Trackker. The app to <strong>easily</strong> keep track of your ideas, where you can give a status to each one and keep a history of <em>everything</em> related to it.
+		<br />
+		<br />
+		Don't lose track of your ideas <strong>any longer</strong>!
+	}
 	##() {
 		#(project.description)
 	}
 
-	#if(project.externalLink) {
-		<br />
-		<br />
-		<a href="#(project.externalLink)"
+	<br />
+	<br />
+
+	#loop(project.externalLinks, "link") {
+		<a href="#(link.url)"
 			class="paddle_button_dark"
-			data-init="false">Download</a>
+			data-init="false">#(link.title)</a>
 	}
 
 	#if(project.paddleProductId) {
