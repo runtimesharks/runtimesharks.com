@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"experimentalDecorators": true,
+		"allowJs": true,
+		"checkJs": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"jsx": "react",
+		"lib": ["es6", "dom"],
+		"moduleResolution": "node",
+		"noEmit": true,
+		"target": "esnext"
+	},
+	"exclude": [
+		"node_modules",
+		"build",
+		"*.config.js",
+		"./**/base.js",
+		"./**/paddle.js"
+	]
+}
