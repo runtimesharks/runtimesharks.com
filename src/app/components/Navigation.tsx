@@ -79,7 +79,7 @@ const Link = styled.div`
 		font-size: 1em;
 		color: ${Theme.linkColor};
 		border-radius: 8px;
-		padding: 8px 20px;
+		padding: 2px 20px;
 
 		${Theme.transition("all", "0.25s")}
 
