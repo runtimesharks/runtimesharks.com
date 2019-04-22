@@ -1,5 +1,5 @@
 import React from "react"
-import { Route, Switch } from "react-router-dom"
+import { Redirect, Route, Switch } from "react-router-dom"
 import Consulting from "../pages/Consulting"
 import Home from "../pages/Home"
 import Mentoring from "../pages/Mentoring"
@@ -17,6 +17,9 @@ const Router = () => {
 			<Route path="/terms-and-conditions/:project" component={PrivacyPolicy} />
 			<Route exact path="/mentoring" component={Mentoring} />
 			<Route exact path="/consulting" component={Consulting} />
+			<Route>
+				<Redirect to="/" />
+			</Route>
 		</Switch>
 	)
 }
