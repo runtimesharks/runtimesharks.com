@@ -90,6 +90,14 @@ const Link = styled.div`
 			box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px;
 			transform: translateY(-3px);
 		}
+
+		&.active {
+			border-top: 1px solid ${Theme.linkColor};
+			/* Due to the inline-block display, when adding the border
+			Everything else gets pushed down by 1px;
+			*/
+			margin-top: -1px;
+		}
 	}
 
 	animation: appear 0.75s
