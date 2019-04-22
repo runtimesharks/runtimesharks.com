@@ -24,6 +24,7 @@
     "@types/react-helmet": "^5.0.8",
     "@types/react-router-dom": "^4.3.2",
     "@types/styled-components": "^4.1.14",
+    "@types/webpack-env": "^1.13.9",
     "typescript": "^3.5.0-dev.20190420"
   }
 }

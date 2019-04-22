@@ -8,11 +8,9 @@ let currentApp = app
 
 server.listen(process.env.PORT || 3000, () => console.log("🚀 started"))
 
-// @ts-ignore
 if (module.hot) {
 	console.log("✅  Server-side HMR Enabled!")
 
-	// @ts-ignore
 	module.hot.accept("./server", () => {
 		console.log("🔁  HMR Reloading `./server`...")
 
