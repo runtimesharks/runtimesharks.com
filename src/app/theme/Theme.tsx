@@ -1,4 +1,4 @@
-import { css } from "styled-components"
+import { css } from "styled-components";
 
 class Theme {
 	static maxWidth = "700px"
@@ -65,13 +65,13 @@ class Theme {
 		`
 
 	static dottedBottomBorder = () => css`
-		border-bottom: 1px dotted ${Theme.textColor};
+		border-bottom: 1px dotted currentColor;
 
 		${Theme.transition("0.4s")};
 
 		@media (hover: hover) {
 			&:hover {
-				border-bottom: 1px solid ${Theme.textColor};
+				border-bottom: 1px solid currentColor;
 			}
 		}
 	`

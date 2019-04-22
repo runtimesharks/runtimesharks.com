@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import Theme from "../theme/Theme";
+import React from "react"
+import { Link } from "react-router-dom"
+import styled, { keyframes } from "styled-components"
+import Theme from "../theme/Theme"
 
 const Header = () => {
 	return (
@@ -43,6 +43,18 @@ const Title = styled.h1`
 	}
 `
 
+const appearFromAbove = keyframes`
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+`
+
 const Subtitle = styled.h2`
 	font-style: italic;
 	font-size: 0.8em;
@@ -51,19 +63,7 @@ const Subtitle = styled.h2`
 	margin-top: -5px;
 	opacity: 0;
 
-	animation: appearFromAbove 0.75s 0.5s forwards ease-in-out;
-
-	@keyframes appearFromAbove {
-		0% {
-			opacity: 0;
-			transform: translateY(-20px);
-		}
-
-		100% {
-			opacity: 1;
-			transform: translateY(0px);
-		}
-	}
+	animation: ${appearFromAbove} 0.75s 0.5s forwards ease-in-out;
 `
 
 const FirstHalf = styled(Title)`

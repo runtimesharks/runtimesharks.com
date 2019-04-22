@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components"
-import Theme from "./Theme"
+import { createGlobalStyle } from "styled-components";
+import Theme from "./Theme";
 
 export const GlobalStyle = createGlobalStyle`
 	@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
@@ -38,7 +38,7 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	body, div, p {
-		line-height: 1.35em;
+		line-height: 1.75em;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -70,7 +70,6 @@ export const GlobalStyle = createGlobalStyle`
 		background: ${Theme.backgroundColor};
 		font-family: ${Theme.bodyFont};
 		font-size: 1.1em;
-		line-height: 1.75em;
 
 		margin: 0 auto;
 
@@ -124,7 +123,7 @@ export const GlobalStyle = createGlobalStyle`
 
 	a {
 		text-decoration: none;
-		color: ${Theme.textColor};
+		color: ${Theme.linkColor};
 
 		${Theme.dottedBottomBorder()};
 	}
@@ -150,6 +149,6 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	.side-padded {
-		padding: 0 ${Theme.sidePadding};
+		padding: inherit ${Theme.sidePadding};
 	}
 `
