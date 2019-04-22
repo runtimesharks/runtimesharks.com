@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
-import { Route, Switch } from "react-router-dom"
+import Router from "../routes/router"
+import Helmet from "../utils/Helmet"
 
 interface Props {
 	ssrLocation?: string
@@ -13,9 +14,8 @@ const App = ({ ssrLocation }: Props) => {
 
 	return (
 		<>
-			<Switch>
-				<Route exact path="/" render={() => <div>It works</div>} />
-			</Switch>
+			<Helmet ssrLocation={ssrLocation} />
+			<Router />
 		</>
 	)
 }

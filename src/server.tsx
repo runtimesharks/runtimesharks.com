@@ -7,7 +7,6 @@ import { ServerStyleSheet } from "styled-components"
 import App from "./app/components/App"
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST)
-
 const server = express()
 
 server
@@ -41,8 +40,15 @@ server
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Runtime Sharks</title>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
+		>
+		<meta name="author" content="Runtime Sharks" />
+		<meta name="HandheldFriendly" content="true" />
+		<meta name="MobileOptimized" content="375" />
+
+		<link rel="author" type="text/plain" href="/humans.txt" />
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="favicon.ico">
 		<link rel="icon" href="${faviconPath}/favicon-32.png" sizes="32x32">
@@ -63,6 +69,9 @@ server
 		<meta name="theme-color" content="#ffffff">
 
 		<script src="https://cdn.paddle.com/paddle/paddle.js"></script>
+
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:creator" content="@runtimesharks" />
 
 		${allHelmetDataAsString}
 		${styleTags}
