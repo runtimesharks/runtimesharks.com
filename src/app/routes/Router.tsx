@@ -3,15 +3,17 @@ import { Route, Switch } from "react-router-dom"
 import Consulting from "../pages/Consulting"
 import Home from "../pages/Home"
 import Mentoring from "../pages/Mentoring"
+import Project from "../pages/Project"
 import Projects from "../pages/Projects"
 
 const Router = () => {
 	return (
 		<Switch>
-			<Route exact path="/" render={Home} />
-			<Route exact path="/projects" render={Projects} />
-			<Route exact path="/mentoring" render={Mentoring} />
-			<Route exact path="/consulting" render={Consulting} />
+			<Route exact path="/" component={Home} />
+			<Route exact path="/projects" component={Projects} />
+			<Route path="/projects/:project" component={Project} />
+			<Route exact path="/mentoring" component={Mentoring} />
+			<Route exact path="/consulting" component={Consulting} />
 		</Switch>
 	)
 }
