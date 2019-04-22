@@ -1,8 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 
-const Content = ({ children }) => (
-	<Container className="side-padded">{children}</Container>
+const Content = ({ children, ...rest }) => (
+	<Container className="side-padded" {...rest}>
+		{children}
+	</Container>
 )
 
 const Container = styled.div`
