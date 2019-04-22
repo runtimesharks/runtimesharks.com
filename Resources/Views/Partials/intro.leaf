@@ -1,5 +1,0 @@
-<div class="intro">
-	<div class="contact-us-container">
-		#embed("Partials/contact-us")
-	</div>
-</div>

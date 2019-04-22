@@ -92,8 +92,9 @@ const Link = styled.div`
 		}
 	}
 
-	animation: appear 0.75s ${(props: LinkProps) => `${props.position * 0.5}s`}
-		forwards ease-in-out;
+	animation: appear 0.75s
+		${(props: LinkProps) => `${1 + props.position * 0.35}s`} forwards
+		ease-in-out;
 
 	@keyframes appear {
 		0% {

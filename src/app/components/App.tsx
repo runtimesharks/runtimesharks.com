@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import Router from "../routes/router"
 import { GlobalStyle } from "../theme/globalStyle"
 import Helmet from "../utils/Helmet"
+import Footer from "./Footer"
 import Header from "./Header"
 import Navigation from "./Navigation"
 
@@ -22,6 +23,7 @@ const App = ({ ssrLocation }: Props) => {
 			<Header />
 			<Navigation />
 			<Router />
+			<Footer />
 		</>
 	)
 }
