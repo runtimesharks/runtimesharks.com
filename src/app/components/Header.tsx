@@ -13,7 +13,7 @@ const Header = () => {
 				</Link>
 				<Subtitle>Improving the world, one bit at a time</Subtitle>
 			</Container>
-			<Padding />
+			<Padding className="nav-padding" />
 		</>
 	)
 }

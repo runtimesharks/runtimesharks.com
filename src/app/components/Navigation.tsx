@@ -10,7 +10,7 @@ interface LinkProps {
 const Navigation = () => {
 	return (
 		<>
-			<Container className="centered side-padded" role="navigation">
+			<Container className="navigation centered side-padded" role="navigation">
 				<Nav>
 					<Link position={0}>
 						<NavLink to="/projects">Projects</NavLink>
