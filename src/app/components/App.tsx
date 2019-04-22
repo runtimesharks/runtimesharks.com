@@ -2,6 +2,8 @@ import React, { useEffect } from "react"
 import Router from "../routes/router"
 import { GlobalStyle } from "../theme/globalStyle"
 import Helmet from "../utils/Helmet"
+import Header from "./Header"
+import Navigation from "./Navigation"
 
 interface Props {
 	ssrLocation?: string
@@ -17,6 +19,8 @@ const App = ({ ssrLocation }: Props) => {
 		<>
 			<Helmet ssrLocation={ssrLocation} />
 			<GlobalStyle />
+			<Header />
+			<Navigation />
 			<Router />
 		</>
 	)

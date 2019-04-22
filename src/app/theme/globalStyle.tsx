@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components"
 import Theme from "./Theme"
 
 export const GlobalStyle = createGlobalStyle`
-	@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900');
+	@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
 
 	/* Reset */
 	html, body, div, span, applet, object, iframe,
