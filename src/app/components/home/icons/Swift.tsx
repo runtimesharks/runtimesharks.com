@@ -9,7 +9,7 @@ const Swift = () => (
 		y="0px"
 		width="60px"
 		viewBox="-252 343.9 106.1 106.1"
-		enable-background="new -252 343.9 106.1 106.1"
+		enableBackground="new -252 343.9 106.1 106.1"
 	>
 		<g>
 			<path

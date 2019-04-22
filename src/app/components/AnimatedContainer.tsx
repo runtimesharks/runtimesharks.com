@@ -1,7 +1,16 @@
-import React from "react"
-import styled, { keyframes } from "styled-components"
+import React, { useContext } from "react"
+import styled, { css, keyframes } from "styled-components"
+import InitialAnimationContext from "../utils/InitialAnimationContext"
 
-const AnimatedContainer = ({ children }) => <Container>{children}</Container>
+interface StyleProps {
+	didAnimate: boolean
+}
+
+const AnimatedContainer = ({ children }) => {
+	const didAnimate = useContext(InitialAnimationContext)
+
+	return <Container didAnimate={didAnimate}>{children}</Container>
+}
 
 const appearFromBelow = keyframes`
 	from {
@@ -16,8 +25,13 @@ const appearFromBelow = keyframes`
 `
 
 const Container = styled.div`
-	opacity: 0;
-	animation: ${appearFromBelow} 0.75s 0.5s forwards ease-in-out;
+	${(props: StyleProps) =>
+		props.didAnimate
+			? null
+			: css`
+					opacity: 0;
+					animation: ${appearFromBelow} 0.75s 0.5s forwards ease-in-out;
+			  `}
 `
 
 export default AnimatedContainer
