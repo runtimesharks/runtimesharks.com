@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import Router from "../routes/router"
+import { GlobalStyle } from "../theme/globalStyle"
 import Helmet from "../utils/Helmet"
 
 interface Props {
@@ -15,6 +16,7 @@ const App = ({ ssrLocation }: Props) => {
 	return (
 		<>
 			<Helmet ssrLocation={ssrLocation} />
+			<GlobalStyle />
 			<Router />
 		</>
 	)
