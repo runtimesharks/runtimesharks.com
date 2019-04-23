@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const ContactUs = () => (
-	<Container className="centered side-padded">
+	<Container className="centered">
 		We're focused on mobile applications, but we also love building web apps;{" "}
 		<Spacer />
 		if you'd like to get in touch, you can reach us at{" "}

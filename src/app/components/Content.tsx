@@ -1,11 +1,19 @@
 import React from "react"
 import styled from "styled-components"
 
-const Content = ({ children, ...rest }) => (
-	<Container className="side-padded" {...rest}>
-		{children}
-	</Container>
-)
+const Content = ({ children, className, ...rest }) => {
+	let classNames = "side-padded"
+
+	if (className !== undefined) {
+		classNames += ` ${className}`
+	}
+
+	return (
+		<Container className={classNames} {...rest}>
+			{children}
+		</Container>
+	)
+}
 
 const Container = styled.div`
 	padding-top: 3em;
