@@ -41,6 +41,14 @@ const Title = styled.h1`
 	@media screen and (max-width: 330px) {
 		font-size: 1.9em;
 	}
+
+	@media screen and (max-width: 305px) {
+		font-size: 1.5em;
+	}
+
+	@media screen and (max-width: 260px) {
+		font-size: 1.2em;
+	}
 `
 
 const appearFromAbove = keyframes`
@@ -64,6 +72,18 @@ const Subtitle = styled.h2`
 	opacity: 0;
 
 	animation: ${appearFromAbove} 0.75s 0.5s forwards ease-in-out;
+
+	@media screen and (max-width: 330px) {
+		font-size: 0.7em;
+	}
+
+	@media screen and (max-width: 305px) {
+		font-size: 0.6em;
+	}
+
+	@media screen and (max-width: 260px) {
+		font-size: 0.5em;
+	}
 `
 
 const FirstHalf = styled(Title)`

@@ -1,0 +1,35 @@
+import ExternalLink from "./ExternalLink";
+
+interface Schema {
+	name: string
+	description?: string
+	externalLinks?: ExternalLink[]
+	paddleProductId?: string
+	link?: string
+}
+
+export default class Project {
+	name: string
+	description: string
+	externalLinks: ExternalLink[]
+	paddleProductId?: string
+	link?: string
+	image: string
+	slug: string
+
+	constructor({
+		name,
+		description = "def",
+		externalLinks = [],
+		paddleProductId,
+		link,
+	}: Schema) {
+		this.name = name
+		this.description = description
+		this.externalLinks = externalLinks
+		this.paddleProductId = paddleProductId
+		this.slug = name.toLowerCase().replace(/[& ]/g, "-")
+		this.link = `/projects/${this.slug}`
+		this.image = `/images/projects/screenshots/${this.slug}.png`
+	}
+}
