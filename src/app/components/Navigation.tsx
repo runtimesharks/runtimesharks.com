@@ -1,7 +1,7 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import styled from "styled-components";
-import Theme from "../theme/Theme";
+import React from "react"
+import { NavLink } from "react-router-dom"
+import styled from "styled-components"
+import Theme from "../theme/Theme"
 
 interface LinkProps {
 	position: number
@@ -10,7 +10,7 @@ interface LinkProps {
 const Navigation = () => {
 	return (
 		<>
-			<Container className="navigation centered side-padded" role="navigation">
+			<Container className="navigation centered" role="navigation">
 				<Nav>
 					<Link position={0}>
 						<NavLink to="/projects">Projects</NavLink>
@@ -64,7 +64,7 @@ const Nav = styled.nav`
 	}
 
 	@media screen and (max-width: 300px) {
-		grid-template-columns: repeat(2, minmax(120px, 1fr));
+		grid-template-columns: repeat(2, minmax(100px, 1fr));
 		font-size: 0.8em;
 	}
 

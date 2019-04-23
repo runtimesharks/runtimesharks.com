@@ -9,7 +9,11 @@ interface StyleProps {
 const AnimatedContainer = ({ children }) => {
 	const didAnimate = useContext(InitialAnimationContext)
 
-	return <Container didAnimate={didAnimate}>{children}</Container>
+	return (
+		<Container className="side-padded" didAnimate={didAnimate}>
+			{children}
+		</Container>
+	)
 }
 
 const appearFromBelow = keyframes`

@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import styled, { css, keyframes } from "styled-components"
 import Content from "../components/Content"
-import Intro from "../components/projects/Intro"
+import ContactUs from "../components/projects/ContactUs"
 import allProjects from "../models/AllProjects"
 import InitialAnimationContext from "../utils/InitialAnimationContext"
 
@@ -15,7 +15,7 @@ const Projects = () => {
 
 	return (
 		<StyledContent>
-			<Intro />
+			<ContactUs />
 			<Grid>
 				{allProjects.map((project, index) => {
 					return (
@@ -49,6 +49,7 @@ const appearFromBelow = keyframes`
 
 const StyledContent = styled(Content)`
 	margin-top: 1em;
+	max-width: 700px;
 `
 
 const Grid = styled.div`
@@ -63,7 +64,6 @@ const Grid = styled.div`
 	text-align: center;
 	font-weight: 500;
 	font-size: 0.75em;
-	max-width: 600px;
 
 	a {
 		border-bottom: none;

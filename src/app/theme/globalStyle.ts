@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import Theme from "./Theme";
+import { createGlobalStyle } from "styled-components"
+import Theme from "./Theme"
 
 export const GlobalStyle = createGlobalStyle`
 	@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
@@ -149,6 +149,7 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	.side-padded {
-		padding: inherit ${Theme.sidePadding};
+		padding-left: ${Theme.sidePadding};
+		padding-right: ${Theme.sidePadding};
 	}
 `
