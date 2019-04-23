@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import styled, { css, keyframes } from "styled-components"
+import AnimatedContainer from "../components/AnimatedContainer"
 import Content from "../components/Content"
 import ContactUs from "../components/projects/ContactUs"
 import allProjects from "../models/AllProjects"
@@ -14,24 +15,26 @@ const Projects = () => {
 	const didAnimate = useContext(InitialAnimationContext)
 
 	return (
-		<StyledContent>
-			<ContactUs />
-			<Grid>
-				{allProjects.map((project, index) => {
-					return (
-						<Item key={project.slug} index={index} didAnimate={didAnimate}>
-							<a className="image" href={project.link}>
-								<Icon
-									src={`/images/projects/icons/${project.slug}.jpg`}
-									alt={`${project.name}'s icon`}
-								/>
-							</a>
-							<IconTitle>{project.name}</IconTitle>
-						</Item>
-					)
-				})}
-			</Grid>
-		</StyledContent>
+		<AnimatedContainer>
+			<StyledContent>
+				<ContactUs />
+				<Grid>
+					{allProjects.map((project, index) => {
+						return (
+							<Item key={project.slug} index={index} didAnimate={didAnimate}>
+								<a className="image" href={project.link}>
+									<Icon
+										src={`/images/projects/icons/${project.slug}.jpg`}
+										alt={`${project.name}'s icon`}
+									/>
+								</a>
+								<IconTitle>{project.name}</IconTitle>
+							</Item>
+						)
+					})}
+				</Grid>
+			</StyledContent>
+		</AnimatedContainer>
 	)
 }
 
