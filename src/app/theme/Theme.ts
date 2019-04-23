@@ -1,4 +1,4 @@
-import { css } from "styled-components";
+import { css } from "styled-components"
 
 class Theme {
 	static maxWidth = "700px"
@@ -16,16 +16,6 @@ class Theme {
 	static borderRadius = "4px"
 	static largeBorderRadius = "8px"
 	static darkBlue = "#00356a"
-
-	static challengeBeatColor = "#ff0e37"
-	static deinDealColor = "#c40e3d"
-	static cardVirtualColor = "#fc5f25"
-	static berariahColor = "#fa8f30"
-	static carminderColor = "#00a29b"
-	static expensesPlannerColor = "#481faf"
-	static puppetAnthemsColor = "#a91f13"
-	static goaleeColor = "#7161e8"
-	static travelStoriesColor = "$linkColor"
 
 	static headerFont =
 		"Copperplate, 'Copperplate Gothic', 'Titillium Web', sans-serif"

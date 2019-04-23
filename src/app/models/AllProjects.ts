@@ -15,6 +15,7 @@ const allProjects = [
 					"https://play.google.com/store/apps/details?id=com.runtimesharks.ideatracker",
 			}),
 		],
+		color: "#077ee2",
 	}),
 	new Project({
 		name: "DND Me",
@@ -25,6 +26,7 @@ const allProjects = [
 				url: "https://dl.devmate.com/com.runtimesharks.dndme/DNDMe.dmg",
 			}),
 		],
+		color: "#f15745",
 	}),
 	new Project({
 		name: "Goalee",
@@ -36,6 +38,7 @@ const allProjects = [
 				url: "https://itunes.apple.com/us/app/goalee/id1438115216?ls=1&mt",
 			}),
 		],
+		color: "#7161e8",
 	}),
 	new Project({
 		name: "ChallengeBeat",
@@ -46,6 +49,7 @@ const allProjects = [
 					"https://itunes.apple.com/us/app/challengebeat/id1323950655?ls=1&mt",
 			}),
 		],
+		color: "#ff0e37",
 	}),
 
 	new Project({
@@ -58,6 +62,7 @@ const allProjects = [
 				url: "https://travelstories.world",
 			}),
 		],
+		color: "#0371b8",
 	}),
 	new Project({
 		name: "Card Virtual",
@@ -70,6 +75,7 @@ const allProjects = [
 					"https://itunes.apple.com/ro/app/card-virtual/id1365350958?ls=1&mt",
 			}),
 		],
+		color: "#fc5f25",
 	}),
 	new Project({
 		name: "Beraria H",
@@ -79,6 +85,7 @@ const allProjects = [
 				url: "https://itunes.apple.com/us/app/beraria-h/id1257720997?ls=1&mt",
 			}),
 		],
+		color: "#fa8f30",
 	}),
 	new Project({
 		name: "Essenza",
@@ -88,6 +95,7 @@ const allProjects = [
 				url: "https://itunes.apple.com/us/app/essenza/id1392962759?ls=1&mt=8",
 			}),
 		],
+		color: "#c651a0",
 	}),
 	new Project({
 		name: "DeinDeal",
@@ -97,6 +105,7 @@ const allProjects = [
 				url: "https://itunes.apple.com/us/app/deindeal/id465657999",
 			}),
 		],
+		color: "#c40e3d",
 	}),
 	new Project({
 		name: "DeinDeal Partners",
@@ -114,16 +123,19 @@ const allProjects = [
 					"https://itunes.apple.com/us/app/puppet-anthems/id878308190?ls=1&mt=8",
 			}),
 		],
+		color: "#a91f13",
 	}),
 	new Project({
 		name: "Carminder",
 		link:
 			"https://itunes.apple.com/us/app/carminder-super-simple-maintenance/id633617025?ls=1&mt",
+		color: "#00a29b",
 	}),
 	new Project({
 		name: "Expenses Planner",
 		link:
 			"https://itunes.apple.com/us/app/expenses-planner/id669431471?ls=1&mt",
+		color: "#481faf"
 	}),
 ]
 
