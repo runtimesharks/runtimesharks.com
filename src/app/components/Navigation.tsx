@@ -32,6 +32,8 @@ const Navigation = () => {
 }
 
 const Container = styled.div`
+	/* The fading in animation makes everything be above the navbar */
+	z-index: 1;
 	padding: 0.7em 0 0.5em;
 	margin: auto;
 
