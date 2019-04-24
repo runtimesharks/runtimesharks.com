@@ -32,9 +32,19 @@ export default class Project {
 		this.description = description
 		this.externalLinks = externalLinks
 		this.paddleProductId = paddleProductId
-		this.slug = name.toLowerCase().replace(/[& ]/g, "-")
+		this.slug = name
+			.toLowerCase()
+			.replace(/[& ,!]/g, "-")
+			.replace("--", "-")
+
+		if (this.slug.endsWith("-")) {
+			this.slug = this.slug.slice(0, -1)
+		}
+
 		this.link = link || `/projects/${this.slug}`
 		this.image = `/images/projects/screenshots/${this.slug}.png`
 		this.color = color
+
+		console.log(this.slug)
 	}
 }
