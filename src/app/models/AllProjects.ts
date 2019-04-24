@@ -3,11 +3,61 @@ import Project from "./Project"
 
 const allProjects = [
 	new Project({
+		name: "ChallengeBeat",
+		externalLinks: [
+			new ExternalLink({
+				title: "App Store",
+				url:
+					"https://itunes.apple.com/us/app/challengebeat/id1323950655?ls=1&mt",
+			}),
+		],
+		color: "#ff0e37",
+	}),
+	new Project({
+		name: "My Travel Stories",
+		description:
+			"Travel, take beautiful photos, write down your feelings and create your travel journal. Share your stories with the world and find inspiration from others for your next trips!",
+		externalLinks: [
+			new ExternalLink({
+				title: "App Store",
+				url: "https://travelstories.world",
+			}),
+		],
+		color: "#0371b8",
+	}),
+	new Project({
+		name: "Hey, Be Well!",
+		externalLinks: [
+			new ExternalLink({
+				title: "Home",
+				url: "https://heybewell.com",
+			}),
+			new ExternalLink({
+				title: "App Store",
+				url:
+					"https://itunes.apple.com/us/app/hey-be-well/id1440003341?ls=1&mt=8",
+			}),
+		],
+		color: "#3b245f",
+	}),
+	new Project({
+		name: "Beraria H",
+		externalLinks: [
+			new ExternalLink({
+				title: "App Store",
+				url: "https://itunes.apple.com/us/app/beraria-h/id1257720997?ls=1&mt",
+			}),
+		],
+		color: "#fa8f30",
+	}),
+
+	new Project({
 		name: "Idea Trackerr",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
-				url: "https://itunes.apple.com/us/app/idea-trackerr/id1459548047",
+				url:
+					"https://itunes.apple.com/us/app/idea-trackerr/id1459548047?ls=1&mt=8",
 			}),
 			new ExternalLink({
 				title: "Google Play",
@@ -41,30 +91,6 @@ const allProjects = [
 		color: "#7161e8",
 	}),
 	new Project({
-		name: "ChallengeBeat",
-		externalLinks: [
-			new ExternalLink({
-				title: "App Store",
-				url:
-					"https://itunes.apple.com/us/app/challengebeat/id1323950655?ls=1&mt",
-			}),
-		],
-		color: "#ff0e37",
-	}),
-
-	new Project({
-		name: "My Travel Stories",
-		description:
-			"Travel, take beautiful photos, write down your feelings and create your travel journal. Share your stories with the world and find inspiration from others for your next trips!",
-		externalLinks: [
-			new ExternalLink({
-				title: "App Store",
-				url: "https://travelstories.world",
-			}),
-		],
-		color: "#0371b8",
-	}),
-	new Project({
 		name: "Card Virtual",
 		description:
 			"Helps users save their fidelity cards (or request new ones), that also displays merchants & their offers and offers a shopping list. With the built-in friends feature, the users can share and collaborate in real-time on their shopping lists.",
@@ -76,16 +102,6 @@ const allProjects = [
 			}),
 		],
 		color: "#fc5f25",
-	}),
-	new Project({
-		name: "Beraria H",
-		externalLinks: [
-			new ExternalLink({
-				title: "App Store",
-				url: "https://itunes.apple.com/us/app/beraria-h/id1257720997?ls=1&mt",
-			}),
-		],
-		color: "#fa8f30",
 	}),
 	new Project({
 		name: "Essenza",
@@ -111,7 +127,6 @@ const allProjects = [
 		name: "DeinDeal Partners",
 		link: "https://itunes.apple.com/za/app/deindeal-partners/id892826193",
 	}),
-
 	new Project({
 		name: "Puppet Anthems",
 		description:
@@ -135,7 +150,7 @@ const allProjects = [
 		name: "Expenses Planner",
 		link:
 			"https://itunes.apple.com/us/app/expenses-planner/id669431471?ls=1&mt",
-		color: "#481faf"
+		color: "#481faf",
 	}),
 ]
 
