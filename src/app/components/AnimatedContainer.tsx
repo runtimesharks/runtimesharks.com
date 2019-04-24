@@ -6,7 +6,7 @@ interface StyleProps {
 	didAnimate: boolean
 }
 
-const AnimatedContainer = ({ children }) => {
+const AnimatedContainer = ({ children }: any) => {
 	const didAnimate = useContext(InitialAnimationContext)
 
 	return (
@@ -28,7 +28,7 @@ const appearFromBelow = keyframes`
 	}
 `
 
-const Container = styled.div`
+const Container = styled.div<StyleProps>`
 	${(props: StyleProps) =>
 		props.didAnimate
 			? null

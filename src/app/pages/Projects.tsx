@@ -86,7 +86,7 @@ const Grid = styled.div`
 	}
 `
 
-const Item = styled.div`
+const Item = styled.div<ItemStyle>`
 	${(props: ItemStyle) =>
 		props.didAnimate
 			? null

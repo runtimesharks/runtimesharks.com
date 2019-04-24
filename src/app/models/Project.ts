@@ -15,7 +15,7 @@ export default class Project {
 	description: string
 	externalLinks: ExternalLink[]
 	paddleProductId?: string
-	link?: string
+	link: string
 	image: string
 	slug: string
 	color: string

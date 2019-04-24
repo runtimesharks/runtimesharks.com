@@ -16,8 +16,7 @@
 		"module": "esnext",
 		"skipLibCheck": true,
 		"noImplicitThis": true,
-		"pretty": true,
-
+		"pretty": true
 	},
 	"exclude": [
 		"node_modules",
