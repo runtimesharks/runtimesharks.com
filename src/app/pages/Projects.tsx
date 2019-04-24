@@ -1,4 +1,5 @@
 import React, { useContext } from "react"
+import { Link } from "react-router-dom"
 import styled, { css, keyframes } from "styled-components"
 import AnimatedContainer from "../components/AnimatedContainer"
 import Content from "../components/Content"
@@ -22,12 +23,12 @@ const Projects = () => {
 					{allProjects.map((project, index) => {
 						return (
 							<Item key={project.slug} index={index} didAnimate={didAnimate}>
-								<a className="image" href={project.link}>
+								<Link to={project.link}>
 									<Icon
 										src={`/images/projects/icons/${project.slug}.jpg`}
 										alt={`${project.name}'s icon`}
 									/>
-								</a>
+								</Link>
 								<IconTitle>{project.name}</IconTitle>
 							</Item>
 						)
