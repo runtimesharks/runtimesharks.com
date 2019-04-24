@@ -18,7 +18,7 @@ export default class Project {
 	link?: string
 	image: string
 	slug: string
-	color
+	color: string
 
 	constructor({
 		name,
