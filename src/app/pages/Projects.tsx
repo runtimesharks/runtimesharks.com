@@ -4,7 +4,7 @@ import styled from "styled-components"
 import AnimatedContainer from "../components/containers/AnimatedContainer"
 import Content from "../components/Content"
 import ContactUs from "../components/projects/ContactUs"
-import allProjects from "../models/AllProjects"
+import iOSProjects from "../models/iOSProjects"
 import Project from "../models/Project"
 
 const Icon = ({ slug, name }: Project) => (
@@ -15,8 +15,34 @@ const Projects = () => (
 	<AnimatedContainer>
 		<StyledContent>
 			<ContactUs />
+			<Spacer />
+			<Title>Web</Title>
 			<Grid>
-				{allProjects.map((project, index) => {
+				{iOSProjects.map((project, index) => {
+					return (
+						<AnimatedContainer
+							key={project.slug}
+							position={index + 1}
+							delay={0.125}
+							sidepaded={false}
+						>
+							{project.link.startsWith("/") ? (
+								<Link to={project.link}>
+									<Icon {...project} />
+								</Link>
+							) : (
+								<a href={project.link}>
+									<Icon {...project} />
+								</a>
+							)}
+							<IconTitle>{project.name}</IconTitle>
+						</AnimatedContainer>
+					)
+				})}
+			</Grid>
+			<Title>iOS</Title>
+			<Grid>
+				{iOSProjects.map((project, index) => {
 					return (
 						<AnimatedContainer
 							key={project.slug}
@@ -47,6 +73,15 @@ const StyledContent = styled(Content)`
 	max-width: 700px;
 `
 
+const Spacer = styled.div`
+	padding: 1em 0;
+`
+
+const Title = styled.h1`
+	margin: 2em 0 2em;
+	text-align: center;
+`
+
 const Grid = styled.div`
 	display: grid;
 	grid-template-columns: repeat(4, auto);
@@ -54,7 +89,6 @@ const Grid = styled.div`
 	grid-row-gap: 30px;
 	justify-content: center;
 
-	margin-top: 6em;
 	color: gray;
 	text-align: center;
 	font-weight: 500;

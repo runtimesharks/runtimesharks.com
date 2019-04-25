@@ -2,7 +2,7 @@ import ExternalLink from "./ExternalLink"
 import { GalleryImage } from "./Gallery"
 import Project from "./Project"
 
-const allProjects = [
+const iOSProjects = [
 	new Project({
 		name: "ChallengeBeat",
 		externalLinks: [
@@ -165,4 +165,4 @@ const allProjects = [
 	}),
 ]
 
-export default allProjects
+export default iOSProjects

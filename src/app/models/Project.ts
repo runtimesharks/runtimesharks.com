@@ -4,7 +4,6 @@ import Gallery from "./Gallery"
 
 interface Schema {
 	name: string
-	description?: string
 	externalLinks?: ExternalLink[]
 	paddleProductId?: string
 	link?: string
@@ -14,7 +13,6 @@ interface Schema {
 
 export default class Project {
 	name: string
-	description: string
 	externalLinks: ExternalLink[]
 	paddleProductId?: string
 	link: string
@@ -25,15 +23,13 @@ export default class Project {
 
 	constructor({
 		name,
-		description = "def",
 		externalLinks = [],
 		paddleProductId,
 		link,
 		color = Theme.linkColor,
-		gallery = []
+		gallery = [],
 	}: Schema) {
 		this.name = name
-		this.description = description
 		this.externalLinks = externalLinks
 		this.paddleProductId = paddleProductId
 		this.slug = name

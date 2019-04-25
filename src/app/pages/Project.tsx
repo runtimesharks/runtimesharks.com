@@ -5,7 +5,7 @@ import AnimatedContainer from "../components/containers/AnimatedContainer"
 import ExternalButtons from "../components/projects/ExternalButtons"
 import Gallery from "../components/projects/Gallery"
 import Image from "../components/projects/Image"
-import allProjects from "../models/AllProjects"
+import iOSProjects from "../models/iOSProjects"
 import ProjectModel from "../models/Project"
 
 interface DescriptionStyle {
@@ -14,7 +14,7 @@ interface DescriptionStyle {
 
 const Project = (props: any) => {
 	const param = props.match.path.replace("/projects/", "")
-	const project = allProjects.find((p) => p.slug === param)
+	const project = iOSProjects.find((p) => p.slug === param)
 
 	if (project == null) {
 		return <Redirect to="/" />
