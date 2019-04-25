@@ -4,13 +4,14 @@ import InitialAnimationContext from "../utils/InitialAnimationContext"
 
 interface StyleProps {
 	didAnimate: boolean
+	delay: number
 }
 
-const AnimatedContainer = ({ children }: any) => {
+const AnimatedContainer = ({ delay = 0.5, children }: any) => {
 	const didAnimate = useContext(InitialAnimationContext)
 
 	return (
-		<Container className="side-padded" didAnimate={didAnimate}>
+		<Container className="side-padded" didAnimate={didAnimate} delay={delay}>
 			{children}
 		</Container>
 	)
@@ -34,7 +35,8 @@ const Container = styled.div<StyleProps>`
 			? null
 			: css`
 					opacity: 0;
-					animation: ${appearFromBelow} 0.75s 0.5s forwards ease-in-out;
+					animation: ${appearFromBelow} 0.75s ${props.delay}s forwards
+						ease-in-out;
 			  `}
 `
 

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const Content = ({ children, className, ...rest }) => {
+const Content = ({ children, className, ...rest }: any) => {
 	let classNames = "side-padded"
 
 	if (className !== undefined) {
