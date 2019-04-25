@@ -1,7 +1,7 @@
 import React from "react"
 import Helmet from "react-helmet"
 import { Route, Switch } from "react-router"
-import AnimatedContainer from "../components/AnimatedContainer"
+import AnimatedContainer from "../components/containers/AnimatedContainer"
 import Content from "../components/Content"
 import ChallengeBeat from "../components/privacy-policy/ChallengeBeat"
 import Goalee from "../components/privacy-policy/Goalee"

@@ -10,9 +10,8 @@ import Consulting from "../pages/Consulting"
 import Home from "../pages/Home"
 import Mentoring from "../pages/Mentoring"
 import PrivacyPolicy from "../pages/PrivacyPolicy"
-import Project from "../pages/Project"
-import Projects from "../pages/Projects"
 import InitialAnimationContext from "../utils/InitialAnimationContext"
+import ProjectRouter from "./ProjectRouter"
 
 const Router = (props: RouteComponentProps) => {
 	const [didAnimate, setDidAnimate] = useState(false)
@@ -28,8 +27,7 @@ const Router = (props: RouteComponentProps) => {
 		<InitialAnimationContext.Provider value={didAnimate}>
 			<Switch>
 				<Route exact path="/" component={Home} />
-				<Route exact path="/projects" component={Projects} />
-				<Route path="/projects/:project" component={Project} />
+				<Route path="/projects" component={ProjectRouter} />
 				<Route path="/privacy/:project" component={PrivacyPolicy} />
 				<Route
 					path="/terms-and-conditions/:project"

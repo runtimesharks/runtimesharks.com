@@ -1,59 +1,54 @@
-import React, { useContext } from "react"
+import React from "react"
 import { Link } from "react-router-dom"
-import styled, { css, keyframes } from "styled-components"
-import AnimatedContainer from "../components/AnimatedContainer"
+import styled from "styled-components"
+import AnimatedContainer from "../components/containers/AnimatedContainer"
 import Content from "../components/Content"
 import ContactUs from "../components/projects/ContactUs"
 import allProjects from "../models/AllProjects"
-import InitialAnimationContext from "../utils/InitialAnimationContext"
+import Project from "../models/Project"
 
 interface ItemStyle {
 	index: number
 	didAnimate: boolean
 }
 
-const Projects = () => {
-	const didAnimate = useContext(InitialAnimationContext)
+const Icon = ({ slug, name }: Project) => (
+	<Img src={`/images/projects/icons/${slug}.jpg`} alt={`${name}'s icon`} />
+)
 
-	return (
-		<AnimatedContainer>
-			<StyledContent>
-				<ContactUs />
-				<Grid>
-					{allProjects.map((project, index) => {
-						return (
-							<Item key={project.slug} index={index} didAnimate={didAnimate}>
+const Projects = () => (
+	<AnimatedContainer>
+		<StyledContent>
+			<ContactUs />
+			<Grid>
+				{allProjects.map((project, index) => {
+					return (
+						<AnimatedContainer key={project.slug} delay={index * 0.2} sidepaded={false}>
+							{project.link.startsWith("/") ? (
 								<Link to={project.link}>
-									<Icon
-										src={`/images/projects/icons/${project.slug}.jpg`}
-										alt={`${project.name}'s icon`}
-									/>
+									<Icon {...project} />
 								</Link>
-								<IconTitle>{project.name}</IconTitle>
-							</Item>
-						)
-					})}
-				</Grid>
-			</StyledContent>
-		</AnimatedContainer>
-	)
-}
-
-const appearFromBelow = keyframes`
-	from {
-		opacity: 0;
-		transform: translateY(20px);
-	}
-
-	to {
-		opacity: 1;
-		transform: translateY(0px);
-	}
-`
+							) : (
+								<a href={project.link}>
+									<Icon {...project} />
+								</a>
+							)}
+							<IconTitle>{project.name}</IconTitle>
+						</AnimatedContainer>
+					)
+				})}
+			</Grid>
+		</StyledContent>
+	</AnimatedContainer>
+)
 
 const StyledContent = styled(Content)`
 	margin-top: 1em;
 	max-width: 700px;
+
+	a {
+		border-bottom: none;
+	}
 `
 
 const Grid = styled.div`
@@ -86,19 +81,7 @@ const Grid = styled.div`
 	}
 `
 
-const Item = styled.div<ItemStyle>`
-	${(props: ItemStyle) =>
-		props.didAnimate
-			? null
-			: css`
-					z-index: 0; /* Due to the animation, they appear above the navbar.*/
-					opacity: 0;
-					animation: ${appearFromBelow} 0.75s ${`${props.index * 0.2}s`}
-						forwards ease-in-out;
-			  `}
-`
-
-const Icon = styled.img`
+const Img = styled.img`
 	width: 100px;
 	height: 100px;
 	border-radius: 18px;

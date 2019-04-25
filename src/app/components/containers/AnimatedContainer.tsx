@@ -1,17 +1,28 @@
 import React, { useContext } from "react"
 import styled, { css, keyframes } from "styled-components"
-import InitialAnimationContext from "../utils/InitialAnimationContext"
+import InitialAnimationContext from "../../utils/InitialAnimationContext"
 
 interface StyleProps {
 	didAnimate: boolean
 	delay: number
+	forced: boolean
 }
 
-const AnimatedContainer = ({ delay = 0.5, children }: any) => {
+const AnimatedContainer = ({
+	delay = 0.25,
+	forced = true,
+	sidepaded = true,
+	children,
+}: any) => {
 	const didAnimate = useContext(InitialAnimationContext)
 
 	return (
-		<Container className="side-padded" didAnimate={didAnimate} delay={delay}>
+		<Container
+			className={`${sidepaded ? "side-padded" : null}`}
+			didAnimate={didAnimate}
+			delay={delay}
+			forced={forced}
+		>
 			{children}
 		</Container>
 	)
@@ -31,7 +42,7 @@ const appearFromBelow = keyframes`
 
 const Container = styled.div<StyleProps>`
 	${(props: StyleProps) =>
-		props.didAnimate
+		props.didAnimate && !props.forced
 			? null
 			: css`
 					opacity: 0;
@@ -39,5 +50,7 @@ const Container = styled.div<StyleProps>`
 						ease-in-out;
 			  `}
 `
+
+AnimatedContainer.baseDelay = 0.5
 
 export default AnimatedContainer
