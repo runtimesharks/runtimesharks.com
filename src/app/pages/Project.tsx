@@ -20,8 +20,6 @@ const Project = (props: any) => {
 		return <Redirect to="/" />
 	}
 
-	const base = AnimatedContainer.baseDelay
-
 	return (
 		<AnimatedContainer>
 			<Container {...props}>
@@ -34,13 +32,13 @@ const Project = (props: any) => {
 					<StyledImage {...project} />
 					<Description centered={props.centered}>
 						{props.children}
-						<AnimatedContainer delay={base + 0.25}>
+						<AnimatedContainer position={2}>
 							<ExternalButtons {...project} />
 						</AnimatedContainer>
 					</Description>
 				</Meta>
 				{project.gallery.length > 0 ? (
-					<AnimatedContainer delay={base + 0.5}>
+					<AnimatedContainer position={3}>
 						<Gallery {...project} />
 					</AnimatedContainer>
 				) : null}

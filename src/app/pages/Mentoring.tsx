@@ -8,14 +8,14 @@ import IOS from "../components/mentoring/IOS"
 const Mentoring = () => (
 	<>
 		<Content>
-			<AnimatedContainer delay={AnimatedContainer.baseDelay}>
+			<AnimatedContainer>
 				<FromZero />
 			</AnimatedContainer>
-			<AnimatedContainer delay={AnimatedContainer.baseDelay + 0.25}>
+			<AnimatedContainer position={2}>
 				<IOS />
 			</AnimatedContainer>
 		</Content>
-		<AnimatedContainer delay={AnimatedContainer.baseDelay + 0.5}>
+		<AnimatedContainer position={3}>
 			<GetInTouch section="mentoring" />
 		</AnimatedContainer>
 	</>

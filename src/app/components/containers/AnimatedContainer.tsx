@@ -8,19 +8,28 @@ interface StyleProps {
 	forced: boolean
 }
 
-const AnimatedContainer = ({
-	delay = 0.25,
+interface Props {
+	delay?: number
+	position?: number
+	forced?: boolean
+	sidepaded?: boolean
+	children?: any
+}
+
+function AnimatedContainer({
+	delay = AnimatedContainer.baseDelay,
+	position = 1,
 	forced = true,
 	sidepaded = true,
 	children,
-}: any) => {
+}: Props) {
 	const didAnimate = useContext(InitialAnimationContext)
 
 	return (
 		<Container
 			className={`${sidepaded ? "side-padded" : null}`}
 			didAnimate={didAnimate}
-			delay={delay}
+			delay={position * delay}
 			forced={forced}
 		>
 			{children}
@@ -51,6 +60,6 @@ const Container = styled.div<StyleProps>`
 			  `}
 `
 
-AnimatedContainer.baseDelay = 0.5
+AnimatedContainer.baseDelay = 0.25
 
 export default AnimatedContainer

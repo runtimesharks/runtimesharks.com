@@ -5,20 +5,20 @@ import AnimatedContainer from "../../containers/AnimatedContainer"
 
 const DNDMe = (props: any) => (
 	<StyledProject {...props}>
-		<AnimatedContainer delay={AnimatedContainer.baseDelay}>
+		<AnimatedContainer>
 			Ever wanted to get more focused work done?
 			<br />
 			Do you turn Do Not Disturb on, but forget to turn it off?
 		</AnimatedContainer>
 		<br />
-		<AnimatedContainer delay={AnimatedContainer.baseDelay + 0.25}>
+		<AnimatedContainer position={2}>
 			Look no further!
 			<br />
 			<br />
 			Activate Do Not Disturb for a few hours and work{" "}
 			<strong>distraction free!</strong>
 		</AnimatedContainer>
-		<AnimatedContainer delay={AnimatedContainer.baseDelay + 0.5}>
+		<AnimatedContainer position={3}>
 			<br />
 			<Disclaimer>
 				*Due to system limitations, DND Me does not work if Do Not Disturb is

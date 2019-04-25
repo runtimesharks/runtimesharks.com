@@ -8,17 +8,17 @@ import Teaching from "../components/home/Teaching"
 const Home = () => (
 	<>
 		<Content>
-			<AnimatedContainer delay={AnimatedContainer.baseDelay}>
+			<AnimatedContainer>
 				<Apps />
 			</AnimatedContainer>
-			<AnimatedContainer delay={AnimatedContainer.baseDelay + 0.25}>
+			<AnimatedContainer position={2}>
 				<Experience />
 			</AnimatedContainer>
-			<AnimatedContainer delay={AnimatedContainer.baseDelay + 0.5}>
+			<AnimatedContainer position={3}>
 				<Teaching />
 			</AnimatedContainer>
 		</Content>
-		<AnimatedContainer delay={AnimatedContainer.baseDelay + 0.75}>
+		<AnimatedContainer position={4}>
 			<div className="centered side-padded">
 				Please check out the other sections of our site, <br />
 				or <a href="mailto:contact@runtimesharks.com">get in touch</a>; we'd

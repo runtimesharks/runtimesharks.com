@@ -9,17 +9,17 @@ import GetInTouch from "../components/GetInTouch"
 const Consulting = () => (
 	<>
 		<Content>
-			<AnimatedContainer delay={AnimatedContainer.baseDelay}>
+			<AnimatedContainer>
 				<Practices />
 			</AnimatedContainer>
-			<AnimatedContainer delay={AnimatedContainer.baseDelay + 0.25}>
+			<AnimatedContainer position={2}>
 				<Review />
 			</AnimatedContainer>
-			<AnimatedContainer delay={AnimatedContainer.baseDelay + 0.5}>
+			<AnimatedContainer position={3}>
 				<Software />
 			</AnimatedContainer>
 		</Content>
-		<AnimatedContainer delay={AnimatedContainer.baseDelay + 0.75}>
+		<AnimatedContainer position={4}>
 			<GetInTouch section="consulting" />
 		</AnimatedContainer>
 	</>

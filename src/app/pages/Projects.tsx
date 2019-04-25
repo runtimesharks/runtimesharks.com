@@ -7,11 +7,6 @@ import ContactUs from "../components/projects/ContactUs"
 import allProjects from "../models/AllProjects"
 import Project from "../models/Project"
 
-interface ItemStyle {
-	index: number
-	didAnimate: boolean
-}
-
 const Icon = ({ slug, name }: Project) => (
 	<Img src={`/images/projects/icons/${slug}.jpg`} alt={`${name}'s icon`} />
 )
@@ -23,7 +18,12 @@ const Projects = () => (
 			<Grid>
 				{allProjects.map((project, index) => {
 					return (
-						<AnimatedContainer key={project.slug} delay={index * 0.2} sidepaded={false}>
+						<AnimatedContainer
+							key={project.slug}
+							position={index + 1}
+							delay={0.125}
+							sidepaded={false}
+						>
 							{project.link.startsWith("/") ? (
 								<Link to={project.link}>
 									<Icon {...project} />
@@ -45,10 +45,6 @@ const Projects = () => (
 const StyledContent = styled(Content)`
 	margin-top: 1em;
 	max-width: 700px;
-
-	a {
-		border-bottom: none;
-	}
 `
 
 const Grid = styled.div`
@@ -64,7 +60,8 @@ const Grid = styled.div`
 	font-weight: 500;
 	font-size: 0.75em;
 
-	a {
+	a,
+	a:hover {
 		border-bottom: none;
 	}
 

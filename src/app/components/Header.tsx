@@ -1,22 +1,20 @@
-import React from "react"
-import { Link } from "react-router-dom"
-import styled, { keyframes } from "styled-components"
-import Theme from "../theme/Theme"
+import React from "react";
+import { Link } from "react-router-dom";
+import styled, { keyframes } from "styled-components";
+import Theme from "../theme/Theme";
 
-const Header = () => {
-	return (
-		<>
-			<Container className="side-padded">
-				<Link to="/">
-					<FirstHalf>runtime</FirstHalf>
-					<SecondHalf>sharks</SecondHalf>
-				</Link>
-				<Subtitle>Improving the world, one bit at a time</Subtitle>
-			</Container>
-			<Padding className="nav-padding" />
-		</>
-	)
-}
+const Header = () => (
+	<>
+		<Container className="side-padded">
+			<Link to="/">
+				<FirstHalf>runtime</FirstHalf>
+				<SecondHalf>sharks</SecondHalf>
+			</Link>
+			<Subtitle>Improving the world, one bit at a time</Subtitle>
+		</Container>
+		<Padding className="nav-padding" />
+	</>
+)
 
 const Container = styled.div`
 	padding: 1.5em 20px 1em;
@@ -68,7 +66,7 @@ const Subtitle = styled.h2`
 	font-size: 0.8em;
 	font-weight: 400;
 	line-height: 1.5em;
-	margin-top: -5px;
+	margin-top: -8px;
 	opacity: 0;
 
 	animation: ${appearFromAbove} 0.75s 0.5s forwards ease-in-out;

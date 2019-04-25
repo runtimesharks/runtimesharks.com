@@ -2,6 +2,7 @@ import React from "react"
 import { NavLink } from "react-router-dom"
 import styled from "styled-components"
 import Theme from "../theme/Theme"
+import AnimatedContainer from "./containers/AnimatedContainer"
 
 interface LinkProps {
 	position: number
@@ -75,7 +76,7 @@ const Nav = styled.nav`
 	}
 `
 
-const Link = styled.div`
+const Link = styled.div<LinkProps>`
 	opacity: 0;
 
 	& a {
@@ -108,8 +109,9 @@ const Link = styled.div`
 	}
 
 	animation: appear 0.75s
-		${(props: LinkProps) => `${1 + props.position * 0.35}s`} forwards
-		ease-in-out;
+		${(props: LinkProps) =>
+			`${0.75 + props.position * AnimatedContainer.baseDelay}s`}
+		forwards ease-in-out;
 
 	@keyframes appear {
 		0% {
