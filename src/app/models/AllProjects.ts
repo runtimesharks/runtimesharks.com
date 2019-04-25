@@ -1,4 +1,5 @@
 import ExternalLink from "./ExternalLink"
+import { GalleryImage } from "./Gallery"
 import Project from "./Project"
 
 const allProjects = [
@@ -77,6 +78,16 @@ const allProjects = [
 			}),
 		],
 		color: "#f15745",
+		gallery: [
+			new GalleryImage({
+				url: "/images/projects/dnd-me/on-icon.png",
+				caption: "The icon changes if DND Me is active.",
+			}),
+			new GalleryImage({
+				url: "/images/projects/dnd-me/on-menu.png",
+				caption: "See the time left until DND Me will turn off Do Not Disturb.",
+			}),
+		],
 	}),
 	new Project({
 		name: "Goalee",

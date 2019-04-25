@@ -1,5 +1,6 @@
 import Theme from "../theme/Theme"
 import ExternalLink from "./ExternalLink"
+import Gallery from "./Gallery"
 
 interface Schema {
 	name: string
@@ -8,6 +9,7 @@ interface Schema {
 	paddleProductId?: string
 	link?: string
 	color?: string
+	gallery?: Gallery
 }
 
 export default class Project {
@@ -17,6 +19,7 @@ export default class Project {
 	paddleProductId?: string
 	link: string
 	image: string
+	gallery: Gallery
 	slug: string
 	color: string
 
@@ -27,6 +30,7 @@ export default class Project {
 		paddleProductId,
 		link,
 		color = Theme.linkColor,
+		gallery = []
 	}: Schema) {
 		this.name = name
 		this.description = description
@@ -44,7 +48,6 @@ export default class Project {
 		this.link = link || `/projects/${this.slug}`
 		this.image = `/images/projects/screenshots/${this.slug}.png`
 		this.color = color
-
-		console.log(this.slug)
+		this.gallery = gallery
 	}
 }
