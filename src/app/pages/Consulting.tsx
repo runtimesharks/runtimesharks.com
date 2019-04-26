@@ -1,5 +1,5 @@
 import React from "react"
-import Practices from "../components/consulting/practices"
+import Practices from "../components/consulting/Practices"
 import Review from "../components/consulting/Review"
 import Software from "../components/consulting/Software"
 import AnimatedContainer from "../components/containers/AnimatedContainer"

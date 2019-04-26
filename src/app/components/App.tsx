@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import Router from "../routes/router"
+import Router from "../routes/Router"
 import { GlobalStyle } from "../theme/globalStyle"
 import Helmet from "../utils/Helmet"
 import Footer from "./Footer"
