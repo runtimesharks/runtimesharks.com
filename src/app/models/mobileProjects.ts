@@ -28,13 +28,13 @@ const mobileProjects = [
 		name: "Hey, Be Well!",
 		externalLinks: [
 			new ExternalLink({
-				title: "Home",
-				url: "https://heybewell.com",
-			}),
-			new ExternalLink({
 				title: "App Store",
 				url:
 					"https://itunes.apple.com/us/app/hey-be-well/id1440003341?ls=1&mt=8",
+			}),
+			new ExternalLink({
+				title: "Home",
+				url: "https://heybewell.com",
 			}),
 		],
 		color: "#3b245f",
