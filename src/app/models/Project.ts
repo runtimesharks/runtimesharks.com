@@ -34,7 +34,7 @@ export default class Project {
 		this.paddleProductId = paddleProductId
 		this.slug = name
 			.toLowerCase()
-			.replace(/[& ,!]/g, "-")
+			.replace(/[& ,!']/g, "-")
 			.replace("--", "-")
 
 		if (this.slug.endsWith("-")) {
