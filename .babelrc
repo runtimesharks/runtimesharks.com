@@ -1,6 +1,7 @@
 {
 	"presets": [
 		"razzle/babel", // NEEDED
+		"@babel/preset-typescript",
 		[
 			"@babel/preset-env",
 			{
@@ -11,5 +12,9 @@
 			}
 		]
 	],
-	"plugins": []
+	"plugins": [
+		"transform-optional-chaining",
+		"@babel/proposal-class-properties",
+		"@babel/proposal-object-rest-spread"
+	]
 }
