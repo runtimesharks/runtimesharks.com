@@ -5,26 +5,29 @@ import AnimatedContainer from "../../../containers/AnimatedContainer"
 const TeamCards = (props: any) => (
 	<Project {...props}>
 		<AnimatedContainer>
-			In 2018 we set out to create a platform to help people journal and share
-			travels better. Why bother with such a crowded market? Because we believe
-			that when you write down your thoughts in a journal, you write in a
-			certain way; you write for yourself; you write for your future self; you
-			write with empathy; you create memories, not simple reviews.
+			In 2019 we envisioned a simple tool that would allow anyone to create and
+			manage an about page, where one or several teams are presented. And that's
+			how <a href="https://team.cards">team.cards</a> came to life.
 		</AnimatedContainer>
 		<br />
 		<AnimatedContainer position={2}>
-			We really think it’s much more rewarding to read a story, not a simple
-			review; to experience a memory, not read a simple description about a
-			place; to feel another person’s feelings about a photo. And My Travel
-			Stories offers just that: a way to search places and/or follow others to
-			be up-to-date with their entries. You’ll get a glimpse of other people’s
-			lives, as they want it to be remembered by themselves.
+			There are many existing solutions, but all require technical knowledge,
+			even if a little. Another option is to hire an agency that would build it,
+			but the costs can go up quite fast. The last option is to use your own
+			developers to create it, but that translates into indirect costs as well,
+			just as high.
 		</AnimatedContainer>
 		<br />
 		<AnimatedContainer position={3}>
-			The backend and website were created with{" "}
-			<a href="https://vapor.codes">Vapor</a>, a server side framework based on
-			Swift.
+			Why not give <a href="https://team.cards">team.cards</a> a try? Easy and
+			cheap. Be sure to subscribe to be informed on the launch and any other
+			news!
+		</AnimatedContainer>
+		<br />
+		<AnimatedContainer position={4}>
+			Written with <a href="https://nodejs.org/en">Node.js</a>,{" "}
+			<a href="http://expressjs.com/">Express</a> and{" "}
+			<a href="https://reactjs.org">React</a>.
 		</AnimatedContainer>
 	</Project>
 )
