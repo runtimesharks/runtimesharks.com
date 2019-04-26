@@ -55,8 +55,14 @@ const Button = styled.a`
 	padding-left: 9px;
 	padding-right: 9px;
 	box-sizing: content-box;
+
 	border: 1px solid;
 	border-color: #494949 #303030 #1d1d1d;
+
+	&:hover {
+		border-color: #494949 #303030 #1d1d1d;
+	}
+
 	font-weight: bold;
 	font-size: 13px;
 	text-shadow: 0px 1px 0px #414141;
@@ -69,6 +75,10 @@ const Button = styled.a`
 const PaddleButton = styled(Button)`
 	background: linear-gradient(#74c937 0%, #3b8109 100%);
 	border-color: #60a62e #519f18 #409701;
+
+	&:hover {
+		border-color: #60a62e #519f18 #409701;
+	}
 `
 
 export default ExternalButtons
