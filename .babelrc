@@ -5,7 +5,7 @@
 		[
 			"@babel/preset-env",
 			{
-				"spec": true,
+				// "spec": true,
 				// "debug": true,
 				"useBuiltIns": "usage",
 				"corejs": "3.0.1"
