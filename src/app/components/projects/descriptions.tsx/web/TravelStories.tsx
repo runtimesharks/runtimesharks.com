@@ -11,6 +11,7 @@ const TravelStories = (props: any) => (
 			certain way; you write for yourself; you write for your future self; you
 			write with empathy; you create memories, not simple reviews.
 		</AnimatedContainer>
+		<br />
 		<AnimatedContainer position={2}>
 			We really think it’s much more rewarding to read a story, not a simple
 			review; to experience a memory, not read a simple description about a
@@ -19,8 +20,11 @@ const TravelStories = (props: any) => (
 			be up-to-date with their entries. You’ll get a glimpse of other people’s
 			lives, as they want it to be remembered by themselves.
 		</AnimatedContainer>
+		<br />
 		<AnimatedContainer position={3}>
-			The backend and website were created with <a href="https://vapor.codes">Vapor</a>, a server side framework based on Swift.
+			The backend and website were created with{" "}
+			<a href="https://vapor.codes">Vapor</a>, a server side framework based on
+			Swift.
 		</AnimatedContainer>
 	</Project>
 )

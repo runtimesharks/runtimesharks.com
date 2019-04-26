@@ -10,7 +10,7 @@ const webProjects = [
 		externalLinks: [
 			new ExternalLink({
 				title: "GitHub",
-				url: "https://github.com/runtime-sharks/homepage",
+				url: "https://github.com/runtimesharks/homepage",
 			}),
 		],
 	}),
@@ -26,13 +26,14 @@ const webProjects = [
 	}),
 	new Project({
 		name: "Travel Stories",
+		hasImage: false,
 		externalLinks: [
 			new ExternalLink({
 				title: "Web",
 				url: "https://travelstories.world",
 			}),
 		],
-		color: "#3b245f",
+		color: "#7324d6",
 	}),
 	new Project({
 		name: "Roland's blog",
@@ -40,6 +41,10 @@ const webProjects = [
 			new ExternalLink({
 				title: "Web",
 				url: "https://rolandleth.com",
+			}),
+			new ExternalLink({
+				title: "GitHub",
+				url: "https://github.com/rolandleth/rolandleth.com",
 			}),
 		],
 		color: "#12a8da",

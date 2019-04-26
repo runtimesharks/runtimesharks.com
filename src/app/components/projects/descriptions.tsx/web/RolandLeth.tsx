@@ -5,24 +5,34 @@ import AnimatedContainer from "../../../containers/AnimatedContainer"
 const RolandLeth = (props: any) => (
 	<Project {...props}>
 		<AnimatedContainer>
-			In 2018 we set out to create a platform to help people journal and share
-			travels better. Why bother with such a crowded market? Because we believe
-			that when you write down your thoughts in a journal, you write in a
-			certain way; you write for yourself; you write for your future self; you
-			write with empathy; you create memories, not simple reviews.
+			Roland has used his blog both to write and teach others, but also as a
+			training ground for learning new technologies. Throughout the years he
+			built it with{" "}
+			<a href="https://github.com/rolandleth/rolandleth.com/tree/sinatra">
+				Sinatra
+			</a>
+			,{" "}
+			<a href="https://github.com/rolandleth/rolandleth.com/tree/node">
+				Node.js
+			</a>
+			, or{" "}
+			<a href="https://github.com/rolandleth/rolandleth.com/tree/swift-vapor">
+				Vapor
+			</a>
+			.
 		</AnimatedContainer>
+		<br />
 		<AnimatedContainer position={2}>
-			We really think it’s much more rewarding to read a story, not a simple
-			review; to experience a memory, not read a simple description about a
-			place; to feel another person’s feelings about a photo. And My Travel
-			Stories offers just that: a way to search places and/or follow others to
-			be up-to-date with their entries. You’ll get a glimpse of other people’s
-			lives, as they want it to be remembered by themselves.
+			We thought it's time to get up to speed with modern times, so we rewrote
+			it with <a href="https://nodejs.org/en">Node.js</a>,{" "}
+			<a href="http://expressjs.com/">Express</a> and{" "}
+			<a href="https://reactjs.org">React</a>, bringing a better structure and
+			modern JavaScript to the project and opening the way to more easily
+			improve it in the future.
 		</AnimatedContainer>
+		<br />
 		<AnimatedContainer position={3}>
-			The backend and website were created with{" "}
-			<a href="https://vapor.codes">Vapor</a>, a server side framework based on
-			Swift.
+			The source code is open source and you can find it below.
 		</AnimatedContainer>
 	</Project>
 )
