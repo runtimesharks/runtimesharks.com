@@ -1,5 +1,5 @@
 import React from "react"
-import { Route } from "react-router"
+import { Redirect, Route, Switch } from "react-router"
 import BerariaH from "../components/projects/descriptions.tsx/BerariaH"
 import CardVirtual from "../components/projects/descriptions.tsx/CardVirtual"
 import Carminder from "../components/projects/descriptions.tsx/Carminder"
@@ -16,7 +16,7 @@ import PuppetAnthems from "../components/projects/descriptions.tsx/PuppetAnthems
 import Projects from "../pages/Projects"
 
 const ProjectRouter = () => (
-	<>
+	<Switch>
 		<Route exact path="/projects" component={Projects} />
 		<Route exact path="/projects/challengebeat" component={ChallengeBeat} />
 		<Route
@@ -39,7 +39,10 @@ const ProjectRouter = () => (
 			component={ExpensesPlanner}
 		/>
 		<Route exact path="/projects/carminder" component={Carminder} />
-	</>
+		<Route>
+			<Redirect to="/projects" />
+		</Route>
+	</Switch>
 )
 
 export default ProjectRouter
