@@ -1,9 +1,10 @@
 import React, { useContext } from "react"
+import { RouteComponentProps, withRouter } from "react-router"
 import styled, { css, keyframes } from "styled-components"
 import InitialAnimationContext from "../../utils/InitialAnimationContext"
 
 interface StyleProps {
-	didAnimate: boolean
+	shouldAnimate: boolean
 	delay: number
 	forced: boolean
 }
@@ -22,15 +23,19 @@ function AnimatedContainer({
 	forced = true,
 	sidepaded = true,
 	children,
-}: Props) {
+	history,
+}: Props & RouteComponentProps) {
 	const didAnimate = useContext(InitialAnimationContext)
+	// Disable animating when going back.
+	const isPop = history.action === "POP"
+	const shouldAnimate = didAnimate === false || isPop === false
 
 	return (
 		<Container
 			className={`${sidepaded ? "side-padded" : null}`}
-			didAnimate={didAnimate}
+			shouldAnimate={shouldAnimate && didAnimate === false}
 			delay={position * delay}
-			forced={forced}
+			forced={shouldAnimate && forced}
 		>
 			{children}
 		</Container>
@@ -51,7 +56,7 @@ const appearFromBelow = keyframes`
 
 const Container = styled.div<StyleProps>`
 	${(props: StyleProps) =>
-		props.didAnimate && !props.forced
+		props.shouldAnimate === false && props.forced === false
 			? null
 			: css`
 					opacity: 0;
@@ -62,4 +67,4 @@ const Container = styled.div<StyleProps>`
 
 AnimatedContainer.baseDelay = 0.25
 
-export default AnimatedContainer
+export default withRouter(AnimatedContainer)
