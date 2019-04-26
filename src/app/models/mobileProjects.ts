@@ -2,7 +2,7 @@ import ExternalLink from "./ExternalLink"
 import { GalleryImage } from "./Gallery"
 import Project from "./Project"
 
-const iOSProjects = [
+const mobileProjects = [
 	new Project({
 		name: "ChallengeBeat",
 		externalLinks: [
@@ -16,8 +16,6 @@ const iOSProjects = [
 	}),
 	new Project({
 		name: "My Travel Stories",
-		description:
-			"Travel, take beautiful photos, write down your feelings and create your travel journal. Share your stories with the world and find inspiration from others for your next trips!",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -91,8 +89,6 @@ const iOSProjects = [
 	}),
 	new Project({
 		name: "Goalee",
-		description:
-			"What drives you each day? What matters to you the most? Remind yourself often, so you don't forget what your true goals in life are!",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -103,8 +99,6 @@ const iOSProjects = [
 	}),
 	new Project({
 		name: "Card Virtual",
-		description:
-			"Helps users save their fidelity cards (or request new ones), that also displays merchants & their offers and offers a shopping list. With the built-in friends feature, the users can share and collaborate in real-time on their shopping lists.",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -140,8 +134,6 @@ const iOSProjects = [
 	}),
 	new Project({
 		name: "Puppet Anthems",
-		description:
-			"The fun way to learn about national anthems, for adults and kids alike. All the lyrics, the music, the history, and all the info related to the 32 countries from the 2014 World Cup in one great app.",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -165,4 +157,4 @@ const iOSProjects = [
 	}),
 ]
 
-export default iOSProjects
+export default mobileProjects
