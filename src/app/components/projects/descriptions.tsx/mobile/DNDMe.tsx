@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import Project from "../../../pages/Project"
-import AnimatedContainer from "../../containers/AnimatedContainer"
+import Project from "../../../../pages/Project"
+import AnimatedContainer from "../../../containers/AnimatedContainer"
 
 const DNDMe = (props: any) => (
 	<StyledProject {...props}>

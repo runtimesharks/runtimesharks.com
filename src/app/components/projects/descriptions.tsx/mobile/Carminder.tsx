@@ -1,6 +1,6 @@
 import React from "react"
-import Project from "../../../pages/Project"
-import ProjectContainer from "../../containers/ProjectContainer"
+import Project from "../../../../pages/Project"
+import ProjectContainer from "../../../containers/ProjectContainer"
 
 const Carminder = (props: any) => (
 	<Project {...props} centered>

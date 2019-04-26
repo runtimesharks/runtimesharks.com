@@ -5,13 +5,14 @@ import Project from "./Project"
 const webProjects = [
 	new Project({
 		name: "Our website",
+		hasImage: false,
+		color: Theme.darkBlue,
 		externalLinks: [
 			new ExternalLink({
-				title: "Web",
-				url: "https://runtimesharks.com",
+				title: "GitHub",
+				url: "https://github.com/runtime-sharks/homepage",
 			}),
 		],
-		color: Theme.darkBlue,
 	}),
 	new Project({
 		name: "team.cards",
@@ -24,7 +25,7 @@ const webProjects = [
 		color: "#4054b2",
 	}),
 	new Project({
-		name: "My Travel Stories",
+		name: "Travel Stories",
 		externalLinks: [
 			new ExternalLink({
 				title: "Web",

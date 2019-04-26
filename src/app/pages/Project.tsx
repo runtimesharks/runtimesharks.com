@@ -7,17 +7,21 @@ import Gallery from "../components/projects/Gallery"
 import Image from "../components/projects/Image"
 import mobileProjects from "../models/mobileProjects"
 import ProjectModel from "../models/Project"
+import webProjects from "../models/webProjects"
 
-interface DescriptionStyle {
+interface StyleProps {
 	centered: boolean
+	hasImage: boolean
 }
 
 const Project = (props: any) => {
 	const param = props.match.path.replace("/projects/", "")
-	const project = mobileProjects.find((p) => p.slug === param)
+	const project = mobileProjects
+		.concat(webProjects)
+		.find((p) => p.slug === param)
 
 	if (project == null) {
-		return <Redirect to="/" />
+		return <Redirect to="/projects" />
 	}
 
 	return (
@@ -28,9 +32,9 @@ const Project = (props: any) => {
 						{project.name}
 					</Link>
 				</Header>
-				<Meta>
-					<StyledImage {...project} />
-					<Description centered={props.centered}>
+				<Meta hasImage={project.hasImage}>
+					{project.hasImage ? <StyledImage {...project} /> : null}
+					<Description centered={props.centered} hasImage={project.hasImage}>
 						{props.children}
 						<AnimatedContainer position={2}>
 							<ExternalButtons {...project} />
@@ -65,10 +69,13 @@ const Link = styled.a`
 	border-bottom-color: transparent;
 `
 
-const Meta = styled.div`
+const Meta = styled.div<StyleProps>`
 	margin-top: 3em;
 	display: grid;
-	grid-template-columns: auto auto;
+	grid-template-columns: repeat(
+		${(props: StyleProps) => (props.hasImage ? 2 : 1)},
+		auto
+	);
 	grid-gap: 60px;
 	justify-content: center;
 
@@ -81,11 +88,11 @@ const Meta = styled.div`
 
 const StyledImage = styled(Image)``
 
-const Description = styled.div<DescriptionStyle>`
-	max-width: 500px;
+const Description = styled.div<StyleProps>`
+	max-width: ${(props: StyleProps) => (props.hasImage ? "500px" : "700px")};
 	align-self: center;
-	${(props: DescriptionStyle) =>
-		props.centered ? "text-align: center;" : null};
+	text-align: justify;
+	/* ${(props: StyleProps) => (props.centered ? "text-align: center;" : null)}; */
 `
 
 export default Project

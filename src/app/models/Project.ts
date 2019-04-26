@@ -8,6 +8,7 @@ interface Schema {
 	paddleProductId?: string
 	link?: string
 	color?: string
+	hasImage?: boolean
 	gallery?: Gallery
 }
 
@@ -17,6 +18,7 @@ export default class Project {
 	paddleProductId?: string
 	link: string
 	image: string
+	hasImage: boolean
 	gallery: Gallery
 	slug: string
 	color: string
@@ -27,6 +29,7 @@ export default class Project {
 		paddleProductId,
 		link,
 		color = Theme.linkColor,
+		hasImage = true,
 		gallery = [],
 	}: Schema) {
 		this.name = name
@@ -44,6 +47,7 @@ export default class Project {
 		this.link = link || `/projects/${this.slug}`
 		this.image = `/images/projects/screenshots/${this.slug}.png`
 		this.color = color
+		this.hasImage = hasImage
 		this.gallery = gallery
 	}
 }
