@@ -1,0 +1,15 @@
+{
+	"presets": [
+		"razzle/babel", // NEEDED
+		[
+			"@babel/preset-env",
+			{
+				"spec": true,
+				// "debug": true,
+				"useBuiltIns": "usage",
+				"corejs": "3.0.1"
+			}
+		]
+	],
+	"plugins": []
+}
