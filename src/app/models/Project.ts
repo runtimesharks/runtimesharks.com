@@ -1,6 +1,6 @@
 import Theme from "../theme/Theme"
 import ExternalLink from "./ExternalLink"
-import Gallery from "./Gallery"
+import GalleryImage from "./GalleryImage"
 
 interface Schema {
 	name: string
@@ -9,7 +9,7 @@ interface Schema {
 	link?: string
 	color?: string
 	hasImage?: boolean
-	gallery?: Gallery
+	gallery?: GalleryImage[]
 }
 
 export default class Project {
@@ -19,7 +19,7 @@ export default class Project {
 	link: string
 	image: string
 	hasImage: boolean
-	gallery: Gallery
+	gallery: GalleryImage[]
 	slug: string
 	color: string
 

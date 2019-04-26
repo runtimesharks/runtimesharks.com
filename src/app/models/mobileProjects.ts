@@ -1,5 +1,5 @@
 import ExternalLink from "./ExternalLink"
-import { GalleryImage } from "./Gallery"
+import GalleryImage from "./GalleryImage"
 import Project from "./Project"
 
 const mobileProjects = [

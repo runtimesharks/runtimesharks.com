@@ -1,4 +1,4 @@
-export class GalleryImage {
+export default class GalleryImage {
 	url: string
 	caption: string
 
@@ -7,7 +7,3 @@ export class GalleryImage {
 		this.caption = caption
 	}
 }
-
-type Gallery = GalleryImage[]
-
-export default Gallery
