@@ -82,6 +82,7 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	code {
+		font-size: 0.8em;
 		font-family: 'SF Mono', Menlo, Monaco, Courier, monospace;
 	}
 
