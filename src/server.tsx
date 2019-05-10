@@ -26,6 +26,7 @@ server
 		const styleTags = sheet.getStyleTags()
 		const helmet = Helmet.renderStatic()
 		const allHelmetDataAsString = Object.keys(helmet)
+			// @ts-ignore
 			.map((key) => helmet[key].toString())
 			.filter((o) => o !== "" && o !== undefined)
 			.join("\n")

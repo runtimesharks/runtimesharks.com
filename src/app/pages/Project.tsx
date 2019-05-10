@@ -1,4 +1,5 @@
 import React from "react"
+import Helmet from "react-helmet"
 import { Redirect } from "react-router"
 import styled from "styled-components"
 import AnimatedContainer from "../components/containers/AnimatedContainer"
@@ -10,7 +11,7 @@ import ProjectModel from "../models/Project"
 import webProjects from "../models/webProjects"
 
 interface StyleProps {
-	centered: boolean
+	centered?: boolean
 	hasImage: boolean
 }
 
@@ -25,29 +26,34 @@ const Project = (props: any) => {
 	}
 
 	return (
-		<AnimatedContainer>
-			<Container {...props}>
-				<Header>
-					<Link href={project.link} color={project.color}>
-						{project.name}
-					</Link>
-				</Header>
-				<Meta hasImage={project.hasImage}>
-					{project.hasImage ? <StyledImage {...project} /> : null}
-					<Description centered={props.centered} hasImage={project.hasImage}>
-						{props.children}
-						<AnimatedContainer position={2}>
-							<ExternalButtons {...project} />
+		<>
+			<Helmet>
+				<title>Runtime Sharks: {project.name}</title>
+			</Helmet>
+			<AnimatedContainer>
+				<Container {...props}>
+					<Header>
+						<Link href={project.link} color={project.color}>
+							{project.name}
+						</Link>
+					</Header>
+					<Meta hasImage={project.hasImage}>
+						{project.hasImage ? <StyledImage {...project} /> : null}
+						<Description centered={props.centered} hasImage={project.hasImage}>
+							{props.children}
+							<AnimatedContainer position={2}>
+								<ExternalButtons {...project} />
+							</AnimatedContainer>
+						</Description>
+					</Meta>
+					{project.gallery.length > 0 ? (
+						<AnimatedContainer position={3}>
+							<Gallery {...project} />
 						</AnimatedContainer>
-					</Description>
-				</Meta>
-				{project.gallery.length > 0 ? (
-					<AnimatedContainer position={3}>
-						<Gallery {...project} />
-					</AnimatedContainer>
-				) : null}
-			</Container>
-		</AnimatedContainer>
+					) : null}
+				</Container>
+			</AnimatedContainer>
+		</>
 	)
 }
 

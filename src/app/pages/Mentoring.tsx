@@ -1,4 +1,5 @@
 import React from "react"
+import Helmet from "react-helmet"
 import AnimatedContainer from "../components/containers/AnimatedContainer"
 import Content from "../components/Content"
 import GetInTouch from "../components/GetInTouch"
@@ -7,6 +8,9 @@ import IOS from "../components/mentoring/IOS"
 
 const Mentoring = () => (
 	<>
+		<Helmet>
+			<title>Runtime Sharks: Mentoring</title>
+		</Helmet>
 		<Content>
 			<AnimatedContainer>
 				<FromZero />

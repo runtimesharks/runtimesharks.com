@@ -1,4 +1,5 @@
 import React from "react"
+import Helmet from "react-helmet"
 import Practices from "../components/consulting/Practices"
 import Review from "../components/consulting/Review"
 import Software from "../components/consulting/Software"
@@ -8,6 +9,9 @@ import GetInTouch from "../components/GetInTouch"
 
 const Consulting = () => (
 	<>
+		<Helmet>
+			<title>Runtime Sharks: Consulting</title>
+		</Helmet>
 		<Content>
 			<AnimatedContainer>
 				<Practices />
