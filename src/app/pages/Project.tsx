@@ -32,11 +32,13 @@ const Project = (props: any) => {
 			</Helmet>
 			<AnimatedContainer>
 				<Container {...props}>
-					<Header>
-						<Link href={project.link} color={project.color}>
-							{project.name}
-						</Link>
-					</Header>
+					<header>
+						<Title>
+							<Link href={project.link} color={project.color}>
+								{project.name}
+							</Link>
+						</Title>
+					</header>
 					<Meta hasImage={project.hasImage}>
 						{project.hasImage ? <StyledImage {...project} /> : null}
 						<Description centered={props.centered} hasImage={project.hasImage}>
@@ -61,7 +63,7 @@ const Container = styled.div`
 	margin-top: 4em;
 `
 
-const Header = styled.header`
+const Title = styled.h1`
 	text-align: center;
 	margin-bottom: 2.5em;
 	font-size: 1.6em;

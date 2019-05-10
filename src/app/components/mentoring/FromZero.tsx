@@ -2,7 +2,7 @@ import React from "react"
 
 const FromZero = () => (
 	<>
-		<h1>Learning from zero</h1>
+		<h2>Learn to code</h2>
 		<p>
 			Would you like to learn programming? No matter the language, let us help
 			you! We will start with an intro session, where we'll understand your

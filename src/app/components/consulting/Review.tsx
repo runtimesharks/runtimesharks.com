@@ -2,7 +2,7 @@ import React from "react"
 
 const Review = () => (
 	<>
-		<h1>Code review</h1>
+		<h2>Code review</h2>
 		<p>
 			Do you have an existing app/codebase that you'd like reviewed? Do you need
 			tips and advice on how to untangle and clean old code? Do you need old

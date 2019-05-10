@@ -2,7 +2,7 @@ import React from "react"
 
 const Apps = () => (
 	<>
-		<h1>Building mobile and web apps</h1>
+		<h1>Software development</h1>
 		<p>
 			Our team has worked with small and big companies, from start to finish or
 			on existing projects, so whether you're just starting out or want to add

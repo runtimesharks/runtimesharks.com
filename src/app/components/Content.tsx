@@ -21,7 +21,7 @@ const Container = styled.div`
 	margin: auto;
 	max-width: 600px;
 
-	& h1 {
+	& h1, h2 {
 		font-weight: 600;
 		font-size: 1.2em;
 		padding: 1em 0 0;

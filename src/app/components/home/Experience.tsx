@@ -6,7 +6,7 @@ import Swift from "./icons/Swift"
 
 const Experience = () => (
 	<>
-		<h1>We have experience with</h1>
+		<h2>We have experience with</h2>
 		<Container>
 			<Technologies>
 				<Technology>

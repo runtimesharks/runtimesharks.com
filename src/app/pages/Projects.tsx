@@ -38,9 +38,4 @@ const Spacer = styled.div`
 	padding: 1em 0;
 `
 
-const Title = styled.h1`
-	margin: 2em 0 2em;
-	text-align: center;
-`
-
 export default Projects

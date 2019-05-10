@@ -116,7 +116,7 @@ export const GlobalStyle = createGlobalStyle`
 		font-family: ${Theme.headerFont};
 	}
 
-	h1 {
+	h1, h2 {
 		font-size: 1.3em;
 		font-weight: 600;
 		margin-bottom: 10px;

@@ -46,7 +46,7 @@ const ProjectsSection = ({ projects, title, offset = 0 }: Props) => (
 	</AnimatedContainer>
 )
 
-const Title = styled.h1`
+const Title = styled.h2`
 	margin: 2em 0 2em;
 	text-align: center;
 `

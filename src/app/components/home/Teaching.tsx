@@ -2,7 +2,7 @@ import React from "react"
 
 const Teaching = () => (
 	<>
-		<h1>Teaching & Consulting</h1>
+		<h2>Teaching & Consulting</h2>
 		<p>
 			Roland has more than 8 years of iOS experience; he's been writing on{" "}
 			<a href="https://rolandleth.com">his blog</a> since 2013 and has been{" "}
