@@ -1,11 +1,12 @@
 import React from "react"
 import { Redirect, Route, Switch } from "react-router"
+import DNDMe from "../components/projects/descriptions.tsx/mac/DNDMe"
+import TimeProgress from "../components/projects/descriptions.tsx/mac/TimeProgress"
 import BerariaH from "../components/projects/descriptions.tsx/mobile/BerariaH"
 import CardVirtual from "../components/projects/descriptions.tsx/mobile/CardVirtual"
 import Carminder from "../components/projects/descriptions.tsx/mobile/Carminder"
 import ChallengeBeat from "../components/projects/descriptions.tsx/mobile/ChallengeBeat"
 import DeinDeal from "../components/projects/descriptions.tsx/mobile/DeinDeal"
-import DNDMe from "../components/projects/descriptions.tsx/mobile/DNDMe"
 import Essenza from "../components/projects/descriptions.tsx/mobile/Essenza"
 import ExpensesPlanner from "../components/projects/descriptions.tsx/mobile/ExpensesPlanner"
 import Goalee from "../components/projects/descriptions.tsx/mobile/Goalee"
@@ -31,7 +32,6 @@ const ProjectRouter = () => (
 		<Route exact path="/projects/hey-be-well" component={HBW} />
 		<Route exact path="/projects/beraria-h" component={BerariaH} />
 		<Route exact path="/projects/idea-trackerr" component={IdeaTrackerr} />
-		<Route exact path="/projects/dnd-me" component={DNDMe} />
 		<Route exact path="/projects/goalee" component={Goalee} />
 		<Route exact path="/projects/card-virtual" component={CardVirtual} />
 		<Route exact path="/projects/essenza" component={Essenza} />
@@ -43,6 +43,8 @@ const ProjectRouter = () => (
 			component={ExpensesPlanner}
 		/>
 		<Route exact path="/projects/carminder" component={Carminder} />
+		<Route exact path="/projects/dnd-me" component={DNDMe} />
+		<Route exact path="/projects/timeprogress" component={TimeProgress} />
 		<Route exact path="/projects/travel-stories" component={TravelStories} />
 		<Route exact path="/projects/team.cards" component={TeamCards} />
 		<Route exact path="/projects/roland-s-blog" component={RolandLeth} />

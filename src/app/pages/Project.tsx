@@ -6,6 +6,7 @@ import AnimatedContainer from "../components/containers/AnimatedContainer"
 import ExternalButtons from "../components/projects/ExternalButtons"
 import Gallery from "../components/projects/Gallery"
 import Image from "../components/projects/Image"
+import macProjects from "../models/macProjects"
 import mobileProjects from "../models/mobileProjects"
 import ProjectModel from "../models/Project"
 import webProjects from "../models/webProjects"
@@ -19,6 +20,7 @@ const Project = (props: any) => {
 	const param = props.match.path.replace("/projects/", "")
 	const project = mobileProjects
 		.concat(webProjects)
+		.concat(macProjects)
 		.find((p) => p.slug === param)
 
 	if (project == null) {

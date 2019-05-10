@@ -5,6 +5,7 @@ import AnimatedContainer from "../components/containers/AnimatedContainer"
 import Content from "../components/Content"
 import ContactUs from "../components/projects/ContactUs"
 import ProjectsSection from "../components/projects/ProjectsSection"
+import macProjects from "../models/macProjects"
 import mobileProjects from "../models/mobileProjects"
 import webProjects from "../models/webProjects"
 
@@ -21,9 +22,15 @@ const Projects = () => (
 			<ProjectsSection title="Mobile " projects={mobileProjects} />
 			<Spacer />
 			<ProjectsSection
+				title="Mac"
+				projects={macProjects}
+				offset={mobileProjects.length}
+			/>
+			<Spacer />
+			<ProjectsSection
 				title="Web"
 				projects={webProjects}
-				offset={mobileProjects.length}
+				offset={mobileProjects.length + macProjects.length}
 			/>
 		</StyledContent>
 	</>
