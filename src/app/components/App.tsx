@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import Router from "../routes/Router"
 import { GlobalStyle } from "../theme/globalStyle"
 import Helmet from "../utils/Helmet"
+import LocationContext from "../utils/LocationContext"
 import Footer from "./Footer"
 import Header from "./Header"
 import Navigation from "./Navigation"
@@ -51,7 +52,9 @@ const App = ({ ssrLocation }: Props) => {
 			<GlobalStyle />
 			<Header />
 			<Navigation />
-			<Router />
+			<LocationContext.Provider value={ssrLocation}>
+				<Router />
+			</LocationContext.Provider>
 			<Footer />
 		</>
 	)
