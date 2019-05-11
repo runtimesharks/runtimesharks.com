@@ -10,8 +10,8 @@ interface Props {
 	offset?: number
 }
 
-const Icon = ({ slug, name }: Project) => (
-	<Img src={`/images/projects/icons/${slug}.jpg`} alt={`${name}'s icon`} />
+const Icon = ({ name, icon }: Project) => (
+	<Img src={icon} alt={`${name}'s icon`} />
 )
 
 const ProjectsSection = ({ projects, title, offset = 0 }: Props) => (

@@ -5,6 +5,8 @@ import Project from "./Project"
 const macProjects = [
 	new Project({
 		name: "DND Me",
+		summary:
+			"Activate Do Not Disturb for a few hours and work distraction free.",
 		paddleProductId: "551634",
 		price: "€4.99",
 		externalLinks: [
@@ -27,6 +29,8 @@ const macProjects = [
 	}),
 	new Project({
 		name: "TimeProgress",
+		summary:
+			"See at a glance what percentage of the current year, quarter, month, week or day has passed (or is remaining).",
 		paddleProductId: "558933",
 		price: "€2.99",
 		externalLinks: [

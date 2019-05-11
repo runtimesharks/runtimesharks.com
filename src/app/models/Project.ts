@@ -4,6 +4,7 @@ import GalleryImage from "./GalleryImage"
 
 interface Schema {
 	name: string
+	summary?: string
 	externalLinks?: ExternalLink[]
 	paddleProductId?: string
 	price?: string
@@ -15,11 +16,13 @@ interface Schema {
 
 export default class Project {
 	name: string
+	summary?: string
 	externalLinks: ExternalLink[]
 	paddleProductId?: string
 	price?: string
 	link: string
 	image: string
+	icon: string
 	hasImage: boolean
 	gallery: GalleryImage[]
 	slug: string
@@ -27,6 +30,7 @@ export default class Project {
 
 	constructor({
 		name,
+		summary,
 		externalLinks = [],
 		paddleProductId,
 		price,
@@ -36,6 +40,7 @@ export default class Project {
 		gallery = [],
 	}: Schema) {
 		this.name = name
+		this.summary = summary
 		this.externalLinks = externalLinks
 		this.paddleProductId = paddleProductId
 		this.price = price
@@ -50,6 +55,7 @@ export default class Project {
 
 		this.link = link || `/projects/${this.slug}`
 		this.image = `/images/projects/screenshots/${this.slug}.png`
+		this.icon = `/images/projects/icons/${this.slug}.jpg`
 		this.color = color
 		this.hasImage = hasImage
 		this.gallery = gallery

@@ -4,6 +4,7 @@ import Project from "./Project"
 const mobileProjects = [
 	new Project({
 		name: "ChallengeBeat",
+		summary: "Challenge yourself and your friends for better habits!",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -15,6 +16,7 @@ const mobileProjects = [
 	}),
 	new Project({
 		name: "My Travel Stories",
+		summary: "Travel the world and share your journey!",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -25,6 +27,7 @@ const mobileProjects = [
 	}),
 	new Project({
 		name: "Hey, Be Well!",
+		summary: "Achieve your wellbeing goals.",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -40,6 +43,7 @@ const mobileProjects = [
 	}),
 	new Project({
 		name: "Beraria H",
+		summary: "Browse for, book and check-in at events.",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -51,6 +55,8 @@ const mobileProjects = [
 
 	new Project({
 		name: "Idea Trackerr",
+		summary:
+			"Quickly jot down any idea you might have and keep track of its status and history.",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -67,6 +73,7 @@ const mobileProjects = [
 	}),
 	new Project({
 		name: "Goalee",
+		summary: "Your digital goal list reminder.",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -77,6 +84,8 @@ const mobileProjects = [
 	}),
 	new Project({
 		name: "Card Virtual",
+		summary:
+			"Store and easily access your fidelity cards. Collaborative sharing list included!",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -88,6 +97,7 @@ const mobileProjects = [
 	}),
 	new Project({
 		name: "Essenza",
+		summary: "A handy list of self improvement essentials and takeaways.",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -98,6 +108,7 @@ const mobileProjects = [
 	}),
 	new Project({
 		name: "DeinDeal",
+		summary: "One of the dominating flash-sales companies in Switzerland.",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -108,10 +119,13 @@ const mobileProjects = [
 	}),
 	new Project({
 		name: "DeinDeal Partners",
+		summary: "One of the dominating flash-sales companies in Switzerland.",
 		link: "https://itunes.apple.com/za/app/deindeal-partners/id892826193",
 	}),
 	new Project({
 		name: "Puppet Anthems",
+		summary:
+			"The fun way to learn about national anthems, for adults and kids alike.",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -123,12 +137,15 @@ const mobileProjects = [
 	}),
 	new Project({
 		name: "Carminder",
+		summary:
+			"See all your car's events at a glance and easily add a reminder, and how often you'd like to be reminded.",
 		link:
 			"https://itunes.apple.com/us/app/carminder-super-simple-maintenance/id633617025?ls=1&mt",
 		color: "#00a29b",
 	}),
 	new Project({
 		name: "Expenses Planner",
+		summary: "Helps you keep track of your upcoming expenses.",
 		link:
 			"https://itunes.apple.com/us/app/expenses-planner/id669431471?ls=1&mt",
 		color: "#481faf",

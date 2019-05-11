@@ -5,6 +5,7 @@ import Project from "./Project"
 const webProjects = [
 	new Project({
 		name: "Our website",
+		summary: "Our website.",
 		hasImage: false,
 		color: Theme.darkBlue,
 		externalLinks: [
@@ -16,6 +17,7 @@ const webProjects = [
 	}),
 	new Project({
 		name: "team.cards",
+		summary: "Create a team page in minutes!",
 		externalLinks: [
 			new ExternalLink({
 				title: "Web",
@@ -26,6 +28,7 @@ const webProjects = [
 	}),
 	new Project({
 		name: "Travel Stories",
+		summary: "Travel the world and share your journey!",
 		hasImage: false,
 		externalLinks: [
 			new ExternalLink({
@@ -37,6 +40,7 @@ const webProjects = [
 	}),
 	new Project({
 		name: "Roland's blog",
+		summary: "Roland Leth's blog.",
 		externalLinks: [
 			new ExternalLink({
 				title: "Web",
