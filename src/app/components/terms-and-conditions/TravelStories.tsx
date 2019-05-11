@@ -213,7 +213,11 @@ const TravelStories = () => (
 			<li>Is a direct and specific threat of violence to others;</li>
 			<li>Is defamatory, obscene, nude, partially nude, or pornographic;</li>
 			<li>Is furtherance of illegal activities; or</li>
-			<li>Is harassing, abusive, or constitutes spam.</li>
+			<li>Is harassing, abusive, or constitutes spam;</li>
+			<li>
+				Can be considered marketing of any kind. This includes — but is not
+				limited to — marketing of products, services, people or companies.
+			</li>
 		</ul>
 
 		<p>
