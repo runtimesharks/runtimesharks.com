@@ -1,11 +1,11 @@
 import React from "react"
-import Helmet from "react-helmet"
 import { Redirect } from "react-router"
 import styled from "styled-components"
 import AnimatedContainer from "../components/containers/AnimatedContainer"
 import ExternalButtons from "../components/projects/ExternalButtons"
 import Gallery from "../components/projects/Gallery"
 import Image from "../components/projects/Image"
+import ProjectHelmet from "../components/projects/ProjectHelmet"
 import macProjects from "../models/macProjects"
 import mobileProjects from "../models/mobileProjects"
 import ProjectModel from "../models/Project"
@@ -29,9 +29,7 @@ const Project = (props: any) => {
 
 	return (
 		<>
-			<Helmet>
-				<title>Runtime Sharks: {project.name}</title>
-			</Helmet>
+			<ProjectHelmet {...project} />
 			<AnimatedContainer>
 				<Container {...props}>
 					<header>
