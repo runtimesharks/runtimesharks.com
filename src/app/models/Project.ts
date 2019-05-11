@@ -6,6 +6,7 @@ interface Schema {
 	name: string
 	externalLinks?: ExternalLink[]
 	paddleProductId?: string
+	price?: string
 	link?: string
 	color?: string
 	hasImage?: boolean
@@ -16,6 +17,7 @@ export default class Project {
 	name: string
 	externalLinks: ExternalLink[]
 	paddleProductId?: string
+	price?: string
 	link: string
 	image: string
 	hasImage: boolean
@@ -27,6 +29,7 @@ export default class Project {
 		name,
 		externalLinks = [],
 		paddleProductId,
+		price,
 		link,
 		color = Theme.linkColor,
 		hasImage = true,
@@ -35,6 +38,7 @@ export default class Project {
 		this.name = name
 		this.externalLinks = externalLinks
 		this.paddleProductId = paddleProductId
+		this.price = price
 		this.slug = name
 			.toLowerCase()
 			.replace(/[& ,!']/g, "-")

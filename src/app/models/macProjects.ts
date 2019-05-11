@@ -6,6 +6,7 @@ const macProjects = [
 	new Project({
 		name: "DND Me",
 		paddleProductId: "551634",
+		price: "€4.99",
 		externalLinks: [
 			new ExternalLink({
 				title: "Download",
@@ -27,6 +28,7 @@ const macProjects = [
 	new Project({
 		name: "TimeProgress",
 		paddleProductId: "558933",
+		price: "€2.99",
 		externalLinks: [
 			new ExternalLink({
 				title: "Download",

@@ -7,10 +7,12 @@ interface StyleProps {
 	count: number
 }
 
-const ExternalButtons = ({ externalLinks, paddleProductId }: Project) => (
-	<Container
-		count={externalLinks.length + (paddleProductId === undefined ? 0 : 1)}
-	>
+const ExternalButtons = ({
+	externalLinks,
+	paddleProductId,
+	price,
+}: Project) => (
+	<Container count={externalLinks.length + (paddleProductId == null ? 0 : 1)}>
 		{externalLinks.map((l) => {
 			return (
 				<Button key={l.url} href={l.url}>
@@ -18,7 +20,7 @@ const ExternalButtons = ({ externalLinks, paddleProductId }: Project) => (
 				</Button>
 			)
 		})}
-		{paddleProductId !== undefined ? (
+		{paddleProductId == null ? null : (
 			<PaddleButton
 				onClick={(e) => {
 					e.preventDefault()
@@ -26,10 +28,8 @@ const ExternalButtons = ({ externalLinks, paddleProductId }: Project) => (
 					Paddle.Checkout.open({ product: paddleProductId })
 				}}
 			>
-				Buy Now!
+				Buy Now for {price}!
 			</PaddleButton>
-		) : (
-			""
 		)}
 	</Container>
 )
