@@ -8,15 +8,15 @@ const RolandLeth = (props: any) => (
 			Roland has used his blog both to write and teach others, but also as a
 			training ground for learning new technologies. Throughout the years he
 			built it with{" "}
-			<a href="https://github.com/rolandleth/rolandleth.com/tree/sinatra">
+			<a href="https://gitlab.com/runtimesharks/rolandleth.com/tree/sinatra">
 				Sinatra
 			</a>
 			,{" "}
-			<a href="https://github.com/rolandleth/rolandleth.com/tree/node">
+			<a href="https://gitlab.com/runtimesharks/rolandleth.com/tree/node">
 				Node.js
 			</a>
 			, or{" "}
-			<a href="https://github.com/rolandleth/rolandleth.com/tree/swift-vapor">
+			<a href="https://gitlab.com/runtimesharks/rolandleth.com/tree/swift-vapor">
 				Vapor
 			</a>
 			.
