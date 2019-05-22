@@ -12,16 +12,16 @@ const TeamCards = (props: any) => (
 		<br />
 		<AnimatedContainer position={2}>
 			There are many existing solutions, but all require technical knowledge,
-			even if a little. Another option is to hire an agency that would build it,
-			but the costs can go up quite fast. The last option is to use your own
-			developers to create it, but that translates into indirect costs as well,
-			just as high.
+			even if just a little. Another option is to hire an agency that would
+			build it, but the costs can go up quite fast. The last option is to use
+			your own developers to create it, but that translates into indirect costs
+			as well, just as high.
 		</AnimatedContainer>
 		<br />
 		<AnimatedContainer position={3}>
-			Why not give <a href="https://team.cards">team.cards</a> a try? Easy and
-			cheap. Be sure to subscribe to be informed on the launch and any other
-			news!
+			Why not give <a href="https://team.cards">team.cards</a> a try? It's easy
+			to use and super cheap. Be sure to subscribe to be informed on the launch
+			and any other news!
 		</AnimatedContainer>
 		<br />
 		<AnimatedContainer position={4}>

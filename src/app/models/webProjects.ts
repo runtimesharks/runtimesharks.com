@@ -20,7 +20,7 @@ const webProjects = [
 		summary: "Create a team page in minutes!",
 		externalLinks: [
 			new ExternalLink({
-				title: "Web",
+				title: "Visit",
 				url: "https://team.cards",
 			}),
 		],
@@ -32,7 +32,7 @@ const webProjects = [
 		hasImage: false,
 		externalLinks: [
 			new ExternalLink({
-				title: "Web",
+				title: "Visit",
 				url: "https://travelstories.world",
 			}),
 		],
@@ -43,7 +43,7 @@ const webProjects = [
 		summary: "Roland Leth's blog.",
 		externalLinks: [
 			new ExternalLink({
-				title: "Web",
+				title: "Visit",
 				url: "https://rolandleth.com",
 			}),
 			new ExternalLink({
