@@ -10,7 +10,7 @@
 	},
 	"dependencies": {
 		"core-js": "^3.0.1",
-		"express": "^4.16.4",
+		"express": "^4.17.0",
 		"razzle": "^3.0.0",
 		"razzle-plugin-typescript": "^3.0.0",
 		"react": "^16.8.6",
