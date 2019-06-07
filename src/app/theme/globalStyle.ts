@@ -73,11 +73,9 @@ export const GlobalStyle = createGlobalStyle`
 
 		margin: 0 auto;
 
-		${
-			"" /* @media (prefers-color-scheme: dark) {
-			background: ${Theme.textColor};
+		@media (prefers-color-scheme: dark) {
+			background: ${Theme.darkBackgroundColor};
 			color: white;
-		} */
 		}
 	}
 

@@ -11,6 +11,7 @@ class Theme {
 	static lightGray = "#cacaca"
 	static gray = "#888"
 	static backgroundColor = "white"
+	static darkBackgroundColor = "#111111"
 	static textColor = "#3b3b3b"
 	static homeTextColor = "#4054B2"
 	static borderRadius = "4px"

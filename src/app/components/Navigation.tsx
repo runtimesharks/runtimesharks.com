@@ -41,10 +41,14 @@ const Container = styled.div`
 	&.fixed {
 		position: fixed;
 		top: 0;
-		background: rgba(255, 255, 255, 0.9);
+		background: rgba(255, 255, 255, 0.8);
 		width: 100%;
 		border-bottom: 0.5px solid ${Theme.linkColor};
 		-webkit-backdrop-filter: blur(10px);
+
+		@media (prefers-color-scheme: dark) {
+			background: ${`${Theme.darkBackgroundColor}cc`};
+		}
 	}
 
 	@media screen and (max-width: 630px) {

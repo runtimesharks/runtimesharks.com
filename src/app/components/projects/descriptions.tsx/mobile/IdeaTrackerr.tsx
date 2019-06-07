@@ -17,9 +17,9 @@ const IdeaTrackerr = (props: any) => {
 			</AnimatedContainer>
 			<br />
 			<AnimatedContainer position={3}>
-				Say hello to Idea Trackker. The app to <strong>easily</strong> keep
-				track of your ideas, where you can give a status to each one and keep
-				a history of <em>everything</em> related to it.
+				Say hello to Idea Trackerr. The app to <strong>easily</strong> keep
+				track of your ideas, where you can give a status to each one and keep a
+				history of <em>everything</em> related to it.
 			</AnimatedContainer>
 			<br />
 			<AnimatedContainer position={4}>
