@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { RouteComponentProps, withRouter } from "react-router"
 import styled, { css, keyframes } from "styled-components"
-import InitialAnimationContext from "../../utils/InitialAnimationContext"
+import InitialAnimationContext from "../utils/InitialAnimationContext"
 
 interface StyleProps {
 	shouldAnimate: boolean

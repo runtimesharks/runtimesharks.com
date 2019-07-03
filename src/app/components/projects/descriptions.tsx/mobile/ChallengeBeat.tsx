@@ -1,10 +1,10 @@
 import React from "react"
 import Project from "../../../../pages/Project"
-import ProjectContainer from "../../../containers/ProjectContainer"
+import AnimatedContainer from "../../../AnimatedContainer";
 
 const ChallengeBeat = (props: any) => (
 	<Project {...props} centered>
-		<ProjectContainer>
+		<AnimatedContainer>
 			In collaboration with{" "}
 			<a href="https://www.linkedin.com/in/tiagodanielmsfernandes">
 				Tiago Fernandes
@@ -12,7 +12,7 @@ const ChallengeBeat = (props: any) => (
 			and <a href="http://www.christian-boegner.ch/">Christian Boegner</a>,
 			ChallengeBeat has been one of the first projects we worked on. Challenge
 			yourself and/or your friends and build better habits!
-		</ProjectContainer>
+		</AnimatedContainer>
 	</Project>
 )
 

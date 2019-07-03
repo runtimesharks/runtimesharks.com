@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 import Project from "../../models/Project"
-import AnimatedContainer from "../containers/AnimatedContainer"
+import AnimatedContainer from "../AnimatedContainer"
 
 interface Props {
 	projects: Project[]

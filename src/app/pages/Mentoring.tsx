@@ -1,6 +1,6 @@
 import React from "react"
 import Helmet from "react-helmet"
-import AnimatedContainer from "../components/containers/AnimatedContainer"
+import AnimatedContainer from "../components/AnimatedContainer"
 import Content from "../components/Content"
 import GetInTouch from "../components/GetInTouch"
 import FromZero from "../components/mentoring/FromZero"

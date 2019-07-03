@@ -1,6 +1,6 @@
 import React from "react"
 import Project from "../../../../pages/Project"
-import AnimatedContainer from "../../../containers/AnimatedContainer"
+import AnimatedContainer from "../../../AnimatedContainer"
 
 const IdeaTrackerr = (props: any) => {
 	return (
@@ -24,6 +24,11 @@ const IdeaTrackerr = (props: any) => {
 			<br />
 			<AnimatedContainer position={4}>
 				Don't lose track of your ideas <strong>any longer</strong>!
+			</AnimatedContainer>
+			<br />
+			<AnimatedContainer position={5}>
+				Written with{" "}
+				<a href="https://facebook.github.io/react-native/">React Native</a>.
 			</AnimatedContainer>
 		</Project>
 	)

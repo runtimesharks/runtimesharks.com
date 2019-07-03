@@ -1,6 +1,6 @@
 import React from "react"
 import Project from "../../../../pages/Project"
-import AnimatedContainer from "../../../containers/AnimatedContainer"
+import AnimatedContainer from "../../../AnimatedContainer"
 
 const HBW = (props: any) => (
 	<Project {...props}>

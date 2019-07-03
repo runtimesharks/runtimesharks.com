@@ -1,5 +1,5 @@
 import React from "react"
-import AnimatedContainer from "../components/containers/AnimatedContainer"
+import AnimatedContainer from "../components/AnimatedContainer"
 import Content from "../components/Content"
 import Apps from "../components/home/Apps"
 import Experience from "../components/home/Experience"

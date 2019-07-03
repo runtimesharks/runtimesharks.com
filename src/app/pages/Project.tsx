@@ -1,7 +1,7 @@
 import React from "react"
 import { Redirect } from "react-router"
 import styled from "styled-components"
-import AnimatedContainer from "../components/containers/AnimatedContainer"
+import AnimatedContainer from "../components/AnimatedContainer"
 import ExternalButtons from "../components/projects/ExternalButtons"
 import Gallery from "../components/projects/Gallery"
 import Image from "../components/projects/Image"

@@ -1,14 +1,14 @@
 import React from "react"
 import Project from "../../../../pages/Project"
-import ProjectContainer from "../../../containers/ProjectContainer"
+import AnimatedContainer from "../../../AnimatedContainer"
 
 const MyTravelStories = (props: any) => (
 	<Project {...props} centered>
-		<ProjectContainer>
+		<AnimatedContainer>
 			Travel, take beautiful photos, write down your feelings and create your
 			travel journal. Share your stories with the world and find inspiration
 			from others for your next trips!
-		</ProjectContainer>
+		</AnimatedContainer>
 	</Project>
 )
 
