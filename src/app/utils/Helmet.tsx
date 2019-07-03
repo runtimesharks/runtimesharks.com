@@ -1,19 +1,19 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Helmet as ReactHelmet } from "react-helmet"
+import LocationContext from "./LocationContext"
 
 interface Props {
-	ssrLocation?: string
 	title: string
 	description: string
 	image: string
 }
 
-const Helmet = ({ ssrLocation, title, description, image }: Props) => {
-	let location = ssrLocation
+const Helmet = ({ title, description, image }: Props) => {
+	let location = useContext(LocationContext)
 
 	// We use the `window`'s location when rendering on the client.
 	// Used when we need the full URL, like canonical or OG tags.
-	if (ssrLocation == null) {
+	if (location == null) {
 		location = window.location.href
 	}
 

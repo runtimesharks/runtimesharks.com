@@ -10,6 +10,7 @@ import Consulting from "../pages/Consulting"
 import Home from "../pages/Home"
 import Mentoring from "../pages/Mentoring"
 import PrivacyPolicy from "../pages/PrivacyPolicy"
+import Helmet from "../utils/Helmet"
 import InitialAnimationContext from "../utils/InitialAnimationContext"
 import ProjectRouter from "./ProjectRouter"
 
@@ -25,6 +26,7 @@ const Router = (props: RouteComponentProps) => {
 
 	return (
 		<InitialAnimationContext.Provider value={didAnimate}>
+			<Helmet />
 			<Switch>
 				<Route exact path="/" component={Home} />
 				<Route path="/projects" component={ProjectRouter} />

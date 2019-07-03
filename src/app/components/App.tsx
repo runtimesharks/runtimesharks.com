@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
 import Router from "../routes/Router"
 import { GlobalStyle } from "../theme/globalStyle"
-import Helmet from "../utils/Helmet"
 import LocationContext from "../utils/LocationContext"
 import Footer from "./Footer"
 import Header from "./Header"
@@ -28,6 +27,7 @@ const App = ({ ssrLocation }: Props) => {
 				if (navPadding.classList.contains(visible) === false) {
 					navPadding.classList.add(visible)
 				}
+
 				if (nav.classList.contains(fixed) === false) {
 					nav.classList.add(fixed)
 				}
@@ -35,6 +35,7 @@ const App = ({ ssrLocation }: Props) => {
 				if (navPadding.classList.contains(visible)) {
 					navPadding.classList.remove(visible)
 				}
+
 				if (nav.classList.contains(fixed)) {
 					nav.classList.remove(fixed)
 				}
@@ -48,7 +49,6 @@ const App = ({ ssrLocation }: Props) => {
 
 	return (
 		<>
-			<Helmet ssrLocation={ssrLocation} />
 			<GlobalStyle />
 			<Header />
 			<Navigation />

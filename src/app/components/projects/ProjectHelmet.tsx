@@ -8,7 +8,7 @@ const ProjectHelmet = (project: Project) => {
 
 	// We use the `window`'s location when rendering on the client.
 	// Used when we need the full URL, like canonical or OG tags.
-	if (typeof window !== "undefined") {
+	if (location == null) {
 		location = window.location.href
 	}
 
@@ -19,14 +19,11 @@ const ProjectHelmet = (project: Project) => {
 			<title>Runtime Sharks: {project.name}</title>
 			<meta name="description" content={project.summary} />
 			<meta property="og:title" content={project.name} />
+			<meta name="date" content={project.date} />
 			{project.summary == null ? null : (
 				<meta property="og:description" content={project.summary} />
 			)}
-			<meta property="og:url" content={location} />
-			<meta
-				property="og:image"
-				content={`${url.protocol}//${url.hostname}${project.image}`}
-			/>
+			<meta property="og:image" content={`${url.origin}${project.image}`} />
 		</Helmet>
 	)
 }
