@@ -6,6 +6,7 @@ const webProjects = [
 	new Project({
 		name: "Our website",
 		summary: "Our website.",
+		date: "2019-04-01",
 		hasImage: false,
 		color: Theme.darkBlue,
 		externalLinks: [
@@ -18,6 +19,7 @@ const webProjects = [
 	new Project({
 		name: "team.cards",
 		summary: "Create a team page in minutes!",
+		date: "2019-03-01",
 		externalLinks: [
 			new ExternalLink({
 				title: "Visit",
@@ -29,6 +31,7 @@ const webProjects = [
 	new Project({
 		name: "Travel Stories",
 		summary: "Travel the world and share your journey!",
+		date: "2018-06-01",
 		hasImage: false,
 		externalLinks: [
 			new ExternalLink({
@@ -41,6 +44,7 @@ const webProjects = [
 	new Project({
 		name: "Roland's blog",
 		summary: "Roland Leth's blog.",
+		date: "2019-05-01",
 		externalLinks: [
 			new ExternalLink({
 				title: "Visit",

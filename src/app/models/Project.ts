@@ -4,6 +4,7 @@ import GalleryImage from "./GalleryImage"
 
 interface Schema {
 	name: string
+	date: string
 	summary?: string
 	externalLinks?: ExternalLink[]
 	paddleProductId?: string
@@ -16,6 +17,7 @@ interface Schema {
 
 export default class Project {
 	name: string
+	date: string
 	summary?: string
 	externalLinks: ExternalLink[]
 	paddleProductId?: string
@@ -31,6 +33,7 @@ export default class Project {
 	constructor({
 		name,
 		summary,
+		date,
 		externalLinks = [],
 		paddleProductId,
 		price,
@@ -41,6 +44,7 @@ export default class Project {
 	}: Schema) {
 		this.name = name
 		this.summary = summary
+		this.date = date
 		this.externalLinks = externalLinks
 		this.paddleProductId = paddleProductId
 		this.price = price

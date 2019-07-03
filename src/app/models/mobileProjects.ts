@@ -5,6 +5,7 @@ const mobileProjects = [
 	new Project({
 		name: "ChallengeBeat",
 		summary: "Challenge yourself and your friends for better habits!",
+		date: "2018-03-01",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -17,6 +18,7 @@ const mobileProjects = [
 	new Project({
 		name: "My Travel Stories",
 		summary: "Travel the world and share your journey!",
+		date: "2018-10-13",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -28,6 +30,7 @@ const mobileProjects = [
 	new Project({
 		name: "Hey, Be Well!",
 		summary: "Achieve your wellbeing goals.",
+		date: "2018-09-01",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -44,6 +47,7 @@ const mobileProjects = [
 	new Project({
 		name: "Beraria H",
 		summary: "Browse for, book and check-in at events.",
+		date: "2018-04-01",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -57,6 +61,7 @@ const mobileProjects = [
 		name: "Idea Trackerr",
 		summary:
 			"Quickly jot down any idea you might have and keep track of its status and history.",
+		date: "2019-04-13",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -74,6 +79,7 @@ const mobileProjects = [
 	new Project({
 		name: "Goalee",
 		summary: "Your digital goal list reminder.",
+		date: "2018-10-01",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -86,6 +92,7 @@ const mobileProjects = [
 		name: "Card Virtual",
 		summary:
 			"Store and easily access your fidelity cards. Collaborative sharing list included!",
+		date: "2018-03-01",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -98,6 +105,7 @@ const mobileProjects = [
 	new Project({
 		name: "Essenza",
 		summary: "A handy list of self improvement essentials and takeaways.",
+		date: "2019-04-01",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -109,6 +117,7 @@ const mobileProjects = [
 	new Project({
 		name: "DeinDeal",
 		summary: "One of the dominating flash-sales companies in Switzerland.",
+		date: "2017-09-31",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -120,10 +129,12 @@ const mobileProjects = [
 	new Project({
 		name: "DeinDeal Partners",
 		summary: "One of the dominating flash-sales companies in Switzerland.",
+		date: "2014-06-01",
 		link: "https://itunes.apple.com/za/app/deindeal-partners/id892826193",
 	}),
 	new Project({
 		name: "Puppet Anthems",
+		date: "2014-06-01",
 		summary:
 			"The fun way to learn about national anthems, for adults and kids alike.",
 		externalLinks: [
@@ -137,6 +148,7 @@ const mobileProjects = [
 	}),
 	new Project({
 		name: "Carminder",
+		date: "2013-09-01",
 		summary:
 			"See all your car's events at a glance and easily add a reminder, and how often you'd like to be reminded.",
 		link:
@@ -146,6 +158,7 @@ const mobileProjects = [
 	new Project({
 		name: "Expenses Planner",
 		summary: "Helps you keep track of your upcoming expenses.",
+		date: "2013-12-01",
 		link:
 			"https://itunes.apple.com/us/app/expenses-planner/id669431471?ls=1&mt",
 		color: "#481faf",
