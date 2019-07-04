@@ -1,13 +1,12 @@
 /* TEAM */
 Designer:		Roland Leth
-Developer:		Roland Leth
+Developer:	Roland Leth
 Contact:		roland@leth.ro
 Twitter:		@rolandleth
 
 /* SITE */
-Last update:	2017-27-10
+Last update:	2019-05-01
 Language:		English
 Doctype:		HTML5
-Tools:			HTML5, SCSS, Swift, Leaf, Markdown
-Editors:		Xcode, Visual Studio Code, CodeRunner, Caret
-Hosted on:		Heroku
+Tools:			HTML5, CSS, React, TS
+Editors:		Visual Studio Code, Ulysses
