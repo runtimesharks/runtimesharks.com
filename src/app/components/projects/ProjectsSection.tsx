@@ -24,7 +24,7 @@ const ProjectsSection = ({
 	<AnimatedContainer
 		position={offset + 1}
 		delay={offset > 0 ? 0.125 : undefined}
-		forcedOff={disableAnimation}
+		disableAnimations={disableAnimation}
 	>
 		<a name={title.toLowerCase()} />
 		<Title>{title}</Title>
@@ -36,7 +36,7 @@ const ProjectsSection = ({
 						position={offset + index + 1}
 						delay={0.125}
 						sidepaded={false}
-						forcedOff={disableAnimation}
+						disableAnimations={disableAnimation}
 					>
 						{project.link.startsWith("/") ? (
 							<Link to={project.link}>

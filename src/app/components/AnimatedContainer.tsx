@@ -6,14 +6,12 @@ import InitialAnimationContext from "../utils/InitialAnimationContext"
 interface StyleProps {
 	shouldAnimate: boolean
 	delay: number
-	forced: boolean
 }
 
 interface Props {
 	delay?: number
 	position?: number
-	forced?: boolean
-	forcedOff?: boolean
+	disableAnimations?: boolean
 	sidepaded?: boolean
 	children?: any
 }
@@ -21,24 +19,26 @@ interface Props {
 function AnimatedContainer({
 	delay = AnimatedContainer.baseDelay,
 	position = 1,
-	forced = true,
-	forcedOff = false,
+	disableAnimations = false,
 	sidepaded = true,
 	children,
 	history,
 }: Props & RouteComponentProps) {
 	const didAnimate = useContext(InitialAnimationContext)
-	// Disable animating when going back.
 	const isPop = history.action === "POP"
-	const shouldAnimate =
-		forcedOff === false && (didAnimate === false || isPop === false)
+	// On `PUSH`, `didAnimate` will be `true` -> not first render.
+	// On `POP` [back | forward button], `didAnimate` will be `true` -> not first render.
+	// On `POP` first render, `didAnimate` will be `false` -> first render.
+	const isFirstRender = didAnimate === false || isPop === false
+	const shouldAnimate = disableAnimations === false && isFirstRender
+
+	console.log(history.action)
 
 	return (
 		<Container
 			className={`${sidepaded ? "side-padded" : null}`}
-			shouldAnimate={shouldAnimate && didAnimate === false}
+			shouldAnimate={shouldAnimate}
 			delay={position * delay}
-			forced={shouldAnimate && forced}
 		>
 			{children}
 		</Container>
@@ -59,13 +59,13 @@ const appearFromBelow = keyframes`
 
 const Container = styled.div<StyleProps>`
 	${(props: StyleProps) =>
-		props.shouldAnimate === false && props.forced === false
-			? null
-			: css`
+		props.shouldAnimate
+			? css`
 					opacity: 0;
 					animation: ${appearFromBelow} 0.75s ${props.delay}s forwards
 						ease-in-out;
-			  `}
+			  `
+			: null}
 `
 
 AnimatedContainer.baseDelay = 0.25

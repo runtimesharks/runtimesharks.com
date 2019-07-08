@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import Helmet from "react-helmet"
 import styled from "styled-components"
 import AnimatedContainer from "../components/AnimatedContainer"
@@ -8,15 +8,17 @@ import ProjectsSection from "../components/projects/ProjectsSection"
 import macProjects from "../models/macProjects"
 import mobileProjects from "../models/mobileProjects"
 import webProjects from "../models/webProjects"
+import LocationContext from "../utils/LocationContext"
 
 const Projects = () => {
-	let anchor: string | null = null
+	let location = useContext(LocationContext)
 
-	if (typeof window === "object") {
-		anchor = window.location.href.split("#")[1]
+	if (location == null) {
+		location = window.location.href
 	}
 
-	const disableAnimation = anchor != null && anchor !== "mobile"
+	const sectionAnchor = location.split("#")[1]
+	const disableAnimation = sectionAnchor != null && sectionAnchor !== "mobile"
 
 	return (
 		<>
