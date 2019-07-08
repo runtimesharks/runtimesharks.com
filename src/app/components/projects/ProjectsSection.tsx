@@ -8,17 +8,25 @@ interface Props {
 	projects: Project[]
 	title: string
 	offset?: number
+	disableAnimation?: boolean
 }
 
 const Icon = ({ name, icon }: Project) => (
 	<Img src={icon} alt={`${name}'s icon`} />
 )
 
-const ProjectsSection = ({ projects, title, offset = 0 }: Props) => (
+const ProjectsSection = ({
+	projects,
+	title,
+	offset = 0,
+	disableAnimation = false,
+}: Props) => (
 	<AnimatedContainer
 		position={offset + 1}
 		delay={offset > 0 ? 0.125 : undefined}
+		forcedOff={disableAnimation}
 	>
+		<a name={title.toLowerCase()} />
 		<Title>{title}</Title>
 		<Grid>
 			{projects.map((project, index) => {
@@ -28,6 +36,7 @@ const ProjectsSection = ({ projects, title, offset = 0 }: Props) => (
 						position={offset + index + 1}
 						delay={0.125}
 						sidepaded={false}
+						forcedOff={disableAnimation}
 					>
 						{project.link.startsWith("/") ? (
 							<Link to={project.link}>

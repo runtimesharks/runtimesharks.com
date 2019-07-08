@@ -13,6 +13,7 @@ interface Props {
 	delay?: number
 	position?: number
 	forced?: boolean
+	forcedOff?: boolean
 	sidepaded?: boolean
 	children?: any
 }
@@ -21,6 +22,7 @@ function AnimatedContainer({
 	delay = AnimatedContainer.baseDelay,
 	position = 1,
 	forced = true,
+	forcedOff = false,
 	sidepaded = true,
 	children,
 	history,
@@ -28,7 +30,8 @@ function AnimatedContainer({
 	const didAnimate = useContext(InitialAnimationContext)
 	// Disable animating when going back.
 	const isPop = history.action === "POP"
-	const shouldAnimate = didAnimate === false || isPop === false
+	const shouldAnimate =
+		forcedOff === false && (didAnimate === false || isPop === false)
 
 	return (
 		<Container
