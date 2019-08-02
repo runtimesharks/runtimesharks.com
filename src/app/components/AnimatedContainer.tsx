@@ -17,7 +17,7 @@ interface Props {
 }
 
 function AnimatedContainer({
-  delay = AnimatedContainer.baseDelay,
+  delay = baseDelay,
   position = 1,
   disableAnimations = false,
   sidepaded = true,
@@ -66,6 +66,6 @@ const Container = styled.div<StyleProps>`
       : null}
 `
 
-AnimatedContainer.baseDelay = 0.25
+export const baseDelay = 0.25
 
 export default withRouter(AnimatedContainer)
