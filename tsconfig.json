@@ -2,7 +2,7 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "checkJs": true,
+    // "checkJs": true,
     "declaration": false,
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
@@ -14,15 +14,16 @@
     "moduleResolution": "node",
     "noEmit": true,
     "noImplicitThis": true,
-    "noResolve": true,
+    "noUnusedLocals": true,
     "pretty": true,
+    "removeComments": true,
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
     "strictPropertyInitialization": true,
     "strictNullChecks": true,
     "target": "esnext",
-    "typeRoots": ["node_modules/@types"]
+    "typeRoots": ["./node_modules/@types"]
   },
   "exclude": [
     "node_modules",

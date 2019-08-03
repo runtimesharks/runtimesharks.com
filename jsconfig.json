@@ -1,8 +1,0 @@
-{
-	"compilerOptions": {
-		"target": "esnext",
-		"checkJs": true,
-		"experimentalDecorators": true
-	},
-	"exclude": ["node_modules", "**/node_modules/*", "build"]
-}
