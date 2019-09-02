@@ -83,8 +83,8 @@ server
     }
 		${
       process.env.IS_PROD
-        ? `<script src="${assets.client.js}" defer></script>`
-        : `<script src="${assets.client.js}" defer crossorigin></script>`
+        ? `<script type="text/javascript" src="${assets.client.js}" defer></script>`
+        : `<script type="text/javascript" src="${assets.client.js}" defer crossorigin></script>`
     }
 	</head>
 	<body>
