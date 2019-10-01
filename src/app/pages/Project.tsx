@@ -27,8 +27,14 @@ const Project = (props: any) => {
     .find((p) => p.slug === param)
 
   if (project == null) {
-    return <Redirect to="/projects" />
+    return <Redirect to="/" />
   }
+
+  const projectType: "web" | "mobile" | "mac" = mobileProjects.includes(project)
+    ? "mobile"
+    : webProjects.includes(project)
+    ? "web"
+    : "mac"
 
   return (
     <>
@@ -56,6 +62,12 @@ const Project = (props: any) => {
               <Gallery {...project} />
             </AnimatedContainer>
           ) : null}
+          <More>
+            <AnimatedContainer position={4}>
+              You can find more of our projects{" "}
+              <a href={`/#${projectType}`}>here</a>.
+            </AnimatedContainer>
+          </More>
         </Container>
       </AnimatedContainer>
     </>
@@ -101,6 +113,11 @@ const Description = styled.div<StyleProps>`
 	align-self: center;
 	text-align: justify;
 	/* ${(props: StyleProps) => (props.centered ? "text-align: center;" : null)}; */
+`
+
+const More = styled.div`
+  text-align: center;
+  padding-top: 40px;
 `
 
 export default Project
