@@ -1,5 +1,4 @@
 import React, { useContext } from "react"
-import Helmet from "react-helmet"
 import styled from "styled-components"
 import AnimatedContainer from "../components/AnimatedContainer"
 import Content from "../components/Content"
@@ -8,6 +7,7 @@ import ProjectsSection from "../components/projects/ProjectsSection"
 import macProjects from "../models/macProjects"
 import mobileProjects from "../models/mobileProjects"
 import webProjects from "../models/webProjects"
+import Helmet from "../utils/Helmet"
 import LocationContext from "../utils/LocationContext"
 
 const Projects = () => {
@@ -22,9 +22,7 @@ const Projects = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Runtime Sharks: Projects</title>
-      </Helmet>
+      <Helmet title="Runtime Sharks: Projects" />
       <StyledContent>
         <ProjectsSection
           title="Mobile "
