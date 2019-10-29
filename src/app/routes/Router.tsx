@@ -6,6 +6,7 @@ import {
   Switch,
   withRouter,
 } from "react-router-dom"
+import LoanCalculator from "../components/projects/LoanCalculator"
 import Consulting from "../pages/Consulting"
 import Mentoring from "../pages/Mentoring"
 import PrivacyPolicy from "../pages/PrivacyPolicy"
@@ -29,6 +30,7 @@ const Router = (props: RouteComponentProps) => {
       <Helmet />
       <Switch>
         <Route exact path="/" component={Projects} />
+        <Route path="/projects/loan-calculator" component={LoanCalculator} />
         <Route path="/projects" component={ProjectRouter} />
         <Route path="/privacy/:project" component={PrivacyPolicy} />
         <Route
