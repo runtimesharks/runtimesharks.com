@@ -32,13 +32,15 @@ const ColoredElement = styled.div<Style>`
   ${(props) =>
     props.color === "negative"
       ? css`
-          color: red;
+          color: lightseagreen;
         `
       : props.color === "positive"
       ? css`
-          color: lightseagreen;
+          color: coral;
         `
-      : null};
+      : css`
+          color: inherit;
+        `};
 `
 
 const Label = styled(ColoredElement)`

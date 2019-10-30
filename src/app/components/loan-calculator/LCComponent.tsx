@@ -94,6 +94,19 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
         type="checkbox"
         onChange={(e: any) => {
           setHasExtraPayments(e.target.checked)
+
+          if (e.target.checked) {
+            return
+          }
+
+          setState({
+            ...state,
+            extraPayments: {
+              frequency: 0,
+              value: 0,
+              limit: 0,
+            },
+          })
         }}
         defaultValue={false}
         description="An additional sum you intend to pay extra, every now and then."

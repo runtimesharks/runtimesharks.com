@@ -5,25 +5,26 @@ import LabelValue, { Color } from "./LabelValue"
 
 type Props = {
   values?: ComputeReturn
-  useColors?: boolean
+  showComparisonResults?: boolean
 }
 
-const LCSummary = ({ values, useColors = false }: Props) => {
+const LCSummary = ({ values, showComparisonResults = false }: Props) => {
   if (values == null) {
     return null
   }
 
-  const colorFor = (value: number): Color => {
-    return value == 0 || !useColors
+  const colorFor = (value: number, inverse: boolean = false): Color => {
+    return value == 0 || !showComparisonResults
       ? "none"
-      : value < 0
+      : value < 0 || inverse // A difference in "amount saved" is inverse of normal differences.
       ? "negative"
       : "positive"
   }
 
-  const hasAdditionalPayment =
+  const showAdditionalPayment =
+    showComparisonResults ||
     values.actualMonthlyPayment != values.baseMonthlyPayment
-  const hasExtraPayments =
+  const showExtraPayments =
     values.actualMonthlyPaymentWithExtra != values.actualMonthlyPayment
 
   return (
@@ -31,19 +32,19 @@ const LCSummary = ({ values, useColors = false }: Props) => {
       <Grid>
         {
           <LabelValue
-            label={(hasAdditionalPayment ? "Base m" : "M") + "onthly rate"}
+            label={(showAdditionalPayment ? "Base m" : "M") + "onthly rate"}
             value={values.baseMonthlyPayment.format()}
             color={colorFor(values.baseMonthlyPayment)}
           />
         }
-        {hasAdditionalPayment ? (
+        {showAdditionalPayment ? (
           <LabelValue
             label="Actual monthly rate"
             value={values.actualMonthlyPayment.format()}
             color={colorFor(values.actualMonthlyPayment)}
           />
         ) : null}
-        {hasExtraPayments ? (
+        {showExtraPayments ? (
           <>
             <Subtotal
               label="Monthly rate extra"
@@ -72,7 +73,7 @@ const LCSummary = ({ values, useColors = false }: Props) => {
             <LabelValue
               label="Fullfilled earlier by"
               value={`${values.repayDurationDifference.format(0)} months`}
-              color={colorFor(values.repayDurationDifference)}
+              color={colorFor(values.repayDurationDifference, true)}
             />
           </>
         ) : null}
@@ -108,6 +109,7 @@ const Subtotal = styled(LabelValue)`
 
 const Total = styled(LabelValue)`
   font-weight: bold;
+  font-size: 1.1em;
 `
 
 export default LCSummary

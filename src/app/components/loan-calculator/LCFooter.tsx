@@ -20,7 +20,12 @@ const LCFooter = ({
   if (firstValues != null && secondValues != null) {
     Object.keys(firstValues).map((k) => {
       const key = k as keyof ComputeReturn
-      values[key] = firstValues[key] - secondValues[key]
+      // Check if the object is not still empty.
+      if (secondValues.total != null) {
+        values[key] = secondValues[key] - firstValues[key]
+      } else {
+        values[key] = 0
+      }
     })
   }
 
@@ -28,8 +33,8 @@ const LCFooter = ({
     <Container hasSummary={hasSummary}>
       {hasSummary ? (
         <>
-          <Title>Differences:</Title>
-          <LCSummary values={values} useColors={true} />
+          <Title>Right differences:</Title>
+          <LCSummary values={values} showComparisonResults={true} />
         </>
       ) : null}
       {secondValues ? null : (
