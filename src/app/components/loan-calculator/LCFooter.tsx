@@ -1,7 +1,7 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { ComputeReturn } from "../../utils/loanCalculator"
-import LabelValue from "./LabelValue"
+import LCSummary from "./LCSummary"
 
 export type LCFooterProps = {
   firstValues?: ComputeReturn
@@ -14,12 +14,23 @@ const LCFooter = ({
   secondValues,
   onAddComparison,
 }: LCFooterProps) => {
+  const hasSummary = firstValues != null && secondValues != null
+  let values = {} as ComputeReturn
+
+  if (firstValues != null && secondValues != null) {
+    Object.keys(firstValues).map((k) => {
+      const key = k as keyof ComputeReturn
+      values[key] = firstValues[key] - secondValues[key]
+    })
+  }
+
   return (
-    <Container>
-      {firstValues && secondValues ? (
-        <SummaryContainer>
-          <LabelValue label="Loan" value={secondValues.total - firstValues.total}/>
-        </SummaryContainer>
+    <Container hasSummary={hasSummary}>
+      {hasSummary ? (
+        <>
+          <Title>Differences:</Title>
+          <LCSummary values={values} />
+        </>
       ) : null}
       {secondValues ? null : (
         <Button onClick={onAddComparison}>Add comparison</Button>
@@ -28,13 +39,21 @@ const LCFooter = ({
   )
 }
 
-const Container = styled.div`
-  display: grid;
-  padding-top: 4em;
+const Container = styled.div<{ hasSummary: boolean }>`
+  ${(props) =>
+    props.hasSummary
+      ? css`
+          min-width: 300px;
+        `
+      : null}
+
+  margin: 3em auto auto;
+  padding-top: 1em;
 `
 
-const SummaryContainer = styled.div`
-  display: grid;
+const Title = styled.h1`
+  border-bottom: 1px solid lightgray;
+  text-align: center;
 `
 
 const Button = styled.button`
