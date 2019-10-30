@@ -4,14 +4,16 @@ import styled, { css } from "styled-components"
 type Props = any &
   React.PropsWithChildren<unknown> & {
     label: string
+    description?: string
     onChange: (e: any) => void
     defaultValue: any
     type?: string
   }
 
-const LabelInput = ({ label, type = "text", ...rest }: Props) => {
+const LabelInput = ({ label, description, type = "text", ...rest }: Props) => {
   return (
-    <Container>
+    <Container {...rest}>
+    <Grid>
       <Label>{label}</Label>
       <Input
         label={label}
@@ -20,15 +22,25 @@ const LabelInput = ({ label, type = "text", ...rest }: Props) => {
         // Hacky, hack, hack.
         defaultChecked={rest.defaultValue}
       />
-    </Container>
+      </Grid>
+      <Description>{description}</Description>
+      </Container>
   )
 }
 
-const Container = styled.div`
+const Container = styled.div``
+
+const Grid = styled.div`
   margin-top: 6px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 20px;
+`
+
+const Description = styled.h4`
+  color: lightgray;
+  font-size: 0.6em;
+  font-weight: 300;
 `
 
 const Label = styled.div`

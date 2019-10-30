@@ -43,6 +43,7 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
           })
         }}
         defaultValue={state.loan}
+        description="The sum you intend to loan."
       />
       <LabelInput
         label="Duration"
@@ -53,6 +54,7 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
           })
         }}
         defaultValue={state.period}
+        description="The duration of the loan, in months."
       />
       <LabelInput
         label="Annual interest rate"
@@ -63,6 +65,7 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
           })
         }}
         defaultValue={state.annualInterestRate}
+        description="The annual interest rate, as a percentage."
       />
       <LabelInput
         label="Additional costs"
@@ -73,6 +76,7 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
           })
         }}
         defaultValue={state.additionalCosts}
+        description="One-time costs, like comissions."
       />
       <LabelInput
         label="Monthly extra payment"
@@ -83,6 +87,7 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
           })
         }}
         defaultValue={state.additionalMonthlyPayment}
+        description="A sum you intend to pay extra, each month."
       />
       <LabelInput
         label="Occasional extra payments?"
@@ -91,11 +96,12 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
           setHasExtraPayments(e.target.checked)
         }}
         defaultValue={false}
+        description="An additional sum you intend to pay extra, every now and then."
       />
       {hasExtraPayments ? (
         <>
-          <LabelInput
-            label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Value"
+          <PaddedLabelInput
+            label="Value"
             onChange={(e: any) => {
               setState({
                 ...state,
@@ -106,9 +112,10 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
               })
             }}
             defaultValue={state.extraPayments.value}
+            description="The amount you intend to pay extra."
           />
-          <LabelInput
-            label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Frequency"
+          <PaddedLabelInput
+            label="Frequency"
             onChange={(e: any) => {
               setState({
                 ...state,
@@ -119,9 +126,10 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
               })
             }}
             defaultValue={state.extraPayments.frequency}
+            description="The frequency of payments. 1 for monthly."
           />
-          <LabelInput
-            label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Limit"
+          <PaddedLabelInput
+            label="Limit"
             onChange={(e: any) => {
               setState({
                 ...state,
@@ -132,6 +140,7 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
               })
             }}
             defaultValue={state.extraPayments.limit}
+            description="The number of extra payments you intend to pay."
           />
         </>
       ) : null}
@@ -149,6 +158,10 @@ const Footer = styled.div`
   margin-top: 1.5em;
   padding-top: 0.75em;
   display: grid;
+`
+
+const PaddedLabelInput = styled(LabelInput)`
+  padding-left: 25px;
 `
 
 export default LCComponent
