@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react"
-import {
-  Redirect,
-  Route,
-  RouteComponentProps,
-  Switch,
-  withRouter,
-} from "react-router-dom"
-import LoanCalculator from "../components/projects/LoanCalculator"
+import { Redirect, Route, RouteComponentProps, Switch, withRouter } from "react-router-dom"
 import Consulting from "../pages/Consulting"
+import LoanCalculator from "../pages/LoanCalculator"
 import Mentoring from "../pages/Mentoring"
 import PrivacyPolicy from "../pages/PrivacyPolicy"
 import Projects from "../pages/Projects"
