@@ -30,12 +30,12 @@ type PMTParams = {
 }
 
 type ExtraPayments = {
-  count: number
+  limit: number
   value: number
-  interval: number
+  frequency: number
 }
 
-type ComputeParams = {
+export type ComputeParams = {
   period: number
   loan: number
   additionalCosts: number
@@ -44,7 +44,7 @@ type ComputeParams = {
   extraPayments: ExtraPayments
 }
 
-type ComputeReturn = {
+export type ComputeReturn = {
   baseMonthlyPayment: string
   actualMonthlyPayment: string
   actualMonthlyPaymentWithExtra: string
@@ -54,6 +54,7 @@ type ComputeReturn = {
   durationOfRepay: string
   numberOfPaidExtraPayments: string
   valueOfPaidExtraPayments: string
+  repayDurationDifference: string
 }
 
 const PMT = ({
@@ -83,28 +84,37 @@ const computeLoan = ({
   additionalCosts,
   annualInterestRate,
   additionalMonthlyPayment,
-  extraPayments
+  extraPayments,
 }: ComputeParams): ComputeReturn => {
   const monthlyInterestRate = (annualInterestRate * 0.01) / 12
-  const monthlyPayment = PMT({ monthlyInterestRate, period, loan })
+  const monthlyPayment = PMT({
+    monthlyInterestRate,
+    period,
+    loan,
+  })
   const actualMonthlyPayment = monthlyPayment + additionalMonthlyPayment
 
   let remainingLoan = loan
-  let remainingPeriod = period
   let total = loan + additionalCosts
   let totalInterest = 0
   let numberOfPaidExtraPayments = 0
   let valueOfPaidExtraPayments = 0
+  let durationOfRepay = 0
 
-  while (remainingPeriod > 0 && remainingLoan > 0) {
+  while (durationOfRepay < period && remainingLoan > 0) {
     const monthlyInterest = remainingLoan * monthlyInterestRate
     let principal = actualMonthlyPayment - monthlyInterest
+    // Do an extra payment if:
+    // - the value is greater than 0
+    const hasExtraPayments = extraPayments.value > 0
+    // - the limit is 0; or
+    // - we haven't reached the limit.
+    const hasExtraPaymentsRemaining =
+      extraPayments.limit < 1 || numberOfPaidExtraPayments < extraPayments.limit
+    // - the current month divides exactly with the frequency; this includes a frequency of 1.
+    const isExtraPaymentMonth = durationOfRepay % extraPayments.frequency == 0
 
-    if (
-      numberOfPaidExtraPayments < extraPayments.count &&
-      extraPayments.value > 0 &&
-      Math.floor(1 + Math.random() * Math.abs(extraPayments.interval)) === 1
-    ) {
+    if (hasExtraPayments && hasExtraPaymentsRemaining && isExtraPaymentMonth) {
       numberOfPaidExtraPayments += 1
       valueOfPaidExtraPayments += extraPayments.value
       principal += extraPayments.value
@@ -113,24 +123,30 @@ const computeLoan = ({
     remainingLoan -= principal
     totalInterest += monthlyInterest
 
-    remainingPeriod -= 1
+    durationOfRepay += 1
   }
 
-  const percentageOfOverpay = (totalInterest / loan) * 100
-  const durationOfRepay = period - remainingPeriod
+  total += totalInterest
+
+  // If there are no extra payments, ignore any value passed in.
+  const actualMonthlyPaymentWithExtra =
+    extraPayments.value > 0
+      ? actualMonthlyPayment + extraPayments.value
+      : actualMonthlyPayment
+  const percentageOfOverpay = (totalInterest / Math.max(0.01, loan)) * 100
+  const repayDurationDifference = period - durationOfRepay
 
   return {
     baseMonthlyPayment: monthlyPayment.format(),
     actualMonthlyPayment: actualMonthlyPayment.format(),
-    actualMonthlyPaymentWithExtra: (
-      actualMonthlyPayment + extraPayments.value
-    ).format(),
+    actualMonthlyPaymentWithExtra: actualMonthlyPaymentWithExtra.format(),
     total: total.format(),
     totalInterest: totalInterest.format(),
     percentageOfOverpay: `${percentageOfOverpay.format()}%`,
     durationOfRepay: `${durationOfRepay.format(0)} months`,
     numberOfPaidExtraPayments: numberOfPaidExtraPayments.format(0),
     valueOfPaidExtraPayments: valueOfPaidExtraPayments.format(),
+    repayDurationDifference: `${repayDurationDifference.format(0)} months`,
   }
 }
 
