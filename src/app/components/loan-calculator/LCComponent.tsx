@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useCallback, useEffect, useState } from "react"
 import styled from "styled-components"
 import computeLoan, { ComputeParams } from "../../utils/loanCalculator"
 import LabelInput from "./LabelInput"
@@ -24,6 +24,115 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
   } as ComputeParams)
   const [hasExtraPayments, setHasExtraPayments] = useState(false)
 
+  const handleLoanChange = useCallback(
+    (e: any) => {
+      setState({
+        ...state,
+        loan: parseInt(e.target.value, 10) || state.loan,
+      })
+    },
+    [state.loan]
+  )
+
+  const handleDurationChange = useCallback(
+    (e: any) => {
+      setState({
+        ...state,
+        period: parseInt(e.target.value, 10) || state.period,
+      })
+    },
+    [state.period]
+  )
+
+  const handleInterestChange = useCallback(
+    (e: any) => {
+      setState({
+        ...state,
+        annualInterestRate: parseFloat(e.target.value),
+      })
+    },
+    [state.annualInterestRate]
+  )
+
+  const handleAdditionalCostsChange = useCallback(
+    (e: any) => {
+      setState({
+        ...state,
+        additionalCosts: parseFloat(e.target.value),
+      })
+    },
+    [state.additionalCosts]
+  )
+
+  const handleAdditionalMonthlyPaymentChange = useCallback(
+    (e: any) => {
+      setState({
+        ...state,
+        additionalMonthlyPayment: parseFloat(e.target.value),
+      })
+    },
+    [state.additionalMonthlyPayment]
+  )
+
+  const handleOccasionalExtraPaymentChange = useCallback(
+    (e: any) => {
+      setHasExtraPayments(e.target.checked)
+
+      if (e.target.checked) {
+        return
+      }
+
+      setState({
+        ...state,
+        extraPayments: {
+          frequency: 0,
+          value: 0,
+          limit: 0,
+        },
+      })
+    },
+    [hasExtraPayments]
+  )
+
+  const handleExtraValueChange = useCallback(
+    (e: any) => {
+      setState({
+        ...state,
+        extraPayments: {
+          ...state.extraPayments,
+          value: parseFloat(e.target.value),
+        },
+      })
+    },
+    [state.extraPayments.value]
+  )
+
+  const handleFrequencyChange = useCallback(
+    (e: any) => {
+      setState({
+        ...state,
+        extraPayments: {
+          ...state.extraPayments,
+          frequency: parseInt(e.target.value, 10),
+        },
+      })
+    },
+    [state.extraPayments.frequency]
+  )
+
+  const handleLimitChange = useCallback(
+    (e: any) => {
+      setState({
+        ...state,
+        extraPayments: {
+          ...state.extraPayments,
+          limit: parseInt(e.target.value, 10),
+        },
+      })
+    },
+    [state.extraPayments.limit]
+  )
+
   useEffect(() => {
     if (!show) {
       return
@@ -36,78 +145,38 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
     <Container>
       <LabelInput
         label="Loan"
-        onChange={(e: any) => {
-          setState({
-            ...state,
-            loan: parseInt(e.target.value, 10) || state.loan,
-          })
-        }}
+        onChange={handleLoanChange}
         defaultValue={state.loan}
         description="The sum you intend to loan."
       />
       <LabelInput
         label="Duration"
-        onChange={(e: any) => {
-          setState({
-            ...state,
-            period: parseInt(e.target.value, 10) || state.period,
-          })
-        }}
+        onChange={handleDurationChange}
         defaultValue={state.period}
         description="The duration of the loan, in months."
       />
       <LabelInput
         label="Annual interest rate"
-        onChange={(e: any) => {
-          setState({
-            ...state,
-            annualInterestRate: parseFloat(e.target.value),
-          })
-        }}
+        onChange={handleInterestChange}
         defaultValue={state.annualInterestRate}
         description="The annual interest rate, as a percentage."
       />
       <LabelInput
         label="Additional costs"
-        onChange={(e: any) => {
-          setState({
-            ...state,
-            additionalCosts: parseFloat(e.target.value),
-          })
-        }}
+        onChange={handleAdditionalCostsChange}
         defaultValue={state.additionalCosts}
         description="One-time costs, like comissions."
       />
       <LabelInput
         label="Monthly extra payment"
-        onChange={(e: any) => {
-          setState({
-            ...state,
-            additionalMonthlyPayment: parseFloat(e.target.value),
-          })
-        }}
+        onChange={handleAdditionalMonthlyPaymentChange}
         defaultValue={state.additionalMonthlyPayment}
         description="A sum you intend to pay extra, each month."
       />
       <LabelInput
         label="Occasional extra payments?"
         type="checkbox"
-        onChange={(e: any) => {
-          setHasExtraPayments(e.target.checked)
-
-          if (e.target.checked) {
-            return
-          }
-
-          setState({
-            ...state,
-            extraPayments: {
-              frequency: 0,
-              value: 0,
-              limit: 0,
-            },
-          })
-        }}
+        onChange={handleOccasionalExtraPaymentChange}
         defaultValue={false}
         description="An additional sum you intend to pay extra, every now and then."
       />
@@ -115,43 +184,19 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
         <>
           <PaddedLabelInput
             label="Value"
-            onChange={(e: any) => {
-              setState({
-                ...state,
-                extraPayments: {
-                  ...state.extraPayments,
-                  value: parseFloat(e.target.value),
-                },
-              })
-            }}
+            onChange={handleExtraValueChange}
             defaultValue={state.extraPayments.value}
             description="The amount you intend to pay extra."
           />
           <PaddedLabelInput
             label="Frequency"
-            onChange={(e: any) => {
-              setState({
-                ...state,
-                extraPayments: {
-                  ...state.extraPayments,
-                  frequency: parseInt(e.target.value, 10),
-                },
-              })
-            }}
+            onChange={handleFrequencyChange}
             defaultValue={state.extraPayments.frequency}
             description="The frequency of payments. 1 for monthly."
           />
           <PaddedLabelInput
             label="Limit"
-            onChange={(e: any) => {
-              setState({
-                ...state,
-                extraPayments: {
-                  ...state.extraPayments,
-                  limit: parseInt(e.target.value, 10),
-                },
-              })
-            }}
+            onChange={handleLimitChange}
             defaultValue={state.extraPayments.limit}
             description="The number of extra payments you intend to pay."
           />
@@ -177,4 +222,4 @@ const PaddedLabelInput = styled(LabelInput)`
   padding-left: 25px;
 `
 
-export default LCComponent
+export default React.memo(LCComponent)

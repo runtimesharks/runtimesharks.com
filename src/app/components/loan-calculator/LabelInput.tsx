@@ -13,18 +13,18 @@ type Props = any &
 const LabelInput = ({ label, description, type = "text", ...rest }: Props) => {
   return (
     <Container {...rest}>
-    <Grid>
-      <Label>{label}</Label>
-      <Input
-        label={label}
-        type={type}
-        {...rest}
-        // Hacky, hack, hack.
-        defaultChecked={rest.defaultValue}
-      />
+      <Grid>
+        <Label>{label}</Label>
+        <Input
+          label={label}
+          type={type}
+          {...rest}
+          // Hacky, hack, hack.
+          defaultChecked={rest.defaultValue}
+        />
       </Grid>
       <Description>{description}</Description>
-      </Container>
+    </Container>
   )
 }
 
@@ -62,4 +62,4 @@ const Input = styled.input<Props>`
   justify-self: end;
 `
 
-export default LabelInput
+export default React.memo(LabelInput)

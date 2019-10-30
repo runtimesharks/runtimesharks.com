@@ -31,7 +31,7 @@ const LoanCalculator = () => {
         firstValues: computeLoan(values),
       })
     },
-    [footerProps]
+    [footerProps.firstValues]
   )
 
   const updateSecondValues = useCallback(
@@ -41,7 +41,7 @@ const LoanCalculator = () => {
         secondValues: computeLoan(values),
       })
     },
-    [footerProps]
+    [footerProps.secondValues]
   )
 
   const showsComparison = footerProps.secondValues != null
@@ -73,4 +73,4 @@ const Calculators = styled.div<CalculatorStyle>`
   grid-column-gap: 80px;
 `
 
-export default LoanCalculator
+export default React.memo(LoanCalculator)

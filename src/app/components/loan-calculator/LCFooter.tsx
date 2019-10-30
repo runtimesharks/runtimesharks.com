@@ -69,4 +69,4 @@ const Button = styled.button`
   margin: auto;
 `
 
-export default LCFooter
+export default React.memo(LCFooter)

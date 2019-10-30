@@ -112,4 +112,4 @@ const Total = styled(LabelValue)`
   font-size: 1.1em;
 `
 
-export default LCSummary
+export default React.memo(LCSummary)
