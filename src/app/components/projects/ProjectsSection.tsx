@@ -103,7 +103,7 @@ const Img = styled.img`
 
 const IconTitle = styled.span`
   display: block;
-  margin: -0.2em 0 0;
+  margin: 0.3em 0 0;
 `
 
 export default ProjectsSection
