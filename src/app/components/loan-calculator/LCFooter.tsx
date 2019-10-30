@@ -29,7 +29,7 @@ const LCFooter = ({
       {hasSummary ? (
         <>
           <Title>Differences:</Title>
-          <LCSummary values={values} />
+          <LCSummary values={values} useColors={true} />
         </>
       ) : null}
       {secondValues ? null : (

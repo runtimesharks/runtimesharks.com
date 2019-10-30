@@ -1,15 +1,24 @@
 import React from "react"
 import styled from "styled-components"
 import { ComputeReturn } from "../../utils/loanCalculator"
-import LabelValue from "./LabelValue"
+import LabelValue, { Color } from "./LabelValue"
 
 type Props = {
   values?: ComputeReturn
+  useColors?: boolean
 }
 
-const LCSummary = ({ values }: Props) => {
+const LCSummary = ({ values, useColors = false }: Props) => {
   if (values == null) {
     return null
+  }
+
+  const colorFor = (value: number): Color => {
+    return value == 0 || !useColors
+      ? "none"
+      : value < 0
+      ? "negative"
+      : "positive"
   }
 
   const hasAdditionalPayment =
@@ -24,12 +33,14 @@ const LCSummary = ({ values }: Props) => {
           <LabelValue
             label={(hasAdditionalPayment ? "Base m" : "M") + "onthly rate"}
             value={values.baseMonthlyPayment.format()}
+            color={colorFor(values.baseMonthlyPayment)}
           />
         }
         {hasAdditionalPayment ? (
           <LabelValue
             label="Actual monthly rate"
             value={values.actualMonthlyPayment.format()}
+            color={colorFor(values.actualMonthlyPayment)}
           />
         ) : null}
         {hasExtraPayments ? (
@@ -37,14 +48,17 @@ const LCSummary = ({ values }: Props) => {
             <Subtotal
               label="Monthly rate extra"
               value={values.actualMonthlyPaymentWithExtra.format()}
+              color={colorFor(values.actualMonthlyPayment)}
             />
             <LabelValue
               label="Extra payments"
               value={values.numberOfPaidExtraPayments.format(0)}
+              color={colorFor(values.numberOfPaidExtraPayments)}
             />
             <LabelValue
               label="Total extra payment"
               value={values.valueOfPaidExtraPayments.format()}
+              color={colorFor(values.valueOfPaidExtraPayments)}
             />
           </>
         ) : null}
@@ -53,16 +67,30 @@ const LCSummary = ({ values }: Props) => {
             <Subtotal
               label="Loan fulfilled in"
               value={`${values.durationOfRepay.format(0)} months`}
+              color={colorFor(values.durationOfRepay)}
             />
             <LabelValue
               label="Fullfilled earlier by"
               value={`${values.repayDurationDifference.format(0)} months`}
+              color={colorFor(values.repayDurationDifference)}
             />
           </>
         ) : null}
-        <Subtotal label="Overpay" value={`${values.percentageOfOverpay.format()}%`} />
-        <LabelValue label="Total interest" value={values.totalInterest.format()} />
-        <Total label="Total" value={values.total.format()} />
+        <Subtotal
+          label="Overpay"
+          value={`${values.percentageOfOverpay.format()}%`}
+          color={colorFor(values.percentageOfOverpay)}
+        />
+        <LabelValue
+          label="Total interest"
+          value={values.totalInterest.format()}
+          color={colorFor(values.totalInterest)}
+        />
+        <Total
+          label="Total"
+          value={values.total.format()}
+          color={colorFor(values.total)}
+        />
       </Grid>
     </Container>
   )
