@@ -23,10 +23,12 @@ const Container = styled.div`
 
 const Label = styled.div`
   text-align: left;
+  align-self: flex-start;
 `
 
 const Value = styled.div`
   text-align: right;
+  align-self: flex-end;
 `
 
 export default LabelValue

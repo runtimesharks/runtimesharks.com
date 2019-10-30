@@ -23,46 +23,46 @@ const LCSummary = ({ values }: Props) => {
         {
           <LabelValue
             label={(hasAdditionalPayment ? "Base m" : "M") + "onthly rate"}
-            value={values.baseMonthlyPayment}
+            value={values.baseMonthlyPayment.format()}
           />
         }
         {hasAdditionalPayment ? (
           <LabelValue
             label="Actual monthly rate"
-            value={values.actualMonthlyPayment}
+            value={values.actualMonthlyPayment.format()}
           />
         ) : null}
         {hasExtraPayments ? (
           <>
             <Subtotal
               label="Monthly rate extra"
-              value={values.actualMonthlyPaymentWithExtra}
+              value={values.actualMonthlyPaymentWithExtra.format()}
             />
             <LabelValue
               label="Extra payments"
-              value={values.numberOfPaidExtraPayments}
+              value={values.numberOfPaidExtraPayments.format(0)}
             />
             <LabelValue
               label="Total extra payment"
-              value={values.valueOfPaidExtraPayments}
+              value={values.valueOfPaidExtraPayments.format()}
             />
           </>
         ) : null}
-        {values.repayDurationDifference != "0 months" ? (
+        {values.repayDurationDifference > 0 ? (
           <>
             <Subtotal
               label="Loan fulfilled in"
-              value={values.durationOfRepay}
+              value={`${values.durationOfRepay.format(0)} months`}
             />
             <LabelValue
               label="Fullfilled earlier by"
-              value={values.repayDurationDifference}
+              value={`${values.repayDurationDifference.format(0)} months`}
             />
           </>
         ) : null}
-        <Subtotal label="Overpay" value={values.percentageOfOverpay} />
-        <LabelValue label="Total interest" value={values.totalInterest} />
-        <Total label="Total" value={values.total} />
+        <Subtotal label="Overpay" value={`${values.percentageOfOverpay.format()}%`} />
+        <LabelValue label="Total interest" value={values.totalInterest.format()} />
+        <Total label="Total" value={values.total.format()} />
       </Grid>
     </Container>
   )

@@ -45,16 +45,16 @@ export type ComputeParams = {
 }
 
 export type ComputeReturn = {
-  baseMonthlyPayment: string
-  actualMonthlyPayment: string
-  actualMonthlyPaymentWithExtra: string
-  total: string
-  totalInterest: string
-  percentageOfOverpay: string
-  durationOfRepay: string
-  numberOfPaidExtraPayments: string
-  valueOfPaidExtraPayments: string
-  repayDurationDifference: string
+  baseMonthlyPayment: number
+  actualMonthlyPayment: number
+  actualMonthlyPaymentWithExtra: number
+  total: number
+  totalInterest: number
+  percentageOfOverpay: number
+  durationOfRepay: number
+  numberOfPaidExtraPayments: number
+  valueOfPaidExtraPayments: number
+  repayDurationDifference: number
 }
 
 const PMT = ({
@@ -87,12 +87,12 @@ const computeLoan = ({
   extraPayments,
 }: ComputeParams): ComputeReturn => {
   const monthlyInterestRate = (annualInterestRate * 0.01) / 12
-  const monthlyPayment = PMT({
+  const baseMonthlyPayment = PMT({
     monthlyInterestRate,
     period,
     loan,
   })
-  const actualMonthlyPayment = monthlyPayment + additionalMonthlyPayment
+  const actualMonthlyPayment = baseMonthlyPayment + additionalMonthlyPayment
 
   let remainingLoan = loan
   let total = loan + additionalCosts
@@ -137,16 +137,16 @@ const computeLoan = ({
   const repayDurationDifference = period - durationOfRepay
 
   return {
-    baseMonthlyPayment: monthlyPayment.format(),
-    actualMonthlyPayment: actualMonthlyPayment.format(),
-    actualMonthlyPaymentWithExtra: actualMonthlyPaymentWithExtra.format(),
-    total: total.format(),
-    totalInterest: totalInterest.format(),
-    percentageOfOverpay: `${percentageOfOverpay.format()}%`,
-    durationOfRepay: `${durationOfRepay.format(0)} months`,
-    numberOfPaidExtraPayments: numberOfPaidExtraPayments.format(0),
-    valueOfPaidExtraPayments: valueOfPaidExtraPayments.format(),
-    repayDurationDifference: `${repayDurationDifference.format(0)} months`,
+    baseMonthlyPayment,
+    actualMonthlyPayment,
+    actualMonthlyPaymentWithExtra,
+    total,
+    totalInterest,
+    percentageOfOverpay,
+    durationOfRepay,
+    numberOfPaidExtraPayments,
+    valueOfPaidExtraPayments,
+    repayDurationDifference,
   }
 }
 

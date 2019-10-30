@@ -22,7 +22,7 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
       value: 0,
     },
   } as ComputeParams)
-  const [hasExtraPayments, setHasExtraPayments] = useState(true)
+  const [hasExtraPayments, setHasExtraPayments] = useState(false)
 
   useEffect(() => {
     if (!show) {
@@ -144,14 +144,10 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
 
 const Container = styled.div``
 
-const Input = styled.input`
-  text-align: right;
-`
-
 const Footer = styled.div`
   border-top: 1px solid lightgray;
-  margin-top: 1em;
-  padding-top: 0.25em;
+  margin-top: 1.5em;
+  padding-top: 0.75em;
   display: grid;
 `
 

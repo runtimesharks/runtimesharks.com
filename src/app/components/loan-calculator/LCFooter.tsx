@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { ComputeReturn } from "../../utils/loanCalculator"
+import LabelValue from "./LabelValue"
 
 export type LCFooterProps = {
   firstValues?: ComputeReturn
@@ -15,9 +16,9 @@ const LCFooter = ({
 }: LCFooterProps) => {
   return (
     <Container>
-      {secondValues ? (
+      {firstValues && secondValues ? (
         <SummaryContainer>
-          <div>Summary will go here</div>
+          <LabelValue label="Loan" value={secondValues.total - firstValues.total}/>
         </SummaryContainer>
       ) : null}
       {secondValues ? null : (
