@@ -48,19 +48,31 @@ const LoanCalculator = () => {
 
   return (
     <Container>
-      <Calculators showsComparison={showsComparison}>
-        <LCComponent onValuesChanged={updateFirstValues} show={true} />
-        <LCComponent
-          onValuesChanged={updateSecondValues}
-          show={showsComparison}
-        />
-      </Calculators>
-      <LCFooter onAddComparison={handleComparisonClick} {...footerProps} />
+      <Title>Calculate payment schedules and compare different scenarios</Title>
+      <Grid>
+        <Calculators showsComparison={showsComparison}>
+          <LCComponent onValuesChanged={updateFirstValues} show={true} />
+          <LCComponent
+            onValuesChanged={updateSecondValues}
+            show={showsComparison}
+          />
+        </Calculators>
+        <LCFooter onAddComparison={handleComparisonClick} {...footerProps} />
+      </Grid>
     </Container>
   )
 }
 
-const Container = styled.div`
+const Container = styled.div``
+
+const Title = styled.h3`
+  text-align: center;
+  /* max-width: 400px; */
+  margin: 1em auto;
+  padding-bottom: 1em;
+`
+
+const Grid = styled.div`
   display: grid;
   margin-top: 2em;
 `
