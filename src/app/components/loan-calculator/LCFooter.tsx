@@ -4,20 +4,20 @@ import { ComputeReturn } from "../../utils/loanCalculator"
 import LCSummary from "./LCSummary"
 
 export type LCFooterProps = {
-  firstValues?: ComputeReturn
+  firstValues: ComputeReturn
   secondValues?: ComputeReturn
-  onAddComparison: () => void
+  onButtonClick: () => void
 }
 
 const LCFooter = ({
   firstValues,
   secondValues,
-  onAddComparison,
+  onButtonClick,
 }: LCFooterProps) => {
-  const hasSummary = firstValues != null && secondValues != null
+  const hasSummary = secondValues != null
   let values = {} as ComputeReturn
 
-  if (firstValues != null && secondValues != null) {
+  if (secondValues != null) {
     Object.keys(firstValues).map((k) => {
       const key = k as keyof ComputeReturn
       // Check if the object is not still empty.
@@ -37,9 +37,9 @@ const LCFooter = ({
           <LCSummary values={values} showComparisonResults={true} />
         </>
       ) : null}
-      {secondValues ? null : (
-        <Button onClick={onAddComparison}>Add comparison</Button>
-      )}
+      <Button hasSummary={hasSummary} onClick={onButtonClick}>
+        {secondValues ? "Remove" : "Add"} comparison
+      </Button>
     </Container>
   )
 }
@@ -61,11 +61,19 @@ const Title = styled.h1`
   text-align: center;
 `
 
-const Button = styled.button`
-  display: inline-block;
+const Button = styled.button<{ hasSummary: boolean }>`
+  display: block;
+  text-align: center;
   font-size: 1.5em;
   font-weight: bold;
   margin: auto;
+
+  ${(props) =>
+    props.hasSummary
+      ? css`
+          margin-top: 60px;
+        `
+      : null}
 `
 
 export default React.memo(LCFooter)

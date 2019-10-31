@@ -20,7 +20,9 @@ const LoanCalculator = () => {
   const handleComparisonClick = useCallback(() => {
     setFooterProps({
       ...footerProps,
-      secondValues: {} as ComputeReturn,
+      secondValues: footerProps.secondValues
+        ? undefined
+        : ({} as ComputeReturn),
     })
   }, [footerProps])
 
@@ -57,7 +59,7 @@ const LoanCalculator = () => {
             show={showsComparison}
           />
         </Calculators>
-        <LCFooter onAddComparison={handleComparisonClick} {...footerProps} />
+        <LCFooter onButtonClick={handleComparisonClick} {...footerProps} />
       </Grid>
     </Container>
   )
