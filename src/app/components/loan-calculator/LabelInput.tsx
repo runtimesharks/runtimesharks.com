@@ -10,17 +10,22 @@ type Props = any &
     type?: string
   }
 
-const LabelInput = ({ label, description, type = "text", ...rest }: Props) => {
+const LabelInput = ({
+  className,
+  label,
+  description,
+  type = "text",
+  ...rest
+}: Props) => {
   return (
-    <Container {...rest}>
+    <Container className={className}>
       <Grid>
         <Label>{label}</Label>
         <Input
-          label={label}
           type={type}
-          {...rest}
           // Hacky, hack, hack.
           defaultChecked={rest.defaultValue}
+          {...rest}
         />
       </Grid>
       <Description>{description}</Description>
@@ -31,7 +36,6 @@ const LabelInput = ({ label, description, type = "text", ...rest }: Props) => {
 const Container = styled.div``
 
 const Grid = styled.div`
-  margin-top: 6px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 20px;

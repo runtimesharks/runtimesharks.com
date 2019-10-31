@@ -212,7 +212,7 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-row-gap: 6px;
+  grid-row-gap: 12px;
 `
 
 const Footer = styled.div`
