@@ -64,7 +64,6 @@ const Title = styled.h1`
 const Button = styled.button`
   display: inline-block;
   font-size: 1.5em;
-  color: white;
   font-weight: bold;
   margin: auto;
 `

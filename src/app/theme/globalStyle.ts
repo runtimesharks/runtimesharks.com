@@ -29,10 +29,17 @@ export const GlobalStyle = createGlobalStyle`
 	blockquote, dl, dd {
 		margin: 0;
 		border: 0;
-		font-style: inherit;
+		color: inherit;
+		font-family: inherit;
 		font-size: inherit;
 		line-height: inherit;
 		-webkit-font-smoothing: antialiased;
+	}
+
+	/* Revert the header sizes */
+	h1, h2, h3, h4, h5, h6 {
+		font-size: revert;
+		line-height: initial;
 	}
 
 	/* Set core body defaults */
@@ -64,9 +71,11 @@ export const GlobalStyle = createGlobalStyle`
 		margin-top: 1em;
 	}
 
-	/* Inherit fonts for inputs and buttons */
+	/* Inherit fonts and colors for inputs and buttons */
 	input, button, textarea, select {
-		font: inherit;
+		color: inherit;
+		font-family: inherit;
+		font-size: inherit;
 	}
 
 	/* Remove _all_ animations and transitions for people that prefer not to see them */
@@ -84,6 +93,7 @@ export const GlobalStyle = createGlobalStyle`
 		background: ${Theme.backgroundColor};
 		font-family: ${Theme.bodyFont};
 		font-size: 1.1em;
+		line-height: 1.35em;
 
 		margin: 0 auto;
 

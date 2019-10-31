@@ -26,12 +26,12 @@ const Container = styled.footer`
   border-top: solid 0.5px ${Theme.gray};
   padding-top: 0.75em;
   margin: 7em auto 1em;
-  line-height: 1.5em;
-  font-size: 0.85em;
+  line-height: 1.35em;
+  font-size: 0.8em;
   font-weight: 500;
 `
 
-const Quote = styled.div`
+const Quote = styled.h4`
   font-style: italic;
   font-size: 0.8em;
   font-weight: 300;
