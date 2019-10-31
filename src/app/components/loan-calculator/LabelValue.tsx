@@ -56,4 +56,4 @@ const Value = styled(ColoredElement)`
   align-self: flex-end;
 `
 
-export default LabelValue
+export default React.memo(LabelValue)

@@ -31,7 +31,7 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
         loan: parseInt(e.target.value, 10) || state.loan,
       })
     },
-    [state.loan]
+    [state]
   )
 
   const handleDurationChange = useCallback(
@@ -41,7 +41,7 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
         period: parseInt(e.target.value, 10) || state.period,
       })
     },
-    [state.period]
+    [state]
   )
 
   const handleInterestChange = useCallback(
@@ -51,7 +51,7 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
         annualInterestRate: parseFloat(e.target.value),
       })
     },
-    [state.annualInterestRate]
+    [state]
   )
 
   const handleAdditionalCostsChange = useCallback(
@@ -61,7 +61,7 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
         additionalCosts: parseFloat(e.target.value),
       })
     },
-    [state.additionalCosts]
+    [state]
   )
 
   const handleAdditionalMonthlyPaymentChange = useCallback(
@@ -71,7 +71,7 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
         additionalMonthlyPayment: parseFloat(e.target.value),
       })
     },
-    [state.additionalMonthlyPayment]
+    [state]
   )
 
   const handleOccasionalExtraPaymentChange = useCallback(
@@ -104,7 +104,7 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
         },
       })
     },
-    [state.extraPayments.value]
+    [state]
   )
 
   const handleFrequencyChange = useCallback(
@@ -117,7 +117,7 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
         },
       })
     },
-    [state.extraPayments.frequency]
+    [state]
   )
 
   const handleLimitChange = useCallback(
@@ -130,7 +130,7 @@ const LCComponent = ({ show, onValuesChanged }: Props) => {
         },
       })
     },
-    [state.extraPayments.limit]
+    [state]
   )
 
   useEffect(() => {

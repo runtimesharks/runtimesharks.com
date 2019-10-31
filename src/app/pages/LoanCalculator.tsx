@@ -31,7 +31,7 @@ const LoanCalculator = () => {
         firstValues: computeLoan(values),
       })
     },
-    [footerProps.firstValues]
+    [footerProps]
   )
 
   const updateSecondValues = useCallback(
@@ -41,7 +41,7 @@ const LoanCalculator = () => {
         secondValues: computeLoan(values),
       })
     },
-    [footerProps.secondValues]
+    [footerProps]
   )
 
   const showsComparison = footerProps.secondValues != null
