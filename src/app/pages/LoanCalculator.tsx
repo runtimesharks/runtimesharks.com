@@ -69,7 +69,6 @@ const Container = styled.div``
 
 const Title = styled.h3`
   text-align: center;
-  /* max-width: 400px; */
   margin: 1em auto;
   padding-bottom: 1em;
 `
@@ -85,6 +84,7 @@ const Calculators = styled.div<CalculatorStyle>`
   grid-template-columns: ${(props) =>
     props.showsComparison ? "1fr 1fr" : "1fr"};
   grid-column-gap: 80px;
+  align-items: flex-start;
 `
 
 export default React.memo(LoanCalculator)
