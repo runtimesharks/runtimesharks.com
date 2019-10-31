@@ -101,6 +101,7 @@ const Container = styled.div``
 
 const Grid = styled.div`
   display: grid;
+  grid-row-gap: 4px;
 `
 
 const Subtotal = styled(LabelValue)`

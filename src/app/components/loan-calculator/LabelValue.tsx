@@ -26,9 +26,12 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
   grid-column-gap: 20px;
+  font-weight: 400;
 `
 
-const ColoredElement = styled.div<Style>`
+const ColoredElement = styled.h4<Style>`
+  font-weight: inherit;
+
   ${(props) =>
     props.color === "negative"
       ? css`

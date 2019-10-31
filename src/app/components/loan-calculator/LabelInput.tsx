@@ -43,8 +43,9 @@ const Description = styled.h4`
   font-weight: 300;
 `
 
-const Label = styled.div`
+const Label = styled.h4`
   text-align: left;
+  font-weight: 400;
 `
 
 const Input = styled.input<Props>`
