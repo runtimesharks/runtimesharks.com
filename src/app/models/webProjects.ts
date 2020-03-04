@@ -20,12 +20,6 @@ const webProjects = [
     name: "team.cards",
     summary: "Create a team page in minutes!",
     date: "2019-03-01",
-    externalLinks: [
-      new ExternalLink({
-        title: "Visit",
-        url: "https://team.cards",
-      }),
-    ],
     color: "#4054b2",
   }),
   new Project({
@@ -40,12 +34,6 @@ const webProjects = [
     summary: "Travel the world and share your journey!",
     date: "2018-06-01",
     hasImage: false,
-    externalLinks: [
-      new ExternalLink({
-        title: "Visit",
-        url: "https://travelstories.world",
-      }),
-    ],
     color: "#7324d6",
   }),
   new Project({
