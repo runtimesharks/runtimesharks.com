@@ -25,9 +25,6 @@ const TravelStories = (props: any) => (
       The backend and website were created with{" "}
       <a href="https://vapor.codes">Vapor</a>, a server side framework based on
       Swift.
-      <br />
-      <br />
-      <em>[Discontinued as of 2020]</em>
     </AnimatedContainer>
   </Project>
 )

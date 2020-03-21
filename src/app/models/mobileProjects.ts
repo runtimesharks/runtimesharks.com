@@ -14,12 +14,14 @@ const mobileProjects = [
       }),
     ],
     color: "#ff0e37",
+    discontinuedAt: "2019",
   }),
   new Project({
     name: "My Travel Stories",
     summary: "Travel the world and share your journey!",
     date: "2018-10-13",
     color: "#0371b8",
+    discontinuedAt: "2020",
   }),
   new Project({
     name: "Hey, Be Well!",
@@ -139,6 +141,7 @@ const mobileProjects = [
       }),
     ],
     color: "#a91f13",
+    discontinuedAt: "2016",
   }),
   new Project({
     name: "Carminder",
@@ -159,7 +162,8 @@ const mobileProjects = [
     summary: "Helps you keep track of your upcoming expenses.",
     date: "2013-12-01",
     color: "#481faf",
+    discontinuedAt: "2014",
   }),
-]
+].sort((_, p2) => (p2.discontinuedAt ? -1 : 0))
 
 export default mobileProjects

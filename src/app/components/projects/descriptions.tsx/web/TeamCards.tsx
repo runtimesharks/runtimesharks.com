@@ -22,9 +22,6 @@ const TeamCards = (props: any) => (
       Written with <a href="https://nodejs.org/en">Node.js</a>,{" "}
       <a href="http://expressjs.com/">Express</a> and{" "}
       <a href="https://reactjs.org">React</a>.
-      <br />
-      <br />
-      <em>[Discontinued as of 2020]</em>
     </AnimatedContainer>
   </Project>
 )

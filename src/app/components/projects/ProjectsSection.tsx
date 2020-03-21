@@ -11,8 +11,16 @@ interface Props {
   disableAnimation?: boolean
 }
 
-const Icon = ({ name, icon }: Project) => (
-  <Img src={icon} alt={`${name}'s icon`} />
+interface ImageStyle {
+  isDiscontinued: boolean
+}
+
+const Icon = ({ name, icon, discontinuedAt }: Project) => (
+  <Img
+    src={icon}
+    alt={`${name}'s icon`}
+    isDiscontinued={discontinuedAt !== undefined}
+  />
 )
 
 const ProjectsSection = ({
@@ -97,6 +105,7 @@ const Img = styled.img`
   width: 100px;
   height: 100px;
   border-radius: 18px;
+  opacity: ${(props: ImageStyle) => (props.isDiscontinued ? 0.35 : 1)};
 
   box-shadow: #777777 0 0 7px 0;
 `

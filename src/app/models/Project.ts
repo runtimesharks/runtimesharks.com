@@ -13,6 +13,7 @@ interface Schema {
   color?: string
   hasImage?: boolean
   gallery?: GalleryImage[]
+  discontinuedAt?: string
 }
 
 export default class Project {
@@ -29,6 +30,7 @@ export default class Project {
   gallery: GalleryImage[]
   slug: string
   color: string
+  discontinuedAt?: string
 
   constructor({
     name,
@@ -38,6 +40,7 @@ export default class Project {
     paddleProductId,
     price,
     link,
+    discontinuedAt,
     color = Theme.linkColor,
     hasImage = true,
     gallery = [],
@@ -63,5 +66,6 @@ export default class Project {
     this.color = color
     this.hasImage = hasImage
     this.gallery = gallery
+    this.discontinuedAt = discontinuedAt
   }
 }

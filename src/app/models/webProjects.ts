@@ -21,6 +21,7 @@ const webProjects = [
     summary: "Create a team page in minutes!",
     date: "2019-03-01",
     color: "#4054b2",
+    discontinuedAt: "2020",
   }),
   new Project({
     name: "Loan calculator",
@@ -35,6 +36,7 @@ const webProjects = [
     date: "2018-06-01",
     hasImage: false,
     color: "#7324d6",
+    discontinuedAt: "2020",
   }),
   new Project({
     name: "Roland's blog",
@@ -52,6 +54,6 @@ const webProjects = [
     ],
     color: "#12a8da",
   }),
-]
+].sort((_, p2) => (p2.discontinuedAt ? -1 : 0))
 
 export default webProjects

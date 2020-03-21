@@ -52,6 +52,13 @@ const Project = (props: any) => {
             {project.hasImage ? <StyledImage {...project} /> : null}
             <Description centered={props.centered} hasImage={project.hasImage}>
               {props.children}
+              {project.discontinuedAt !== undefined ? (
+                <AnimatedContainer position={5}>
+                  <br />
+                  <br />
+                  <em>[Discontinued as of {project.discontinuedAt}]</em>
+                </AnimatedContainer>
+              ) : null}
               <AnimatedContainer position={2}>
                 <ExternalButtons {...project} />
               </AnimatedContainer>

@@ -8,9 +8,6 @@ const MyTravelStories = (props: any) => (
       Travel, take beautiful photos, write down your feelings and create your
       travel journal. Share your stories with the world and find inspiration
       from others for your next trips!
-      <br />
-      <br />
-      <em>[Discontinued as of 2020]</em>
     </AnimatedContainer>
   </Project>
 )
