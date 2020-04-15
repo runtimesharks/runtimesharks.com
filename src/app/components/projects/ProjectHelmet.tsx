@@ -1,5 +1,5 @@
 import React, { useContext } from "react"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
 import Project from "../../models/Project"
 import LocationContext from "../../utils/LocationContext"
 
