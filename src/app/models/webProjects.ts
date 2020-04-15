@@ -11,8 +11,8 @@ const webProjects = [
     color: Theme.darkBlue,
     externalLinks: [
       new ExternalLink({
-        title: "GitLab",
-        url: "https://gitlab.com/runtimesharks/runtimesharks.com",
+        title: "GitHub",
+        url: "https://github.com/runtimesharks/runtimesharks.com",
       }),
     ],
   }),
@@ -48,8 +48,8 @@ const webProjects = [
         url: "https://rolandleth.com",
       }),
       new ExternalLink({
-        title: "GitLab",
-        url: "https://gitlab.com/runtimesharks/rolandleth.com",
+        title: "GitHub",
+        url: "https://github.com/runtimesharks/rolandleth.com",
       }),
     ],
     color: "#12a8da",
