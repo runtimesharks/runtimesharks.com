@@ -9,7 +9,7 @@ const macProjects = [
       "Activate Do Not Disturb for a few hours and work distraction free.",
     date: "2019-04-01",
     paddleProductId: "551634",
-    price: "€4.99",
+    price: "€2.5 (50% off)",
     externalLinks: [
       new ExternalLink({
         title: "Download Free Trial",
