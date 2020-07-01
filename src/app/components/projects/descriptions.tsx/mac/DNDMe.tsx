@@ -21,8 +21,10 @@ const DNDMe = (props: any) => (
 		<AnimatedContainer position={3}>
 			<br />
 			<Disclaimer>
-				*Due to system limitations, DND Me does not work if Do Not Disturb is
+				• Due to system limitations, DND Me does not work if Do Not Disturb is
 				scheduled in System Preferences -> Notifications.
+				<br />
+				• Currently not working on macOS Big Sur.
 			</Disclaimer>
 		</AnimatedContainer>
 	</StyledProject>
