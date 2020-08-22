@@ -21,6 +21,10 @@ const Helmet = ({ title, description, image }: Props) => {
 		<ReactHelmet>
 			<title>{title}</title>
 			<link rel="canonical" href={location} />
+			<link
+				rel="style"
+				href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600"
+			/>
 			{/* Metadata */}
 			<meta name="description" content={description} />
 			{/* OG */}

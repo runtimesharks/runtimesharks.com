@@ -2,8 +2,6 @@ import { createGlobalStyle } from "styled-components"
 import Theme from "./Theme"
 
 export const GlobalStyle = createGlobalStyle`
-	@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
-
 	/* Reset */
 	/* Box sizing rules */
 	*,
