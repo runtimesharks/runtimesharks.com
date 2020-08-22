@@ -22,9 +22,8 @@ const DNDMe = (props: any) => (
 			<br />
 			<Disclaimer>
 				• Due to system limitations, DND Me does not work if Do Not Disturb is
-				scheduled in System Preferences -> Notifications.
-				<br />
-				• Currently not working on macOS Big Sur.
+				scheduled in System Preferences -&gt; Notifications.
+				<br />• Currently not working on macOS Big Sur.
 			</Disclaimer>
 		</AnimatedContainer>
 	</StyledProject>

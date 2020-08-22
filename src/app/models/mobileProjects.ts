@@ -27,7 +27,7 @@ const mobileProjects = [
 		name: "Hey, Be Well!",
 		summary: "Achieve your wellbeing goals.",
 		date: "2018-09-01",
-		isClient: true,
+		projectType: "Client",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -45,7 +45,7 @@ const mobileProjects = [
 		name: "Beraria H",
 		summary: "Browse for, book and check-in at events.",
 		date: "2018-04-01",
-		isClient: true,
+		projectType: "Client",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -104,7 +104,7 @@ const mobileProjects = [
 		name: "Essenza",
 		summary: "A handy list of self improvement essentials and takeaways.",
 		date: "2019-04-01",
-		isClient: true,
+		projectType: "Client",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -117,7 +117,7 @@ const mobileProjects = [
 		name: "DeinDeal",
 		summary: "One of the dominating flash-sales companies in Switzerland.",
 		date: "2017-09-31",
-		isClient: true,
+		projectType: "Job",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -129,7 +129,7 @@ const mobileProjects = [
 	new Project({
 		name: "DeinDeal Partners",
 		summary: "One of the dominating flash-sales companies in Switzerland.",
-		isClient: true,
+		projectType: "Job",
 		date: "2014-06-01",
 		link: "https://itunes.apple.com/za/app/deindeal-partners/id892826193",
 	}),
@@ -171,6 +171,6 @@ const mobileProjects = [
 	}),
 ]
 	.sort((_, p2) => (p2.discontinuedAt ? -1 : 0))
-	.sort((_, p2) => (p2.isClient ? -1 : 0))
+	.sort((_, p2) => (p2.projectType !== "Own" ? -1 : 0))
 
 export default mobileProjects

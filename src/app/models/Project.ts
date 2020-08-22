@@ -2,10 +2,12 @@ import Theme from "../theme/Theme"
 import ExternalLink from "./ExternalLink"
 import GalleryImage from "./GalleryImage"
 
+export type ProjectType = "Job" | "Client" | "Own"
+
 interface Schema {
 	name: string
 	date: string
-	isClient?: boolean
+	projectType?: ProjectType
 	summary?: string
 	externalLinks?: ExternalLink[]
 	paddleProductId?: string
@@ -20,7 +22,7 @@ interface Schema {
 export default class Project {
 	name: string
 	date: string
-	isClient: boolean
+	projectType: ProjectType
 	summary?: string
 	externalLinks: ExternalLink[]
 	paddleProductId?: string
@@ -38,7 +40,7 @@ export default class Project {
 		name,
 		summary,
 		date,
-		isClient = false,
+		projectType = "Own",
 		externalLinks = [],
 		paddleProductId,
 		price,
@@ -51,7 +53,7 @@ export default class Project {
 		this.name = name
 		this.summary = summary
 		this.date = date
-		this.isClient = isClient
+		this.projectType = projectType
 		this.externalLinks = externalLinks
 		this.paddleProductId = paddleProductId
 		this.price = price
