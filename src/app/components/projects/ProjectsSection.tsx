@@ -29,8 +29,8 @@ const Icon = ({ name, icon, projectType, discontinuedAt }: Project) => (
 			>
 				{projectType === "Client"
 					? "Client"
-					: projectType === "Job"
-					? "Job"
+					: projectType === "Employee"
+					? "Employee"
 					: discontinuedAt !== undefined
 					? "Discontinued"
 					: ""}

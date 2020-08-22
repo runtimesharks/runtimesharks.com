@@ -117,7 +117,7 @@ const mobileProjects = [
 		name: "DeinDeal",
 		summary: "One of the dominating flash-sales companies in Switzerland.",
 		date: "2017-09-31",
-		projectType: "Job",
+		projectType: "Employee",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
@@ -129,7 +129,7 @@ const mobileProjects = [
 	new Project({
 		name: "DeinDeal Partners",
 		summary: "One of the dominating flash-sales companies in Switzerland.",
-		projectType: "Job",
+		projectType: "Employee",
 		date: "2014-06-01",
 		link: "https://itunes.apple.com/za/app/deindeal-partners/id892826193",
 	}),

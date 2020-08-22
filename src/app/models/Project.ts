@@ -2,7 +2,7 @@ import Theme from "../theme/Theme"
 import ExternalLink from "./ExternalLink"
 import GalleryImage from "./GalleryImage"
 
-export type ProjectType = "Job" | "Client" | "Own"
+export type ProjectType = "Employee" | "Client" | "Own"
 
 interface Schema {
 	name: string
