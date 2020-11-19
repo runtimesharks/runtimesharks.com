@@ -3,6 +3,7 @@ import { Redirect, Route, Switch } from "react-router"
 import DNDMe from "../components/projects/descriptions.tsx/mac/DNDMe"
 import TimeProgress from "../components/projects/descriptions.tsx/mac/TimeProgress"
 import BerariaH from "../components/projects/descriptions.tsx/mobile/BerariaH"
+import BodyTracking from "../components/projects/descriptions.tsx/mobile/BodyTracking"
 import CardVirtual from "../components/projects/descriptions.tsx/mobile/CardVirtual"
 import Carminder from "../components/projects/descriptions.tsx/mobile/Carminder"
 import ChallengeBeat from "../components/projects/descriptions.tsx/mobile/ChallengeBeat"
@@ -29,6 +30,7 @@ const ProjectRouter = () => (
 			path="/projects/my-travel-stories"
 			component={MyTravelStories}
 		/>
+		<Route exact path="/projects/body-tracking" component={BodyTracking} />
 		<Route exact path="/projects/hey-be-well" component={HBW} />
 		<Route exact path="/projects/beraria-h" component={BerariaH} />
 		<Route exact path="/projects/idea-trackerr" component={IdeaTrackerr} />

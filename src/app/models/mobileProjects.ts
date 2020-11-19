@@ -3,14 +3,25 @@ import Project from "./Project"
 
 const mobileProjects = [
 	new Project({
+		name: "Body Tracking",
+		summary: "Track your eating habits, not your calories",
+		date: "2020-09-01",
+		externalLinks: [
+			new ExternalLink({
+				title: "App Store",
+				url: "https://apple.co/3kEkknN",
+			}),
+		],
+		color: "#724CB2",
+	}),
+	new Project({
 		name: "ChallengeBeat",
 		summary: "Challenge yourself and your friends for better habits!",
 		date: "2018-03-01",
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
-				url:
-					"https://itunes.apple.com/us/app/challengebeat/id1323950655?ls=1&mt",
+				url: "https://apple.co/2IP3Qwr",
 			}),
 		],
 		color: "#ff0e37",
@@ -31,12 +42,7 @@ const mobileProjects = [
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
-				url:
-					"https://itunes.apple.com/us/app/hey-be-well/id1440003341?ls=1&mt=8",
-			}),
-			new ExternalLink({
-				title: "Home",
-				url: "https://heybewell.com",
+				url: "https://apple.co/36PkdkJ",
 			}),
 		],
 		color: "#3b245f",
@@ -63,8 +69,7 @@ const mobileProjects = [
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
-				url:
-					"https://itunes.apple.com/us/app/idea-trackerr/id1459548047?ls=1&mt=8",
+				url: "https://apple.co/36KOscf",
 			}),
 			new ExternalLink({
 				title: "Google Play",
@@ -81,7 +86,7 @@ const mobileProjects = [
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
-				url: "https://itunes.apple.com/us/app/goalee/id1438115216?ls=1&mt",
+				url: "https://apple.co/3f82k4h",
 			}),
 		],
 		color: "#7161e8",
@@ -94,8 +99,7 @@ const mobileProjects = [
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
-				url:
-					"https://itunes.apple.com/ro/app/card-virtual/id1365350958?ls=1&mt",
+				url: "https://apple.co/3pBrddj",
 			}),
 		],
 		color: "#fc5f25",
@@ -141,8 +145,7 @@ const mobileProjects = [
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
-				url:
-					"https://itunes.apple.com/us/app/puppet-anthems/id878308190?ls=1&mt=8",
+				url: "https://apple.co/3faFLvV",
 			}),
 		],
 		color: "#a91f13",
@@ -156,8 +159,7 @@ const mobileProjects = [
 		externalLinks: [
 			new ExternalLink({
 				title: "App Store",
-				url:
-					"https://itunes.apple.com/us/app/carminder-super-simple-maintenance/id633617025?ls=1&mt",
+				url: "https://apple.co/3kINZfL",
 			}),
 		],
 		color: "#00a29b",
