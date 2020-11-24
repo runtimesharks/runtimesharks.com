@@ -32,7 +32,7 @@ const AppStoreButton = ({ url }: { url: string }) => {
 						: w.navigator.languages !== undefined
 						? w.navigator.languages[0]
 						: window.navigator.language || "en-US"
-				}?size=250x83&amp;releaseDate=1602633600&h=b13930c804b667ec6d53650b70216434`}
+				}?size=250x83`}
 				alt="Download on the App Store"
 				style={{ borderRadius: "13px", width: "250px", height: "83px" }}
 			/>

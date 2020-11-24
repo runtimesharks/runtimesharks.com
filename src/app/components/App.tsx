@@ -6,25 +6,25 @@ import Footer from "./Footer"
 import Header from "./Header"
 
 interface Props {
-  ssrLocation?: string
+	ssrLocation?: string
 }
 
 const App = ({ ssrLocation }: Props) => {
-  useEffect(() => {
-    // @ts-ignore
-    Paddle.Setup({ vendor: 39394 })
-  }, [])
+	useEffect(() => {
+		// @ts-ignore
+		Paddle.Setup({ vendor: 39394 })
+	}, [])
 
-  return (
-    <>
-      <GlobalStyle />
-      <Header />
-      <LocationContext.Provider value={ssrLocation}>
-        <Router />
-      </LocationContext.Provider>
-      <Footer />
-    </>
-  )
+	return (
+		<React.StrictMode>
+			<GlobalStyle />
+			<Header />
+			<LocationContext.Provider value={ssrLocation}>
+				<Router />
+			</LocationContext.Provider>
+			<Footer />
+		</React.StrictMode>
+	)
 }
 
 export default App
