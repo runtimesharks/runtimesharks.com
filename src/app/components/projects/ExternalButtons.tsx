@@ -70,36 +70,50 @@ const ExternalButtons = ({
 	externalLinks,
 	paddleProductId,
 	price,
-}: Project) => (
-	<Container count={externalLinks.length + (paddleProductId == null ? 0 : 1)}>
-		{externalLinks.map((l) => {
-			if (l.title === "App Store") {
-				return <AppStoreButton url={l.url} />
-			}
+}: Project) => {
+	const [displayPrice, setPrice] = useState(price)
 
-			if (l.title === "Google Play") {
-				return <GooglePlayButton url={l.url} />
+	useEffect(() => {
+		// @ts-ignore
+		Paddle.Product.Prices(551634, (details) => {
+			if (!details || !details.price || !details.price.gross) {
+				return
 			}
+			setPrice(details.price.gross)
+		})
+	}, [])
 
-			return (
-				<Button key={l.url} href={l.url}>
-					{l.title}
-				</Button>
-			)
-		})}
-		{paddleProductId == null ? null : (
-			<PaddleButton
-				onClick={(e) => {
-					e.preventDefault()
-					// @ts-ignore
-					Paddle.Checkout.open({ product: paddleProductId })
-				}}
-			>
-				Buy Now for {price}!
-			</PaddleButton>
-		)}
-	</Container>
-)
+	return (
+		<Container count={externalLinks.length + (paddleProductId == null ? 0 : 1)}>
+			{externalLinks.map((l) => {
+				if (l.title === "App Store") {
+					return <AppStoreButton url={l.url} />
+				}
+
+				if (l.title === "Google Play") {
+					return <GooglePlayButton url={l.url} />
+				}
+
+				return (
+					<Button key={l.url} href={l.url}>
+						{l.title}
+					</Button>
+				)
+			})}
+			{paddleProductId == null ? null : (
+				<PaddleButton
+					onClick={(e) => {
+						e.preventDefault()
+						// @ts-ignore
+						Paddle.Checkout.open({ product: paddleProductId })
+					}}
+				>
+					Buy Now for {displayPrice}!
+				</PaddleButton>
+			)}
+		</Container>
+	)
+}
 
 const Container = styled.div<StyleProps>`
 	margin-top: 3em;
