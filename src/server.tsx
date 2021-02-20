@@ -10,32 +10,32 @@ const assets = require(process.env.RAZZLE_ASSETS_MANIFEST!)
 const server = express()
 
 server
-  .disable("x-powered-by")
-  .use(express.static(process.env.RAZZLE_PUBLIC_DIR!))
-  .get("/*", async (req, res) => {
-    const context: any = {}
-    const location = `https://${req.hostname}${req.originalUrl}`
-    const sheet = new ServerStyleSheet()
-    const markup = renderToString(
-      sheet.collectStyles(
-        <StaticRouter context={context} location={req.originalUrl}>
-          <App ssrLocation={location /* For meta tags*/} />
-        </StaticRouter>
-      )
+	.disable("x-powered-by")
+	.use(express.static(process.env.RAZZLE_PUBLIC_DIR!))
+	.get("/*", async (req, res) => {
+		const context: any = {}
+		const location = `https://${req.hostname}${req.originalUrl}`
+		const sheet = new ServerStyleSheet()
+		const markup = renderToString(
+			sheet.collectStyles(
+				<StaticRouter context={context} location={req.originalUrl}>
+					<App ssrLocation={location /* For meta tags*/} />
+				</StaticRouter>
+			)
 		)
-    const styleTags = sheet.getStyleTags()
-    const helmet = Helmet.renderStatic()
-    const allHelmetDataAsString = Object.keys(helmet)
-      // @ts-ignore
-      .map((key) => helmet[key].toString())
-      .filter((o) => o !== "" && o !== undefined)
-      .join("\n")
+		const styleTags = sheet.getStyleTags()
+		const helmet = Helmet.renderStatic()
+		const allHelmetDataAsString = Object.keys(helmet)
+			// @ts-ignore
+			.map((key) => helmet[key].toString())
+			.filter((o) => o !== "" && o !== undefined)
+			.join("\n")
 
-    if (context.url) {
-      res.redirect(context.url)
-    } else {
-      const faviconPath = "/images/favicons"
-      res.status(200).send(`
+		if (context.url) {
+			res.redirect(context.url)
+		} else {
+			const faviconPath = "/images/favicons"
+			res.status(200).send(`
 <!doctype html>
 <html lang="">
 	<head>
@@ -77,21 +77,21 @@ server
 		${allHelmetDataAsString}
 		${styleTags}
 		${
-      assets.client.css
-        ? `<link rel="stylesheet" href="${assets.client.css}">`
-        : ""
-    }
+			assets.client.css
+				? `<link rel="stylesheet" href="${assets.client.css}">`
+				: ""
+		}
 		${
-      process.env.IS_PROD
-        ? `<script type="text/javascript" src="${assets.client.js}" defer></script>`
-        : `<script type="text/javascript" src="${assets.client.js}" defer crossorigin></script>`
-    }
+			process.env.IS_PROD
+				? `<script type="text/javascript" src="${assets.client.js}" defer></script>`
+				: `<script type="text/javascript" src="${assets.client.js}" defer crossorigin></script>`
+		}
 	</head>
 	<body>
 		<div id="root">${markup}</div>
 	</body>
 </html>`)
-    }
-  })
+		}
+	})
 
 export default server
