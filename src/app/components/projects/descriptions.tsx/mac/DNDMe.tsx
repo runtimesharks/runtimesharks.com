@@ -17,17 +17,21 @@ const DNDMe = (props: any) => (
 			<br />
 			<br />
 			Activate Do Not Disturb for a few hours and work{" "}
-			<strong>distraction free!</strong>
+			<strong>distraction free!</strong> <br />
 		</AnimatedContainer>
 		<AnimatedContainer position={3}>
 			<br />
 			<Disclaimer>
-				• Due to system limitations on Catalina or earlier, DND Me does not work
-				if Do Not Disturb is scheduled in System Preferences -&gt;
-				Notifications.
-				<br />• Due to system limitations on Big Sur, if a schedule is active,
-				during those hours DND Me can not perform any actions, but it will
-				update according to external changes.
+				<br />• Due to system limitations on Big Sur (v2.0.0+), if a schedule is
+				active, during those hours DND Me can not perform any actions, but it
+				will update according to external changes.
+				<br />• Due to system limitations on Sierra–Catalina (v1.1.3), DND Me
+				does not work if Do Not Disturb is scheduled in System Preferences -&gt;
+				Notifications. You can download v1.1.3 for Sierra–Catalina{" "}
+				<a href="https://dl.devmate.com/com.runtimesharks.dndme/837/1611389306/DNDMe-837.dmg">
+					here
+				</a>
+				.
 			</Disclaimer>
 		</AnimatedContainer>
 	</StyledProject>
@@ -44,6 +48,7 @@ const Disclaimer = styled.p`
 	font-size: 0.8em;
 	color: #bbb;
 	font-style: italic;
+	text-align: left;
 `
 
 export default DNDMe
