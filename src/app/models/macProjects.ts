@@ -19,12 +19,36 @@ const macProjects = [
 		color: "#f15745",
 		gallery: [
 			new GalleryImage({
-				url: "/images/projects/dnd-me/on-icon.png",
-				caption: "The icon changes if DND Me is active.",
+				url: "/images/projects/dnd-me/off.png",
+				caption: "Choices for any need",
 			}),
 			new GalleryImage({
-				url: "/images/projects/dnd-me/on-menu.png",
-				caption: "See the time left until DND Me will turn off Do Not Disturb.",
+				url: "/images/projects/dnd-me/on.png",
+				caption: "The icon changes if DND is active",
+			}),
+			new GalleryImage({
+				url: "/images/projects/dnd-me/off-notification.png",
+				caption: "",
+			}),
+			new GalleryImage({
+				url: "/images/projects/dnd-me/pomodoro-on.png",
+				caption: "Not allowed to mess it up",
+			}),
+			new GalleryImage({
+				url: "/images/projects/dnd-me/pomodoro-paused.png",
+				caption: "Changed your mind?",
+			}),
+			new GalleryImage({
+				url: "/images/projects/dnd-me/pomodoro-notification.png",
+				caption: "",
+			}),
+			new GalleryImage({
+				url: "/images/projects/dnd-me/schedule-active.png",
+				caption: "Your schedule has priority",
+			}),
+			new GalleryImage({
+				url: "/images/projects/dnd-me/light.png",
+				caption: "Not a fan of light, but it looks good",
 			}),
 		],
 	}),
