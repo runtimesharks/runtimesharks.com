@@ -17,19 +17,17 @@ const Gallery = ({ gallery }: Project) => (
 
 const Container = styled.div`
 	display: grid;
-	max-width: 730px;
+	max-width: 900px;
 	grid-template-columns: auto auto;
-	grid-column-gap: 80px;
-	margin: 100px auto 0;
-
-	@media screen and (max-width: 820px) {
-		grid-column-gap: 40px;
-	}
+	grid-column-gap: 40px;
+	grid-row-gap: 16px;
+	margin-top: 80px;
+	margin-left: 60px;
 
 	@media screen and (max-width: 760px) {
 		grid-template-columns: auto;
 		grid-template-rows: auto auto;
-		grid-row-gap: 80px;
+		grid-row-gap: 40px;
 	}
 `
 
@@ -37,15 +35,15 @@ const Item = styled.div``
 
 const Img = styled.img`
 	display: block;
-	max-height: 400px;
-	max-width: 400px;
+	max-height: 600px !important;
+	max-width: 600px !important;
 	margin: auto;
 `
 
 const Caption = styled.div`
 	text-align: center;
 	color: #666;
-	font-size: 0.7em;
+	font-size: 0.85em;
 	margin-top: 4px;
 `
 
