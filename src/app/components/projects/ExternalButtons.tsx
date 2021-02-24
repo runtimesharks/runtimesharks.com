@@ -162,6 +162,11 @@ const Button = styled.a`
 	outline: none;
 	margin: 0 5px;
 	cursor: pointer;
+
+	@media screen and (max-width: 378px) {
+		height: 34px;
+		line-height: 1.25em;
+	}
 `
 
 const PaddleButton = styled(Button)`
