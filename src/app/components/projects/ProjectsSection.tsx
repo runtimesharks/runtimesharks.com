@@ -55,32 +55,39 @@ const ProjectsSection = ({
 			<a name={title.toLowerCase()} />
 		}
 		<Title>{title}</Title>
-		<Grid>
-			{projects.map((project, index) => {
-				return (
-					<AnimatedContainer
-						key={project.slug}
-						position={offset + index + 1}
-						delay={0.125}
-						sidepaded={false}
-						disableAnimations={disableAnimation}
-					>
-						{project.link.startsWith("/") ? (
-							<Link to={project.link}>
-								<Icon {...project} />
-							</Link>
-						) : (
-							<a href={project.link}>
-								<Icon {...project} />
-							</a>
-						)}
-						<IconTitle>{project.name}</IconTitle>
-					</AnimatedContainer>
-				)
-			})}
-		</Grid>
+		<Container>
+			<Grid>
+				{projects.map((project, index) => {
+					return (
+						<AnimatedContainer
+							key={project.slug}
+							position={offset + index + 1}
+							delay={0.125}
+							sidepaded={false}
+							disableAnimations={disableAnimation}
+						>
+							{project.link.startsWith("/") ? (
+								<Link to={project.link}>
+									<Icon {...project} />
+								</Link>
+							) : (
+								<a href={project.link}>
+									<Icon {...project} />
+								</a>
+							)}
+							<IconTitle>{project.name}</IconTitle>
+						</AnimatedContainer>
+					)
+				})}
+			</Grid>
+		</Container>
 	</AnimatedContainer>
 )
+
+const Container = styled.div`
+	display: flex;
+	justify-content: center;
+`
 
 const Title = styled.h2`
 	margin: 2em 0 2em;
@@ -89,7 +96,8 @@ const Title = styled.h2`
 
 const Grid = styled.div`
 	display: grid;
-	grid-template-columns: repeat(4, auto);
+	width: 100%;
+	grid-template-columns: repeat(auto-fit, 100px);
 	grid-column-gap: 40px;
 	grid-row-gap: 30px;
 	justify-content: center;
@@ -102,18 +110,6 @@ const Grid = styled.div`
 	a,
 	a:hover {
 		border-bottom: none;
-	}
-
-	@media screen and (max-width: 630px) {
-		grid-template-columns: repeat(3, auto);
-	}
-
-	@media screen and (max-width: 430px) {
-		grid-template-columns: repeat(2, auto);
-	}
-
-	@media screen and (max-width: 290px) {
-		grid-template-columns: auto;
 	}
 `
 
