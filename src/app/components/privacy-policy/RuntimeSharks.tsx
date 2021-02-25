@@ -13,6 +13,13 @@ const RuntimeSharks = () => (
 			words, we do not collect information such as your name, address, phone
 			number or email address.
 		</p>
+		<p>
+			The only cookie that we use is <code>paddlejs_checkout_variant</code>, set
+			by our payment provider, if you purchase directly from us. It is fully
+			GDPR compliant and you can read more about it{" "}
+			<a href="https://paddle.com/gdpr/">here</a> and{" "}
+			<a href="https://paddle.com/privacy-buyers/">here</a>.
+		</p>
 		{/* <p>
 			Following{" "}
 			<a href="https://support.google.com/analytics/answer/2763052?hl=en">
