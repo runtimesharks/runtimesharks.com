@@ -13,7 +13,7 @@ const RuntimeSharks = () => (
 			words, we do not collect information such as your name, address, phone
 			number or email address.
 		</p>
-		<p>
+		{/* <p>
 			Following{" "}
 			<a href="https://support.google.com/analytics/answer/2763052?hl=en">
 				their documentation
@@ -44,7 +44,7 @@ const RuntimeSharks = () => (
 				here
 			</a>
 			.
-		</p>
+		</p> */}
 		<p>
 			We do not knowingly contact or collect personal information from children
 			under 13. If you believe we have inadvertently collected such information,
