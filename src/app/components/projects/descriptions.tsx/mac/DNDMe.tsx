@@ -33,6 +33,15 @@ const DNDMe = (props: any) => (
 				</a>
 				.
 			</Disclaimer>
+			<a
+				href="https://www.producthunt.com/posts/dnd-me-2-0?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-dnd-me-2-0"
+				target="_blank"
+			>
+				<Img
+					src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=287274&theme=dark"
+					alt="DND Me 2.0 - Turn DND on for a few hours and work distraction free | Product Hunt"
+				/>
+			</a>
 		</AnimatedContainer>
 	</StyledProject>
 )
@@ -49,6 +58,13 @@ const Disclaimer = styled.p`
 	color: #bbb;
 	font-style: italic;
 	text-align: left;
+`
+
+const Img = styled.img`
+	width: 250px;
+	height: 54px;
+	margin: auto;
+	margin-top: 32px;
 `
 
 export default DNDMe
