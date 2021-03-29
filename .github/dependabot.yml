@@ -9,5 +9,9 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
-    assignees: 
+    labels:
+      - "dependencies"
+    assignees:
+      - "rolandleth"
+    reviewers:
       - "rolandleth"
