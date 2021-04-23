@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
 	<channel>
 		<title>DND Me</title>
-		<link></link>
-		<description></description>
+		<link />
+		<description />
 		<language>en</language>
 		<item>
-			<title>1672</title>
-			<sparkle:minimumSystemVersion>11</sparkle:minimumSystemVersion>
+			<title>2.2.2</title>
+			<pubDate>Fr., 23 Apr. 2021 9:08:11 AM +0300</pubDate>
+			<sparkle:minimumSystemVersion>11.0</sparkle:minimumSystemVersion>
 			<sparkle:releaseNotesLink>
 				https://runtimesharks.com/files/releases/dndme/release-notes.html
 </sparkle:releaseNotesLink>
 			<sparkle:releaseNotesLink xml:lang="en">
 				https://runtimesharks.com/files/releases/dndme/release-notes.html
 </sparkle:releaseNotesLink>
-			<pubDate>Wed, 21 Apr 2021 07:46:01 +0000</pubDate>
-			<enclosure url="https://runtimesharks.com/files/releases/dndme/DNDMe.dmg" length="3904442" type="application/octet-stream" sparkle:version="1672" sparkle:shortVersionString="2.2.1" />
+			<enclosure url="https://runtimesharks.com/files/releases/dndme/DNDMe.dmg" sparkle:version="1684" sparkle:shortVersionString="2.2.2" length="3468837" type="application/octet-stream" sparkle:edSignature="f612CFWOpjtkzWoQJZvTE4PK9IhFkw5o1Q4iPCQi8ALIXTqisE3OX6wz2WABG1Sb06kqZwYZcNRmuVewF8/KDg==" />
 		</item>
 		<item>
-			<title>837</title>
+			<title>1.1.3</title>
 			<sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
 			<sparkle:releaseNotesLink>
 				https://runtimesharks.com/files/releases/dndme/1.1.3/release-notes.html
