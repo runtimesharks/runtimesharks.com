@@ -6,16 +6,16 @@
 		<description />
 		<language>en</language>
 		<item>
-			<title>2.2.2</title>
-			<pubDate>Fr., 23 Apr. 2021 9:08:11 AM +0300</pubDate>
+			<title>2.2.3</title>
+			<pubDate>Sat, 09 Feb 2019 12:36:16 PM +0200</pubDate>
 			<sparkle:minimumSystemVersion>11.0</sparkle:minimumSystemVersion>
+			<enclosure url="https://runtimesharks.com/files/releases/dndme/DNDMe.dmg" sparkle:version="1708" sparkle:shortVersionString="2.2.3" length="3270945" type="application/octet-stream" sparkle:edSignature="RaDIqaSmU6yJGrY8I/cGyztA3CTKQG+uQ0KxHbSs8kNjvlLDwnRFBk4lBGMe5e5Bi98Fy2Jiq6+bgrqzztz3CA==" />
 			<sparkle:releaseNotesLink>
 				https://runtimesharks.com/files/releases/dndme/release-notes.html
 </sparkle:releaseNotesLink>
 			<sparkle:releaseNotesLink xml:lang="en">
 				https://runtimesharks.com/files/releases/dndme/release-notes.html
 </sparkle:releaseNotesLink>
-			<enclosure url="https://runtimesharks.com/files/releases/dndme/DNDMe.dmg" sparkle:version="1684" sparkle:shortVersionString="2.2.2" length="3468837" type="application/octet-stream" sparkle:edSignature="f612CFWOpjtkzWoQJZvTE4PK9IhFkw5o1Q4iPCQi8ALIXTqisE3OX6wz2WABG1Sb06kqZwYZcNRmuVewF8/KDg==" />
 		</item>
 		<item>
 			<title>1.1.3</title>
