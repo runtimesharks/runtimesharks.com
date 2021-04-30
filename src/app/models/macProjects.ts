@@ -19,35 +19,39 @@ const macProjects = [
 		color: "#f15745",
 		gallery: [
 			new GalleryImage({
-				url: "/images/projects/dnd-me/off.png",
+				url: "/images/projects/dnd-me/off.jpg",
 				caption: "Choices for any need",
 			}),
 			new GalleryImage({
-				url: "/images/projects/dnd-me/on.png",
+				url: "/images/projects/dnd-me/on.jpg",
 				caption: "The icon changes if DND is active",
 			}),
 			new GalleryImage({
-				url: "/images/projects/dnd-me/off-notification.png",
-				caption: "",
+				url: "/images/projects/dnd-me/off-notification.jpg",
+				caption: "Get notified when DND turns back on",
 			}),
 			new GalleryImage({
-				url: "/images/projects/dnd-me/pomodoro-on.png",
+				url: "/images/projects/dnd-me/pomodoro-on.jpg",
 				caption: "Not allowed to mess it up",
 			}),
 			new GalleryImage({
-				url: "/images/projects/dnd-me/pomodoro-paused.png",
+				url: "/images/projects/dnd-me/pomodoro-paused.jpg",
 				caption: "Changed your mind?",
 			}),
 			new GalleryImage({
-				url: "/images/projects/dnd-me/pomodoro-notification.png",
-				caption: "",
+				url: "/images/projects/dnd-me/pomodoro-notification.jpg",
+				caption: "Get notified when your pause starts",
 			}),
 			new GalleryImage({
-				url: "/images/projects/dnd-me/schedule-active.png",
+				url: "/images/projects/dnd-me/schedule-active.jpg",
 				caption: "Your schedule has priority",
 			}),
 			new GalleryImage({
-				url: "/images/projects/dnd-me/light.png",
+				url: "/images/projects/dnd-me/deep-links.jpg",
+				caption: "Deep links for all entries",
+			}),
+			new GalleryImage({
+				url: "/images/projects/dnd-me/light.jpg",
 				caption: "Not a fan of light, but it looks good",
 			}),
 		],
