@@ -6,10 +6,10 @@
 		<description />
 		<language>en</language>
 		<item>
-			<title>2.2.3</title>
+			<title>2.2.4</title>
 			<pubDate>Sat, 09 Feb 2019 12:36:16 PM +0200</pubDate>
 			<sparkle:minimumSystemVersion>11.0</sparkle:minimumSystemVersion>
-			<enclosure url="https://runtimesharks.com/files/releases/dndme/DNDMe.dmg" sparkle:version="1708" sparkle:shortVersionString="2.2.3" length="3270945" type="application/octet-stream" sparkle:edSignature="RaDIqaSmU6yJGrY8I/cGyztA3CTKQG+uQ0KxHbSs8kNjvlLDwnRFBk4lBGMe5e5Bi98Fy2Jiq6+bgrqzztz3CA==" />
+			<enclosure url="https://runtimesharks.com/files/releases/dndme/DNDMe.dmg" sparkle:version="1721" sparkle:shortVersionString="2.2.4" length="3298655" type="application/octet-stream" sparkle:edSignature="489yiFMrw6MFH2tM9lMnA1uvapRVfpBTgbLePb9kS+o4js5pXhdfkGg4OFn74fca3Q2aSIxZ+JYzDL1BjsJfBA==" />
 			<sparkle:releaseNotesLink>
 				https://runtimesharks.com/files/releases/dndme/release-notes.html
 </sparkle:releaseNotesLink>
