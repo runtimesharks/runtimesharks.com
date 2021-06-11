@@ -37,6 +37,7 @@ const DNDMe = (props: any) => (
 			</AnimatedContainer>
 			<AnimatedContainer position={3}>
 				<Disclaimer>
+					<br />• Due to system limitations, DND Me does not work on Monterey.
 					<br />• Due to system limitations on Big Sur (v2.0.0+), if a schedule
 					is active, during those hours DND Me can not perform any actions, but
 					it will update according to external changes.
