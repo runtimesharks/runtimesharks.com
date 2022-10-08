@@ -132,7 +132,7 @@ const Overlay = styled.div`
 		0,
 		0,
 		${(props: ImageStyle) =>
-			props.isDiscontinued ? 0.6 : props.isExternal ? 0.85 : 0}
+			props.isDiscontinued ? 0.6 : props.isExternal ? 0.25 : 0}
 	);
 	position: absolute;
 	border-radius: 18px;

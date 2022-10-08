@@ -3,6 +3,19 @@ import Project from "./Project"
 
 const mobileProjects = [
 	new Project({
+		name: "myTherme",
+		summary: "A mobile app for the Therme Group's thermal spas.",
+		date: "2022-10-31",
+		projectType: "Employee",
+		externalLinks: [
+			new ExternalLink({
+				title: "App Store",
+				url: "https://apps.apple.com/ro/app/mytherme/id1334068011",
+			}),
+		],
+		color: "#150530",
+	}),
+	new Project({
 		name: "Body Tracking",
 		summary: "Track your eating habits, not your calories",
 		date: "2020-09-01",
@@ -73,8 +86,7 @@ const mobileProjects = [
 			}),
 			new ExternalLink({
 				title: "Google Play",
-				url:
-					"https://play.google.com/store/apps/details?id=com.runtimesharks.ideatracker",
+				url: "https://play.google.com/store/apps/details?id=com.runtimesharks.ideatracker",
 			}),
 		],
 		color: "#077ee2",
@@ -172,7 +184,7 @@ const mobileProjects = [
 		discontinuedAt: "2014",
 	}),
 ]
-	.sort((_, p2) => (p2.discontinuedAt ? -1 : 0))
-	.sort((_, p2) => (p2.projectType !== "Own" ? -1 : 0))
+// .sort((_, p2) => (p2.discontinuedAt ? -1 : 0))
+// .sort((_, p2) => (p2.projectType !== "Own" ? -1 : 0))
 
 export default mobileProjects

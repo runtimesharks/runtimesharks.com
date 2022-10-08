@@ -13,6 +13,7 @@ import ExpensesPlanner from "../components/projects/descriptions.tsx/mobile/Expe
 import Goalee from "../components/projects/descriptions.tsx/mobile/Goalee"
 import HBW from "../components/projects/descriptions.tsx/mobile/HBW"
 import IdeaTrackerr from "../components/projects/descriptions.tsx/mobile/IdeaTrackerr"
+import MyTherme from "../components/projects/descriptions.tsx/mobile/MyTherme"
 import MyTravelStories from "../components/projects/descriptions.tsx/mobile/MyTravelStories"
 import PuppetAnthems from "../components/projects/descriptions.tsx/mobile/PuppetAnthems"
 import RolandLeth from "../components/projects/descriptions.tsx/web/RolandLeth"
@@ -30,6 +31,7 @@ const ProjectRouter = () => (
 			path="/projects/my-travel-stories"
 			component={MyTravelStories}
 		/>
+		<Route exact path="/projects/mytherme" component={MyTherme} />
 		<Route exact path="/projects/body-tracking" component={BodyTracking} />
 		<Route exact path="/projects/hey-be-well" component={HBW} />
 		<Route exact path="/projects/beraria-h" component={BerariaH} />
