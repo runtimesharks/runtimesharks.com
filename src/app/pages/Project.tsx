@@ -56,7 +56,15 @@ const Project = (props: any) => {
 								<AnimatedContainer position={5}>
 									<br />
 									<br />
-									<em>[Discontinued as of {project.discontinuedAt}]</em>
+									<em>
+										[Discontinued
+										{`${
+											project.discontinuedAt === ""
+												? ""
+												: ` as of ${project.discontinuedAt}`
+										}`}
+										]
+									</em>
 								</AnimatedContainer>
 							) : null}
 							<AnimatedContainer position={2}>

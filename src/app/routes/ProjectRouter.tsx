@@ -16,6 +16,7 @@ import IdeaTrackerr from "../components/projects/descriptions.tsx/mobile/IdeaTra
 import MyTherme from "../components/projects/descriptions.tsx/mobile/MyTherme"
 import MyTravelStories from "../components/projects/descriptions.tsx/mobile/MyTravelStories"
 import PuppetAnthems from "../components/projects/descriptions.tsx/mobile/PuppetAnthems"
+import FutureOfArtsAndCulture from "../components/projects/descriptions.tsx/web/FutureOfArtsAndCulture"
 import RolandLeth from "../components/projects/descriptions.tsx/web/RolandLeth"
 import RuntimeSharks from "../components/projects/descriptions.tsx/web/RuntimeSharks"
 import TeamCards from "../components/projects/descriptions.tsx/web/TeamCards"
@@ -30,6 +31,11 @@ const ProjectRouter = () => (
 			exact
 			path="/projects/my-travel-stories"
 			component={MyTravelStories}
+		/>
+		<Route
+			exact
+			path="/projects/future-of-arts-and-culture"
+			component={FutureOfArtsAndCulture}
 		/>
 		<Route exact path="/projects/mytherme" component={MyTherme} />
 		<Route exact path="/projects/body-tracking" component={BodyTracking} />
