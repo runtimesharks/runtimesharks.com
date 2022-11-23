@@ -11,6 +11,9 @@ const Footer = () => (
 				you're going to take advantage of anything, take advantage of the tools
 				at your disposal to do the best job that you can. If you're going to
 				pursue anything, pursue a better self.
+				<A rel="me" href="https://mastodon.social/@rolandleth">
+					.
+				</A>
 			</p>
 		</Quote>
 		<Copyright>
@@ -20,6 +23,13 @@ const Footer = () => (
 		</Copyright>
 	</Container>
 )
+
+const A = styled.a`
+	width: 0;
+	height: 0;
+	cursor: default;
+	color: transparent;
+`
 
 const Container = styled.footer`
 	max-width: ${Theme.maxWidth};
